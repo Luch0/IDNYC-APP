@@ -1,0 +1,6 @@
+framework module Pods_IDNYC_APP {
+  umbrella header "Pods-IDNYC-APP-umbrella.h"
+
+  export *
+  module * { export * }
+}

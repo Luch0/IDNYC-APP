@@ -1,0 +1,817 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		256B71CC8BAF5407083F9F9E /* Pods_IDNYC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1862015AA3BA468E5B475A83 /* Pods_IDNYC_APP.framework */; };
+		363D590255DBECAA5B6A4814 /* Pods_IDNYC_APPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */; };
+		7B3A6FB376ED420BAE3BADA1 /* Pods_IDNYC_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA18B394C2F2992465BE3E4 /* Pods_IDNYC_APPTests.framework */; };
+		E2B54268209229F500EF2C2C /* CentersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54267209229F500EF2C2C /* CentersListViewController.swift */; };
+		E2B5426A20922A1A00EF2C2C /* CentersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426920922A1A00EF2C2C /* CentersListView.swift */; };
+		E2B5426C20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */; };
+		E2FB86A5208F872B008083F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86A4208F872B008083F6 /* AppDelegate.swift */; };
+		E2FB86AD208F872B008083F6 /* IDNYC_APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86AB208F872B008083F6 /* IDNYC_APP.xcdatamodeld */; };
+		E2FB86AF208F872C008083F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FB86AE208F872C008083F6 /* Assets.xcassets */; };
+		E2FB86B2208F872C008083F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FB86B0208F872C008083F6 /* LaunchScreen.storyboard */; };
+		E2FB86BD208F872D008083F6 /* IDNYC_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86BC208F872D008083F6 /* IDNYC_APPTests.swift */; };
+		E2FB86C8208F872D008083F6 /* IDNYC_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86C7208F872D008083F6 /* IDNYC_APPUITests.swift */; };
+		E2FB86DB208F8C77008083F6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86DA208F8C77008083F6 /* HomeViewController.swift */; };
+		E2FB86DD208F8C8C008083F6 /* EnrollmentCentersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86DC208F8C8C008083F6 /* EnrollmentCentersViewController.swift */; };
+		E2FB86DF208F8C98008083F6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86DE208F8C98008083F6 /* SettingsViewController.swift */; };
+		E2FB86E1208F8CAB008083F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86E0208F8CAB008083F6 /* HomeView.swift */; };
+		E2FB86E3208F8CBA008083F6 /* EnrollmentCentersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86E2208F8CBA008083F6 /* EnrollmentCentersView.swift */; };
+		E2FB86E5208F8CC8008083F6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86E4208F8CC8008083F6 /* SettingsView.swift */; };
+		E2FB86E7208F8D75008083F6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86E6208F8D75008083F6 /* NetworkService.swift */; };
+		E2FB86E9208F8D9A008083F6 /* IDNYCCentersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86E8208F8D9A008083F6 /* IDNYCCentersAPIClient.swift */; };
+		E2FB86EB208F8DB1008083F6 /* IDNYCCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86EA208F8DB1008083F6 /* IDNYCCenter.swift */; };
+		E2FB86ED208F941C008083F6 /* CustomInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2FB86EC208F941C008083F6 /* CustomInfoView.xib */; };
+		E2FB86EF208F944B008083F6 /* CustomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86EE208F944B008083F6 /* CustomInfoView.swift */; };
+		E2FB86F1208FB90F008083F6 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86F0208FB90F008083F6 /* LocationService.swift */; };
+		E2FB86F5208FCF3B008083F6 /* BoroughCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86F4208FCF3B008083F6 /* BoroughCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2FB86B9208F872D008083F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2FB8699208F872B008083F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2FB86A0208F872B008083F6;
+			remoteInfo = "IDNYC-APP";
+		};
+		E2FB86C4208F872D008083F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2FB8699208F872B008083F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2FB86A0208F872B008083F6;
+			remoteInfo = "IDNYC-APP";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03364F95A725AF8FFE15B0A2 /* Pods-IDNYC-APPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPTests/Pods-IDNYC-APPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		161B144208B43CF4F4D0BDF5 /* Pods-IDNYC-APPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPTests/Pods-IDNYC-APPTests.release.xcconfig"; sourceTree = "<group>"; };
+		1862015AA3BA468E5B475A83 /* Pods_IDNYC_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDNYC_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AF056D20E42FD7655C370C0 /* Pods-IDNYC-APPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPUITests/Pods-IDNYC-APPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDNYC_APPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E127D3B43D46523FC0ADE9 /* Pods-IDNYC-APPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPUITests/Pods-IDNYC-APPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E26C3A198C4E08287DDF6770 /* Pods-IDNYC-APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APP/Pods-IDNYC-APP.debug.xcconfig"; sourceTree = "<group>"; };
+		E2B54267209229F500EF2C2C /* CentersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListViewController.swift; sourceTree = "<group>"; };
+		E2B5426920922A1A00EF2C2C /* CentersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListView.swift; sourceTree = "<group>"; };
+		E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCenterTableViewCell.swift; sourceTree = "<group>"; };
+		E2FB86A1208F872B008083F6 /* IDNYC-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IDNYC-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2FB86A4208F872B008083F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2FB86AC208F872B008083F6 /* IDNYC_APP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IDNYC_APP.xcdatamodel; sourceTree = "<group>"; };
+		E2FB86AE208F872C008083F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2FB86B1208F872C008083F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2FB86B3208F872C008083F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2FB86B8208F872D008083F6 /* IDNYC-APPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IDNYC-APPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2FB86BC208F872D008083F6 /* IDNYC_APPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDNYC_APPTests.swift; sourceTree = "<group>"; };
+		E2FB86BE208F872D008083F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2FB86C3208F872D008083F6 /* IDNYC-APPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IDNYC-APPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2FB86C7208F872D008083F6 /* IDNYC_APPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDNYC_APPUITests.swift; sourceTree = "<group>"; };
+		E2FB86C9208F872D008083F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2FB86DA208F8C77008083F6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E2FB86DC208F8C8C008083F6 /* EnrollmentCentersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCentersViewController.swift; sourceTree = "<group>"; };
+		E2FB86DE208F8C98008083F6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E2FB86E0208F8CAB008083F6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E2FB86E2208F8CBA008083F6 /* EnrollmentCentersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCentersView.swift; sourceTree = "<group>"; };
+		E2FB86E4208F8CC8008083F6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E2FB86E6208F8D75008083F6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E2FB86E8208F8D9A008083F6 /* IDNYCCentersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDNYCCentersAPIClient.swift; sourceTree = "<group>"; };
+		E2FB86EA208F8DB1008083F6 /* IDNYCCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDNYCCenter.swift; sourceTree = "<group>"; };
+		E2FB86EC208F941C008083F6 /* CustomInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInfoView.xib; sourceTree = "<group>"; };
+		E2FB86EE208F944B008083F6 /* CustomInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoView.swift; sourceTree = "<group>"; };
+		E2FB86F0208FB90F008083F6 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		E2FB86F4208FCF3B008083F6 /* BoroughCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroughCollectionViewCell.swift; sourceTree = "<group>"; };
+		FDABD267CEC3F7B20F003977 /* Pods-IDNYC-APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APP/Pods-IDNYC-APP.release.xcconfig"; sourceTree = "<group>"; };
+		FEA18B394C2F2992465BE3E4 /* Pods_IDNYC_APPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDNYC_APPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2FB869E208F872B008083F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				256B71CC8BAF5407083F9F9E /* Pods_IDNYC_APP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FB86B5208F872D008083F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B3A6FB376ED420BAE3BADA1 /* Pods_IDNYC_APPTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FB86C0208F872D008083F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				363D590255DBECAA5B6A4814 /* Pods_IDNYC_APPUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FBA6813CCCA9A29187FCA8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E26C3A198C4E08287DDF6770 /* Pods-IDNYC-APP.debug.xcconfig */,
+				FDABD267CEC3F7B20F003977 /* Pods-IDNYC-APP.release.xcconfig */,
+				03364F95A725AF8FFE15B0A2 /* Pods-IDNYC-APPTests.debug.xcconfig */,
+				161B144208B43CF4F4D0BDF5 /* Pods-IDNYC-APPTests.release.xcconfig */,
+				79E127D3B43D46523FC0ADE9 /* Pods-IDNYC-APPUITests.debug.xcconfig */,
+				5AF056D20E42FD7655C370C0 /* Pods-IDNYC-APPUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC85704D4941C359F509BB61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1862015AA3BA468E5B475A83 /* Pods_IDNYC_APP.framework */,
+				FEA18B394C2F2992465BE3E4 /* Pods_IDNYC_APPTests.framework */,
+				748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2FB8698208F872B008083F6 = {
+			isa = PBXGroup;
+			children = (
+				E2FB86A3208F872B008083F6 /* IDNYC-APP */,
+				E2FB86BB208F872D008083F6 /* IDNYC-APPTests */,
+				E2FB86C6208F872D008083F6 /* IDNYC-APPUITests */,
+				E2FB86A2208F872B008083F6 /* Products */,
+				6FBA6813CCCA9A29187FCA8E /* Pods */,
+				CC85704D4941C359F509BB61 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E2FB86A2208F872B008083F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2FB86A1208F872B008083F6 /* IDNYC-APP.app */,
+				E2FB86B8208F872D008083F6 /* IDNYC-APPTests.xctest */,
+				E2FB86C3208F872D008083F6 /* IDNYC-APPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2FB86A3208F872B008083F6 /* IDNYC-APP */ = {
+			isa = PBXGroup;
+			children = (
+				E2FB86D9208F8C57008083F6 /* Models */,
+				E2FB86D8208F8C50008083F6 /* Services */,
+				E2FB86D7208F8C49008083F6 /* Views */,
+				E2FB86D6208F8C42008083F6 /* ViewControllers */,
+				E2FB86D5208F8B8E008083F6 /* SupportingFiles */,
+				E2FB86B3208F872C008083F6 /* Info.plist */,
+				E2FB86AB208F872B008083F6 /* IDNYC_APP.xcdatamodeld */,
+			);
+			path = "IDNYC-APP";
+			sourceTree = "<group>";
+		};
+		E2FB86BB208F872D008083F6 /* IDNYC-APPTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2FB86BC208F872D008083F6 /* IDNYC_APPTests.swift */,
+				E2FB86BE208F872D008083F6 /* Info.plist */,
+			);
+			path = "IDNYC-APPTests";
+			sourceTree = "<group>";
+		};
+		E2FB86C6208F872D008083F6 /* IDNYC-APPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E2FB86C7208F872D008083F6 /* IDNYC_APPUITests.swift */,
+				E2FB86C9208F872D008083F6 /* Info.plist */,
+			);
+			path = "IDNYC-APPUITests";
+			sourceTree = "<group>";
+		};
+		E2FB86D5208F8B8E008083F6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E2FB86A4208F872B008083F6 /* AppDelegate.swift */,
+				E2FB86AE208F872C008083F6 /* Assets.xcassets */,
+				E2FB86B0208F872C008083F6 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E2FB86D6208F8C42008083F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2FB86DA208F8C77008083F6 /* HomeViewController.swift */,
+				E2FB86DC208F8C8C008083F6 /* EnrollmentCentersViewController.swift */,
+				E2B54267209229F500EF2C2C /* CentersListViewController.swift */,
+				E2FB86DE208F8C98008083F6 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E2FB86D7208F8C49008083F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2FB86EC208F941C008083F6 /* CustomInfoView.xib */,
+				E2FB86EE208F944B008083F6 /* CustomInfoView.swift */,
+				E2FB86E0208F8CAB008083F6 /* HomeView.swift */,
+				E2FB86E2208F8CBA008083F6 /* EnrollmentCentersView.swift */,
+				E2FB86F4208FCF3B008083F6 /* BoroughCollectionViewCell.swift */,
+				E2B5426920922A1A00EF2C2C /* CentersListView.swift */,
+				E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */,
+				E2FB86E4208F8CC8008083F6 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E2FB86D8208F8C50008083F6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E2FB86E6208F8D75008083F6 /* NetworkService.swift */,
+				E2FB86F0208FB90F008083F6 /* LocationService.swift */,
+				E2FB86E8208F8D9A008083F6 /* IDNYCCentersAPIClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E2FB86D9208F8C57008083F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2FB86EA208F8DB1008083F6 /* IDNYCCenter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2FB86A0208F872B008083F6 /* IDNYC-APP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2FB86CC208F872D008083F6 /* Build configuration list for PBXNativeTarget "IDNYC-APP" */;
+			buildPhases = (
+				D4A2539818F5BAF72F4115C9 /* [CP] Check Pods Manifest.lock */,
+				E2FB869D208F872B008083F6 /* Sources */,
+				E2FB869E208F872B008083F6 /* Frameworks */,
+				E2FB869F208F872B008083F6 /* Resources */,
+				8B321F503B5D1269498F01AF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IDNYC-APP";
+			productName = "IDNYC-APP";
+			productReference = E2FB86A1208F872B008083F6 /* IDNYC-APP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2FB86B7208F872D008083F6 /* IDNYC-APPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2FB86CF208F872D008083F6 /* Build configuration list for PBXNativeTarget "IDNYC-APPTests" */;
+			buildPhases = (
+				0E593B7D7D2D87147A028AE8 /* [CP] Check Pods Manifest.lock */,
+				E2FB86B4208F872D008083F6 /* Sources */,
+				E2FB86B5208F872D008083F6 /* Frameworks */,
+				E2FB86B6208F872D008083F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2FB86BA208F872D008083F6 /* PBXTargetDependency */,
+			);
+			name = "IDNYC-APPTests";
+			productName = "IDNYC-APPTests";
+			productReference = E2FB86B8208F872D008083F6 /* IDNYC-APPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2FB86C2208F872D008083F6 /* IDNYC-APPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2FB86D2208F872D008083F6 /* Build configuration list for PBXNativeTarget "IDNYC-APPUITests" */;
+			buildPhases = (
+				9183359DBF98730ED8222043 /* [CP] Check Pods Manifest.lock */,
+				E2FB86BF208F872D008083F6 /* Sources */,
+				E2FB86C0208F872D008083F6 /* Frameworks */,
+				E2FB86C1208F872D008083F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2FB86C5208F872D008083F6 /* PBXTargetDependency */,
+			);
+			name = "IDNYC-APPUITests";
+			productName = "IDNYC-APPUITests";
+			productReference = E2FB86C3208F872D008083F6 /* IDNYC-APPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2FB8699208F872B008083F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Lucho;
+				TargetAttributes = {
+					E2FB86A0208F872B008083F6 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					E2FB86B7208F872D008083F6 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = E2FB86A0208F872B008083F6;
+					};
+					E2FB86C2208F872D008083F6 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = E2FB86A0208F872B008083F6;
+					};
+				};
+			};
+			buildConfigurationList = E2FB869C208F872B008083F6 /* Build configuration list for PBXProject "IDNYC-APP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2FB8698208F872B008083F6;
+			productRefGroup = E2FB86A2208F872B008083F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2FB86A0208F872B008083F6 /* IDNYC-APP */,
+				E2FB86B7208F872D008083F6 /* IDNYC-APPTests */,
+				E2FB86C2208F872D008083F6 /* IDNYC-APPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2FB869F208F872B008083F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2FB86B2208F872C008083F6 /* LaunchScreen.storyboard in Resources */,
+				E2FB86AF208F872C008083F6 /* Assets.xcassets in Resources */,
+				E2FB86ED208F941C008083F6 /* CustomInfoView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FB86B6208F872D008083F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FB86C1208F872D008083F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E593B7D7D2D87147A028AE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IDNYC-APPTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B321F503B5D1269498F01AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IDNYC-APP/Pods-IDNYC-APP-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IDNYC-APP/Pods-IDNYC-APP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9183359DBF98730ED8222043 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IDNYC-APPUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4A2539818F5BAF72F4115C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IDNYC-APP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2FB869D208F872B008083F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2B54268209229F500EF2C2C /* CentersListViewController.swift in Sources */,
+				E2FB86AD208F872B008083F6 /* IDNYC_APP.xcdatamodeld in Sources */,
+				E2FB86E5208F8CC8008083F6 /* SettingsView.swift in Sources */,
+				E2FB86E9208F8D9A008083F6 /* IDNYCCentersAPIClient.swift in Sources */,
+				E2FB86A5208F872B008083F6 /* AppDelegate.swift in Sources */,
+				E2FB86E3208F8CBA008083F6 /* EnrollmentCentersView.swift in Sources */,
+				E2B5426C20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift in Sources */,
+				E2FB86E7208F8D75008083F6 /* NetworkService.swift in Sources */,
+				E2FB86DB208F8C77008083F6 /* HomeViewController.swift in Sources */,
+				E2FB86F5208FCF3B008083F6 /* BoroughCollectionViewCell.swift in Sources */,
+				E2FB86E1208F8CAB008083F6 /* HomeView.swift in Sources */,
+				E2FB86DF208F8C98008083F6 /* SettingsViewController.swift in Sources */,
+				E2B5426A20922A1A00EF2C2C /* CentersListView.swift in Sources */,
+				E2FB86F1208FB90F008083F6 /* LocationService.swift in Sources */,
+				E2FB86EF208F944B008083F6 /* CustomInfoView.swift in Sources */,
+				E2FB86EB208F8DB1008083F6 /* IDNYCCenter.swift in Sources */,
+				E2FB86DD208F8C8C008083F6 /* EnrollmentCentersViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FB86B4208F872D008083F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2FB86BD208F872D008083F6 /* IDNYC_APPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FB86BF208F872D008083F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2FB86C8208F872D008083F6 /* IDNYC_APPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2FB86BA208F872D008083F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2FB86A0208F872B008083F6 /* IDNYC-APP */;
+			targetProxy = E2FB86B9208F872D008083F6 /* PBXContainerItemProxy */;
+		};
+		E2FB86C5208F872D008083F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2FB86A0208F872B008083F6 /* IDNYC-APP */;
+			targetProxy = E2FB86C4208F872D008083F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2FB86B0208F872C008083F6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2FB86B1208F872C008083F6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2FB86CA208F872D008083F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2FB86CB208F872D008083F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2FB86CD208F872D008083F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E26C3A198C4E08287DDF6770 /* Pods-IDNYC-APP.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSMJ37658F;
+				INFOPLIST_FILE = "IDNYC-APP/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lucho.IDNYC-APP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2FB86CE208F872D008083F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDABD267CEC3F7B20F003977 /* Pods-IDNYC-APP.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSMJ37658F;
+				INFOPLIST_FILE = "IDNYC-APP/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lucho.IDNYC-APP";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E2FB86D0208F872D008083F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03364F95A725AF8FFE15B0A2 /* Pods-IDNYC-APPTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "IDNYC-APPTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lucho.IDNYC-APPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IDNYC-APP.app/IDNYC-APP";
+			};
+			name = Debug;
+		};
+		E2FB86D1208F872D008083F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 161B144208B43CF4F4D0BDF5 /* Pods-IDNYC-APPTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "IDNYC-APPTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lucho.IDNYC-APPTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IDNYC-APP.app/IDNYC-APP";
+			};
+			name = Release;
+		};
+		E2FB86D3208F872D008083F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79E127D3B43D46523FC0ADE9 /* Pods-IDNYC-APPUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "IDNYC-APPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lucho.IDNYC-APPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "IDNYC-APP";
+			};
+			name = Debug;
+		};
+		E2FB86D4208F872D008083F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF056D20E42FD7655C370C0 /* Pods-IDNYC-APPUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "IDNYC-APPUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Lucho.IDNYC-APPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "IDNYC-APP";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2FB869C208F872B008083F6 /* Build configuration list for PBXProject "IDNYC-APP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2FB86CA208F872D008083F6 /* Debug */,
+				E2FB86CB208F872D008083F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2FB86CC208F872D008083F6 /* Build configuration list for PBXNativeTarget "IDNYC-APP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2FB86CD208F872D008083F6 /* Debug */,
+				E2FB86CE208F872D008083F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2FB86CF208F872D008083F6 /* Build configuration list for PBXNativeTarget "IDNYC-APPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2FB86D0208F872D008083F6 /* Debug */,
+				E2FB86D1208F872D008083F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2FB86D2208F872D008083F6 /* Build configuration list for PBXNativeTarget "IDNYC-APPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2FB86D3208F872D008083F6 /* Debug */,
+				E2FB86D4208F872D008083F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E2FB86AB208F872B008083F6 /* IDNYC_APP.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E2FB86AC208F872B008083F6 /* IDNYC_APP.xcdatamodel */,
+			);
+			currentVersion = E2FB86AC208F872B008083F6 /* IDNYC_APP.xcdatamodel */;
+			path = IDNYC_APP.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E2FB8699208F872B008083F6 /* Project object */;
+}

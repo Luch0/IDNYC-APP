@@ -1,0 +1,6 @@
+framework module Pods_IDNYC_APPUITests {
+  umbrella header "Pods-IDNYC-APPUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

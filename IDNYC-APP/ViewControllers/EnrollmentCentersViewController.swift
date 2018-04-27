@@ -15,6 +15,8 @@ class EnrollmentCentersViewController: UIViewController {
     
     let boroughs: [String] = ["All Boroughs", "Queens", "Manhattan", "Brooklyn", "The Bronx", "Staten Island"]
     
+    var currentBorough: String = "All Boroughs"
+    
     var idnycCenters = [IDNYCCenter]() {
         didSet {
             DispatchQueue.main.async{
@@ -56,12 +58,17 @@ class EnrollmentCentersViewController: UIViewController {
     private func setupNavBar() {
         navigationItem.title = "Enrollment Centers"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .automatic
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "centersList"), style: .plain, target: self, action: #selector(showCentersList))
     }
     
     @objc private func showCentersList() {
-        // TODO: show centers as list in tableView
-        print("Will show list of centers: comming soon...")
+        let centersListVC = CentersListViewController(centers: idnycCenters)
+        navigationController?.pushViewController(centersListVC, animated: true)
+    }
+    
+    private func showCentersFrom(borough: String) {
+        
     }
 
 }
@@ -124,7 +131,10 @@ extension EnrollmentCentersViewController: UICollectionViewDataSource {
 
 extension EnrollmentCentersViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch boroughs[indexPath.row] {
+        let tappedBorough = boroughs[indexPath.row]
+        if tappedBorough == currentBorough { return }
+        currentBorough = tappedBorough
+        switch tappedBorough {
         case "All Boroughs":
             print("All Boroughs")
         case "Queens":

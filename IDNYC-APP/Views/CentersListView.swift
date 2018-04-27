@@ -12,7 +12,8 @@ class CentersListView: UIView {
     
     lazy var centersTableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(EnrollmentCenterTableViewCell.self, forCellReuseIdentifier: "EventCell")
+        tableView.register(EnrollmentCenterTableViewCell.self, forCellReuseIdentifier: "center cell")
+        tableView.separatorStyle = .none
         return tableView
     }()
     
@@ -32,6 +33,18 @@ class CentersListView: UIView {
     }
     
     private func setupViews() {
+        setupCentersTableView()
+    }
+    
+    private func setupCentersTableView() {
+        addSubview(centersTableView)
+        centersTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            centersTableView.topAnchor.constraint(equalTo: topAnchor),
+            centersTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            centersTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            centersTableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
 
 }

@@ -20,18 +20,20 @@ class EnrollmentCentersViewController: UIViewController {
     var idnycCenters = [IDNYCCenter]() {
         didSet {
             DispatchQueue.main.async{
-                for center in self.idnycCenters {
-                    guard let location = center.location_1 else {
-                        print(center.address1)
-                        continue
-                    }
-                    let position = CLLocationCoordinate2D(latitude: location.coordinates[1], longitude: location.coordinates[0])
-                    let centerLocation = GMSMarker(position: position)
-                    centerLocation.title = center.name
-                    centerLocation.snippet = "\(center.address1), \(center.city), \(center.zip)"
-                    centerLocation.icon = #imageLiteral(resourceName: "centerLocationTall")
-                    centerLocation.map = self.enrollmentCentersView.centersMapView
-                }
+                self.showCenters(centers: self.idnycCenters)
+//                for center in self.idnycCenters {
+//                    guard let location = center.location_1 else {
+//                        print(center.address1)
+//                        continue
+//                    }
+//                    let position = CLLocationCoordinate2D(latitude: location.coordinates[1], longitude: location.coordinates[0])
+//                    let centerLocation = GMSMarker(position: position)
+//                    centerLocation.appearAnimation = .pop
+//                    centerLocation.title = center.name
+//                    centerLocation.snippet = "\(center.address1), \(center.city), \(center.zip)"
+//                    centerLocation.icon = #imageLiteral(resourceName: "centerLocationTall")
+//                    centerLocation.map = self.enrollmentCentersView.centersMapView
+//                }
             }
         }
     }
@@ -67,8 +69,19 @@ class EnrollmentCentersViewController: UIViewController {
         navigationController?.pushViewController(centersListVC, animated: true)
     }
     
-    private func showCentersFrom(borough: String) {
-        
+    private func showCenters(centers: [IDNYCCenter]) {
+        for center in centers {
+            guard let location = center.location_1 else {
+                continue
+            }
+            let position = CLLocationCoordinate2D(latitude: location.coordinates[1], longitude: location.coordinates[0])
+            let centerLocation = GMSMarker(position: position)
+            centerLocation.appearAnimation = .pop
+            centerLocation.title = center.name
+            centerLocation.snippet = "\(center.address1), \(center.city), \(center.zip)"
+            centerLocation.icon = #imageLiteral(resourceName: "centerLocationTall")
+            centerLocation.map = self.enrollmentCentersView.centersMapView
+        }
     }
 
 }
@@ -134,19 +147,32 @@ extension EnrollmentCentersViewController: UICollectionViewDelegate {
         let tappedBorough = boroughs[indexPath.row]
         if tappedBorough == currentBorough { return }
         currentBorough = tappedBorough
+        enrollmentCentersView.centersMapView.clear()
         switch tappedBorough {
         case "All Boroughs":
             print("All Boroughs")
+            showCenters(centers: idnycCenters)
         case "Queens":
             print("Queens")
+            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "flushing" ||
+                                                      $0.city.lowercased() == "jamaica"  ||
+                                                      $0.city.lowercased() == "corona"   ||
+                                                      $0.city.lowercased() == "long island city" ||
+                                                      $0.city.lowercased() == "queens" ||
+                                                      $0.city.lowercased() == "briarwood" ||
+                                                      $0.city.lowercased() == "jackson heights" })
         case "Manhattan":
             print("Manhattan")
+            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "new york" })
         case "Brooklyn":
             print("Brooklyn")
+            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "brooklyn" })
         case "The Bronx":
             print("The Bronx")
+            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "bronx" })
         case "Staten Island":
             print("Staten Island")
+            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "staten island" })
         default:
             print("None")
         }

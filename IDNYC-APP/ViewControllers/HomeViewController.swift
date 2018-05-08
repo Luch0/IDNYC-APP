@@ -16,12 +16,32 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(homeView)
         setupNavBar()
+        setupButtonActions()
     }
     
     private func setupNavBar() {
         navigationItem.title = "Home"
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana", size: UIFont.systemFontSize)! ]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana", size: 20)! ]
+    }
+    
+    private func setupButtonActions() {
+        homeView.whatIsIDNYCButton.addTarget(self, action: #selector(whatIsIDNYCTapped), for: .touchUpInside)
+        homeView.documentCheckerButton.addTarget(self, action: #selector(documentCheckerTapped), for: .touchUpInside)
+        homeView.benefitsButton.addTarget(self, action: #selector(benefitsTapped), for: .touchUpInside)
+    }
+    
+    @objc private func whatIsIDNYCTapped() {
+        let whatIsIDNYCViewController = WhatIsIDNYCViewController()
+        navigationController?.pushViewController(whatIsIDNYCViewController, animated: true)
+    }
+    
+    @objc private func documentCheckerTapped() {
+        
+    }
+    
+    @objc private func benefitsTapped() {
+        
     }
 
 

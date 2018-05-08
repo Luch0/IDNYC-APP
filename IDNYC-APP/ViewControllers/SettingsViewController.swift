@@ -12,8 +12,12 @@ class SettingsViewController: UIViewController {
 
     let settingsView = SettingsView()
     
+    let options:[String] = ["Change Language","About IDNYC","Feedback", "Visit Official Site"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingsView.settingsTableView.delegate = self
+        settingsView.settingsTableView.dataSource = self
         view.addSubview(settingsView)
         setupNavBar()
     }
@@ -24,4 +28,20 @@ class SettingsViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana", size: UIFont.systemFontSize)! ]
     }
     
+}
+
+extension SettingsViewController: UITableViewDelegate {
+    
+}
+
+extension SettingsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return options.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "settings cell", for: indexPath)
+        cell.textLabel?.text = options[indexPath.row]
+        return cell
+    }
 }

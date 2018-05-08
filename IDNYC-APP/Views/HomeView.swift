@@ -19,7 +19,7 @@ class HomeView: UIView {
     lazy var whatIsIDNYCButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(displayP3Red: 214/256, green: 71/256, blue: 41/256, alpha: 1.0)
-        button.setTitle("What id IDNYC?", for: .normal)
+        button.setTitle("What is IDNYC?", for: .normal)
         button.titleLabel?.font = UIFont(name: "Verdana", size: 20)
         button.layer.cornerRadius = 10
         return button

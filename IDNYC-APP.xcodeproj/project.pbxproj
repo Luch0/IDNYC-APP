@@ -10,6 +10,8 @@
 		256B71CC8BAF5407083F9F9E /* Pods_IDNYC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1862015AA3BA468E5B475A83 /* Pods_IDNYC_APP.framework */; };
 		363D590255DBECAA5B6A4814 /* Pods_IDNYC_APPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */; };
 		7B3A6FB376ED420BAE3BADA1 /* Pods_IDNYC_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA18B394C2F2992465BE3E4 /* Pods_IDNYC_APPTests.framework */; };
+		E25154A2209CB6B600FB733D /* WhatIsIDNYCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25154A1209CB6B600FB733D /* WhatIsIDNYCViewController.swift */; };
+		E25154A4209CB6D000FB733D /* WhatIsIDNYCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25154A3209CB6D000FB733D /* WhatIsIDNYCView.swift */; };
 		E2B54268209229F500EF2C2C /* CentersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54267209229F500EF2C2C /* CentersListViewController.swift */; };
 		E2B5426A20922A1A00EF2C2C /* CentersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426920922A1A00EF2C2C /* CentersListView.swift */; };
 		E2B5426C20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */; };
@@ -58,6 +60,8 @@
 		5AF056D20E42FD7655C370C0 /* Pods-IDNYC-APPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPUITests/Pods-IDNYC-APPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDNYC_APPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E127D3B43D46523FC0ADE9 /* Pods-IDNYC-APPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPUITests/Pods-IDNYC-APPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E25154A1209CB6B600FB733D /* WhatIsIDNYCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsIDNYCViewController.swift; sourceTree = "<group>"; };
+		E25154A3209CB6D000FB733D /* WhatIsIDNYCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsIDNYCView.swift; sourceTree = "<group>"; };
 		E26C3A198C4E08287DDF6770 /* Pods-IDNYC-APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APP/Pods-IDNYC-APP.debug.xcconfig"; sourceTree = "<group>"; };
 		E2B54267209229F500EF2C2C /* CentersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListViewController.swift; sourceTree = "<group>"; };
 		E2B5426920922A1A00EF2C2C /* CentersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListView.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				E2FB86DA208F8C77008083F6 /* HomeViewController.swift */,
+				E25154A1209CB6B600FB733D /* WhatIsIDNYCViewController.swift */,
 				E2FB86DC208F8C8C008083F6 /* EnrollmentCentersViewController.swift */,
 				E2B54267209229F500EF2C2C /* CentersListViewController.swift */,
 				E2FB86DE208F8C98008083F6 /* SettingsViewController.swift */,
@@ -228,6 +233,7 @@
 				E2B5426920922A1A00EF2C2C /* CentersListView.swift */,
 				E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */,
 				E2FB86E4208F8CC8008083F6 /* SettingsView.swift */,
+				E25154A3209CB6D000FB733D /* WhatIsIDNYCView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -463,7 +469,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2B54268209229F500EF2C2C /* CentersListViewController.swift in Sources */,
+				E25154A4209CB6D000FB733D /* WhatIsIDNYCView.swift in Sources */,
 				E2FB86AD208F872B008083F6 /* IDNYC_APP.xcdatamodeld in Sources */,
+				E25154A2209CB6B600FB733D /* WhatIsIDNYCViewController.swift in Sources */,
 				E2FB86E5208F8CC8008083F6 /* SettingsView.swift in Sources */,
 				E2FB86E9208F8D9A008083F6 /* IDNYCCentersAPIClient.swift in Sources */,
 				E2FB86A5208F872B008083F6 /* AppDelegate.swift in Sources */,

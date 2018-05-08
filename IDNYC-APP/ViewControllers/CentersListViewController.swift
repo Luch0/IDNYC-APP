@@ -38,7 +38,7 @@ class CentersListViewController: UIViewController {
     }
     
     private func setupNavBar() {
-        navigationItem.largeTitleDisplayMode = .never
+        //navigationItem.largeTitleDisplayMode = .never
     }
     
 }

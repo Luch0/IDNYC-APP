@@ -15,28 +15,25 @@ class EnrollmentCentersViewController: UIViewController {
     
     let boroughs: [String] = ["All Boroughs", "Queens", "Manhattan", "Brooklyn", "The Bronx", "Staten Island"]
     
-    var currentBorough: String = "All Boroughs"
+    var currentBorough: String = "None"
+    
+    let boroughsLatAndLog:[String:(lat: Double,long: Double)] = ["All Boroughs":(40.7128, -74.0060),
+                                                                 "Queens":(40.7282, -73.7949),
+                                                                 "Manhattan":(40.7831, -73.9712),
+                                                                 "Brooklyn":(40.6782, -73.9442),
+                                                                 "The Bronx":(40.8448, -73.8648),
+                                                                 "Staten Island":(40.5795, -74.1502)]
     
     var idnycCenters = [IDNYCCenter]() {
         didSet {
             DispatchQueue.main.async{
-                self.showCenters(centers: self.idnycCenters)
-//                for center in self.idnycCenters {
-//                    guard let location = center.location_1 else {
-//                        print(center.address1)
-//                        continue
-//                    }
-//                    let position = CLLocationCoordinate2D(latitude: location.coordinates[1], longitude: location.coordinates[0])
-//                    let centerLocation = GMSMarker(position: position)
-//                    centerLocation.appearAnimation = .pop
-//                    centerLocation.title = center.name
-//                    centerLocation.snippet = "\(center.address1), \(center.city), \(center.zip)"
-//                    centerLocation.icon = #imageLiteral(resourceName: "centerLocationTall")
-//                    centerLocation.map = self.enrollmentCentersView.centersMapView
-//                }
+                self.filteredCenters = self.idnycCenters
+                self.showCenters(centers: self.filteredCenters)
             }
         }
     }
+    
+    var filteredCenters = [IDNYCCenter]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,13 +56,17 @@ class EnrollmentCentersViewController: UIViewController {
     
     private func setupNavBar() {
         navigationItem.title = "Enrollment Centers"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .automatic
+        // TODO: check if compass padding works well on all devices
+        let mapInsets = UIEdgeInsets(top: 40.0, left: 0.0, bottom: 0.0, right: 0.0)
+        enrollmentCentersView.centersMapView.padding = mapInsets
+        //navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationItem.largeTitleDisplayMode = .automatic
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana", size: 20)! ]
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "centersList"), style: .plain, target: self, action: #selector(showCentersList))
     }
     
     @objc private func showCentersList() {
-        let centersListVC = CentersListViewController(centers: idnycCenters)
+        let centersListVC = CentersListViewController(centers: filteredCenters)
         navigationController?.pushViewController(centersListVC, animated: true)
     }
     
@@ -86,6 +87,7 @@ class EnrollmentCentersViewController: UIViewController {
 
 }
 
+// MARK: LocationServiceDelegate
 extension EnrollmentCentersViewController: LocationServiceDelegate {
     
     func updateLocation(with lat: Double, and long: Double) {
@@ -96,17 +98,19 @@ extension EnrollmentCentersViewController: LocationServiceDelegate {
     
 }
 
+// MARK: GMSMapViewDelegate
 extension EnrollmentCentersViewController: GMSMapViewDelegate {
     
-    // TODO: figure out how to show info windows from here as well
-//    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-//        let camera = GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: 13)
-//        enrollmentCentersView.centersMapView.animate(to: camera)
-//        return true
-//    }
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        let camera = GMSCameraPosition.camera(withLatitude: marker.position.latitude, longitude: marker.position.longitude, zoom: 15)
+        enrollmentCentersView.centersMapView.animate(to: camera)
+        // return false to let the delegate method continue to also show info box
+        return false
+    }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         // TODO: try to do this only when arrow button is tapped
+        // TODO: handle when user did not enable location permission
         let userCoordinate = CLLocationCoordinate2D(latitude: LocationService.manager.getCurrentLatitude()!, longitude: LocationService.manager.getCurrentLongitude()!)
         //let placeCoordinate = CLLocationCoordinate2D(latitude: marker.position.latitude, longitude: marker.position.longitude)
         
@@ -128,6 +132,7 @@ extension EnrollmentCentersViewController: GMSMapViewDelegate {
     
 }
 
+// MARK: UICollectionViewDataSource
 extension EnrollmentCentersViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return boroughs.count
@@ -142,40 +147,51 @@ extension EnrollmentCentersViewController: UICollectionViewDataSource {
     
 }
 
+// MARK: UICollectionViewDelegate
 extension EnrollmentCentersViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let tappedBorough = boroughs[indexPath.row]
         if tappedBorough == currentBorough { return }
+        
         currentBorough = tappedBorough
         enrollmentCentersView.centersMapView.clear()
+        let camera = GMSCameraPosition.camera(withLatitude: boroughsLatAndLog[tappedBorough]!.lat, longitude: boroughsLatAndLog[tappedBorough]!.long, zoom: 10)
+        enrollmentCentersView.centersMapView.animate(to: camera)
         switch tappedBorough {
         case "All Boroughs":
             print("All Boroughs")
-            showCenters(centers: idnycCenters)
+            filteredCenters = idnycCenters
+            showCenters(centers: filteredCenters)
         case "Queens":
             print("Queens")
-            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "flushing" ||
+            filteredCenters = idnycCenters.filter{ $0.city.lowercased() == "flushing" ||
                                                       $0.city.lowercased() == "jamaica"  ||
                                                       $0.city.lowercased() == "corona"   ||
                                                       $0.city.lowercased() == "long island city" ||
                                                       $0.city.lowercased() == "queens" ||
                                                       $0.city.lowercased() == "briarwood" ||
-                                                      $0.city.lowercased() == "jackson heights" })
+                                                      $0.city.lowercased() == "jackson heights" }
+            showCenters(centers: filteredCenters)
         case "Manhattan":
             print("Manhattan")
-            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "new york" })
+            filteredCenters = idnycCenters.filter{ $0.city.lowercased() == "new york" }
+            showCenters(centers: filteredCenters)
         case "Brooklyn":
             print("Brooklyn")
-            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "brooklyn" })
+            filteredCenters = idnycCenters.filter{ $0.city.lowercased() == "brooklyn" }
+            showCenters(centers: filteredCenters)
         case "The Bronx":
             print("The Bronx")
-            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "bronx" })
+            filteredCenters = idnycCenters.filter{ $0.city.lowercased() == "bronx" }
+            showCenters(centers: filteredCenters)
         case "Staten Island":
             print("Staten Island")
-            showCenters(centers: idnycCenters.filter{ $0.city.lowercased() == "staten island" })
+            filteredCenters = idnycCenters.filter{ $0.city.lowercased() == "staten island" }
+            showCenters(centers: filteredCenters)
         default:
             print("None")
         }
+        enrollmentCentersView.centersMapView.animate(to: camera)
     }
 }
 

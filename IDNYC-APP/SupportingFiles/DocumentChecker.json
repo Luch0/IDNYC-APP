@@ -1,0 +1,469 @@
+{
+    "response": {
+            "identity": [
+                  {
+                        "type": "U.S. Passport",
+                        "documents": [
+                              {
+                                    "document": "U.S. Passport or U.S. Passport Card",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Expired U.S. Passport or Passport Card - within three years",
+                                    "points": 2
+                              }
+                        ]
+                  },
+                  {
+                        "type": "Foreign Passport",
+                        "documents": [
+                              {
+                                    "document": "Foreign passport - machine readable",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Foreign passport - NOT machine readable",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Expired foreign passport - expired within three years",
+                                    "points": 2
+                              }
+                        ]
+                  },
+                  {
+                        "type": "U.S. Visa / Permits",
+                        "documents": [
+                              {
+                                    "document": "Visa Issued by U.S. State Department (with photo)",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "U.S. Permanent Resident Card (Green Card)",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Current U.S. Work Permit",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Certificate of Citizenship/Naturalization",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Approval Notice on Form I-797, I-797A, I-797B or I-797D issued by U.S. Citizenship and Immigration Services (USCIS)",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "I-94 Form with photo and fingerprint",
+                                    "points": 2
+                              }           
+                        ]
+                  },
+                  {
+                        "type": "U.S. Government ID Documents",
+                        "documents": [
+                              {
+                                    "document": "U.S. State Identification card",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "U.S. Merchant Mariner Credential",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "U.S. Department of State Driver's License or Non- Driver ID card without Current Home Address",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "U.S. Tribal ID",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "IDNYC card without a current address (current or expired within 60 days)",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Social Security Card",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Common Access Card",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Veterans Identification Card",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Veterans Health Identification Card",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "NYS Benefits card without photo",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "NYS Electronic Benefit (EBT) card / Common Benefit Identification Card (CBIC) with Photo",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "NYS Department of Corrections and Community Supervision (DOCCS) Released Offender Identification Card (dated within 1 year)",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Reduced Fare MetroCard for Seniors and People with Disabilities",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Access-A-Ride ID card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "NYC Department of Parks and Recreation issued Recreation Center Membership card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "U.S. Voter Registration card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Selective Service Registration Card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "U.S. birth certificate",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "U.S. Individual Taxpayer Identification Number (ITIN) card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "U.S. Individual Taxpayer Identification Number (ITIN) Assignment Letter",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Your child's U.S. birth certificate - listing applicant as birth parent",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Certificate of marriage, domestic partnership, civil union, divorce or dissolution",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "NYS Office of Mental Health (OMH) Facility Photo ID card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "NYS Office of Mental Health (OMH) Facility Inpatient Photo ID card. Also proof of residency",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "New York City Police Department (NYPD) Restricted Handgun License",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "Medicare identification card",
+                                    "points": 1
+                              }                                   
+                        ]
+                  },
+                  {
+                        "type": "U.S. Driver's License",
+                        "documents": [
+                              {
+                                    "document": "U.S. State Driver's License or Learner's Permit Photo ID",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "New York State (NYS) Department of Motor Vehicles Driver's License or Learner's Permit with a New York City address",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "An expired NYS DMV Driver's License/Learner's Permit with an unexpired DMV interim permit bearing the same identification number as the license/permit",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "NYS DMV Non-Driver ID card with a New York City address",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "An expired NYS DMV Non-Driver ID card with an unexpired DMV interim ID card bearing the same identification number as the identification card",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "NYS DMV Interim Driver's License/Learner's Permit/Non-Driver ID card",
+                                    "points": 3
+                              }        
+                        ]
+                  },
+                  {
+                        "type": "Foreign Driver's License",
+                        "documents": [
+                              {
+                                    "document": "Foreign driver's license - machine readable",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Foreign driver's license - NOT machine readable",
+                                    "points": 1
+                              }      
+                        ]
+                  },
+                  {
+                        "type": "Foreign ID Documents",
+                        "documents": [
+                              {
+                                    "document": "Foreign national identification card - machine readable",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Consular identification Card",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Foreign national identification card - NOT machine readable",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Foreign military photo identification card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Foreign birth certificate",
+                                    "points": 1
+                              }      
+                        ]
+                  },
+                  {
+                        "type": "U.S. Professional / Education ID",
+                        "documents": [
+                              {
+                                    "document": "U.S. federal, state, or local government employee ID",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "NYS Unified Court System Attorney Secure Pass ID card",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "NYS Education Department Professional Identification Card",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "U.S. Uniformed Services ID",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Educational institution ID card: middle, secondary, post-secondary schools, colleges and universities with date of birth",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Educational institution ID Card: middle, secondary, post-secondary schools, colleges and universities without date of birth",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "NYC Summer Youth Employment Program Identification card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Summer Youth Employment Program Verification Form",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "U.S. school transcript from high shcool or post- secondary school, college, or university with date of birth",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "U.S. school transcript from high school or post-secondary school, college, or university without date of birth",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Diploma from a U.S. high school, high school equivalency program, or U.S. post- secondary school, college, or university with date of birth",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Diploma from a U.S. high school, high school equivalency program, or U.S. post-secondary school, college, or university without date of birth",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "DOE Student Verification Form issued by DOE schools (this document is not yet available, please check back for updates)",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Employee, consultant, or board member identification card from organization located in U.S.",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "U.S. union Photo ID",
+                                    "points": 1
+                              }        
+                        ]
+                  }
+            ],
+            "residency": [ 
+                  {
+                        "type": "Bills",
+                        "documents": [
+                              {
+                                    "document": "Cable, phone, or utility bill (dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Statement, bill, or record from a health institution",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Insurance bill, statement, or record (homeowner's, life, renter's, automobile, health insurance; dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Banking, financial or credit card account bill, statement or notice (dated within 60 days)",
+                                    "points": 1
+                              }     
+                        ]
+                  },
+                  {
+                        "type": "Letters",
+                        "documents": [
+                              {
+                                    "document": "Letter from New York City Housing Authority (NYCHA) (dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Letter from NYC Administration for Children Services foster care agency (dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Letter from homeless shelter in NYC (must state applicant has stayed at the shelter for 15 days and shelter allows residents to remain for more than 30 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Letter from residential care facility operated, certified, or funded by NYS Office for People with Developmental Disabilities (OPWDD), NYS Department of Health (NYS DOH), or NYC Department of Health and Mental Hygiene (NYC DOHMH)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Notice of Decision or Determination of Developmental Disability issued by NYS Office for People with Developmental Disabilities (OPWDD) and proof of residency for the applicant and caretaker",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Residency Confirmation Letter for United Nations (UN) Diplomats and Their Families",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Letter from principal or designee of the principal of a Head Start, Early Learn, or any NYC DOE school where applicant's child is enrolled (dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Letter from a principal or designee of the principal of a private or parochial school where applicant or applicant's child is a currently enrolled student (for students and their parent/guardian; dated within 60 days)",
+                                    "points": 1
+                              }        
+                        ]
+                  },
+                  {
+                        "type": "Property",
+                        "documents": [
+                              {
+                                    "document": "Current residential property lease or sublease",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Local property tax statement (dated within 1 year)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Property mortgage payment receipt (dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "NYCHA Lease Addendum and Rent Notice",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "United States Postal Service (USPS) Change of Address confirmation (dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "NYC Housing Preservation and Development (HPD) Section 8 Rent Breakdown Form",
+                                    "points": 1
+                              }           
+                        ]
+                  },
+                  {
+                        "type": "Other",
+                        "documents": [
+                              {
+                                    "document": "NYS DMV Interim Driver's License, Learner's Permit, or Non-Driver's Identification card. Also, 2 points of ID, including, DOB",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "NYS Office of Mental Health (OMH) Facility Inpatient Photo ID card. Also 1 point of ID, including photo ID",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Employment pay stub (dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "IRS Forms W-2, 1099-MISC, 1095-A, 1095-B, and 1095-C (accepted through April 15 of the year following the tax year on the form)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Letter or document issued by the U.S. Internal Revenue Service (IRS), or the NYS Department of Taxation and Finance (DTF) (dated within 1 year)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Tax return with proof of filing (dated within 1 year of filing date)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Jury summons or court order Issued by NYS (including NYC Courts) or federal court (dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "HRA \"Response to Request for a Budget Calculation Report\" (dated within 60 days)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "DOE Student Verification Form issued by DOE schools (this document is not yet available, please check back for updates)",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Summer Youth Employment Program Verification Form",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "\"Verification of Release\" form issued by the U.S. Department of Health and Human Services, Office of Refugee Resettlement, Division of Children's Services",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "U.S. Immigration and Customs Enforcement (ICE) Order of Supervision (dated within 1 year)",
+                                    "points": 1
+                              }
+                        ]
+                  },
+                  {
+                        "type": "No Stable Address/Survivors of Domestic Violence",
+                        "documents": [
+                              {
+                                    "document": "Care-of Letter Issued by nonprofit organization or religious institution in NYC serving homeless individuals or survivors of domestic violence. Entity must currently receive City funding. Letter must indicate applicant has received services from the entity for past 60 days and may use entity's address for mailing purposes (dated within 14 days). Address on card will be \"Care Of\" the organization",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Letter from City agency, nonprofit organization, or religious institution in NYC that provides services to individuals without a home address (dated within 30 days). No address to appear on card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Letter from City agency, nonprofit organization, or religious institution in NYC that provides services to survivors of domestic violence (dated within 30 days). No address or P.O. Box to appear on card",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Letter Issued by a hospital or health Clinic in NYC (dated within 30 days)",
+                                    "points": 1
+                              }
+                        ]
+                  }
+            ]
+      }
+}

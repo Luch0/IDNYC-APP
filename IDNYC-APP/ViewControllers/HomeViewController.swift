@@ -37,7 +37,8 @@ class HomeViewController: UIViewController {
     }
     
     @objc private func documentCheckerTapped() {
-        
+        let documenttCheckerViewController = DocumentCheckerViewController()
+        navigationController?.pushViewController(documenttCheckerViewController, animated: true)
     }
     
     @objc private func benefitsTapped() {

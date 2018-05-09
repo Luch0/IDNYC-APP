@@ -19,6 +19,10 @@ class DocumentCheckerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(documentCheckerView)
+        documentCheckerView.identityTableView.delegate = self
+        documentCheckerView.residencyTableView.delegate = self
+        documentCheckerView.identityTableView.dataSource = self
+        documentCheckerView.residencyTableView.dataSource = self
         setupNavBar()
         //loadDocumentChecker()
         loadDocumentCheckerFromOnline()
@@ -52,4 +56,56 @@ class DocumentCheckerViewController: UIViewController {
         }, errorHandler: { print($0) })
     }
 
+}
+
+extension DocumentCheckerViewController: UITableViewDelegate {
+    
+}
+
+extension DocumentCheckerViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if tableView == documentCheckerView.identityTableView {
+            return identityChecker![section].type
+        } else if tableView == documentCheckerView.residencyTableView {
+            return residencyChecker![section].type
+        } else {
+            return nil
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if tableView == documentCheckerView.identityTableView {
+            return identityChecker!.count
+        } else if tableView == documentCheckerView.residencyTableView {
+            return residencyChecker!.count
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == documentCheckerView.identityTableView {
+            return identityChecker![section].documents.count
+        } else if tableView == documentCheckerView.residencyTableView {
+            return residencyChecker![section].documents.count
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let documentCell = tableView.dequeueReusableCell(withIdentifier: "document cell", for: indexPath)
+        if tableView == documentCheckerView.identityTableView {
+            documentCell.textLabel?.text = identityChecker![indexPath.section].documents[indexPath.row].document
+            return documentCell
+        } else if tableView == documentCheckerView.residencyTableView {
+            documentCell.textLabel?.text = residencyChecker![indexPath.section].documents[indexPath.row].document
+            return documentCell
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+    
 }

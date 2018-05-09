@@ -18,10 +18,22 @@ class DocumentCheckerView: UIView {
         return view
     }()
     
+    lazy var identityTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "document cell")
+        return tableView
+    }()
+    
     lazy var residencyContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .green
         return view
+    }()
+    
+    lazy var residencyTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "document cell")
+        return tableView
     }()
     
     lazy var identityLabel: UILabel = {
@@ -63,7 +75,9 @@ class DocumentCheckerView: UIView {
         setupIdentityLabel()
         setupResidencyLabel()
         setupIdentityContainer()
+        setupIdentityTableView()
         setupResidencyLabel()
+        setupResidencyTableView()
     }
     
     private func setupIdentityLabel() {
@@ -99,6 +113,17 @@ class DocumentCheckerView: UIView {
             ])
     }
     
+    private func setupIdentityTableView() {
+        identityContainer.addSubview(identityTableView)
+        identityTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            identityTableView.topAnchor.constraint(equalTo: identityContainer.topAnchor),
+            identityTableView.bottomAnchor.constraint(equalTo: identityContainer.bottomAnchor),
+            identityTableView.leadingAnchor.constraint(equalTo: identityContainer.leadingAnchor),
+            identityTableView.trailingAnchor.constraint(equalTo: identityContainer.trailingAnchor)
+            ])
+    }
+    
     private func setupResidencyContainer() {
         addSubview(residencyContainer)
         residencyContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -108,6 +133,17 @@ class DocumentCheckerView: UIView {
             residencyContainer.widthAnchor.constraint(equalTo: identityContainer.widthAnchor),
             residencyContainer.leadingAnchor.constraint(equalTo: identityContainer.trailingAnchor),
             residencyContainer.centerYAnchor.constraint(equalTo: identityContainer.centerYAnchor)
+            ])
+    }
+    
+    private func setupResidencyTableView() {
+        residencyContainer.addSubview(residencyTableView)
+        residencyTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            residencyTableView.topAnchor.constraint(equalTo: residencyContainer.topAnchor),
+            residencyTableView.bottomAnchor.constraint(equalTo: residencyContainer.bottomAnchor),
+            residencyTableView.leadingAnchor.constraint(equalTo: residencyContainer.leadingAnchor),
+            residencyTableView.trailingAnchor.constraint(equalTo: residencyContainer.trailingAnchor)
             ])
     }
     

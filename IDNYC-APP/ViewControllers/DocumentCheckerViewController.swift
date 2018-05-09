@@ -11,8 +11,16 @@ import UIKit
 class DocumentCheckerViewController: UIViewController {
 
     let documentCheckerView = DocumentCheckerView()
-    var identityChecker: [IdentityWrapper]?
-    var residencyChecker: [ResidencyWrapper]?
+    var identityChecker: [IdentityWrapper]? {
+        didSet {
+            documentCheckerView.identityTableView.reloadData()
+        }
+    }
+    var residencyChecker: [ResidencyWrapper]? {
+        didSet {
+            documentCheckerView.residencyTableView.reloadData()
+        }
+    }
     var documentChecker: DocumentChecker?
     var onlineDocumentChecker: DocumentChecker?
     
@@ -75,6 +83,7 @@ extension DocumentCheckerViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        //guard let identityChecker = identityChecker, let residencyChecker = residencyChecker else { return 0 }
         if tableView == documentCheckerView.identityTableView {
             return identityChecker!.count
         } else if tableView == documentCheckerView.residencyTableView {
@@ -106,6 +115,5 @@ extension DocumentCheckerViewController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
-    
-    
+
 }

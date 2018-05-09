@@ -10,8 +10,6 @@ import UIKit
 
 class DocumentCheckerView: UIView {
     
-    // TODO: add tableviews for each check
-    
     lazy var identityContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .orange

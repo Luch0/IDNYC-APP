@@ -31,6 +31,10 @@ class DocumentCheckerViewController: UIViewController {
         documentCheckerView.residencyTableView.delegate = self
         documentCheckerView.identityTableView.dataSource = self
         documentCheckerView.residencyTableView.dataSource = self
+//        documentCheckerView.identityTableView.rowHeight = UITableViewAutomaticDimension
+//        documentCheckerView.identityTableView.estimatedRowHeight = 140
+//        documentCheckerView.residencyTableView.rowHeight = UITableViewAutomaticDimension
+//        documentCheckerView.residencyTableView.estimatedRowHeight = 140
         setupNavBar()
         //loadDocumentChecker()
         loadDocumentCheckerFromOnline()
@@ -104,12 +108,12 @@ extension DocumentCheckerViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let documentCell = tableView.dequeueReusableCell(withIdentifier: "document cell", for: indexPath)
+        let documentCell = tableView.dequeueReusableCell(withIdentifier: "document cell", for: indexPath) as! DocumentCheckerTableViewCell
         if tableView == documentCheckerView.identityTableView {
-            documentCell.textLabel?.text = identityChecker![indexPath.section].documents[indexPath.row].document
+            documentCell.documentLabel.text = identityChecker![indexPath.section].documents[indexPath.row].document
             return documentCell
         } else if tableView == documentCheckerView.residencyTableView {
-            documentCell.textLabel?.text = residencyChecker![indexPath.section].documents[indexPath.row].document
+            documentCell.documentLabel.text = residencyChecker![indexPath.section].documents[indexPath.row].document
             return documentCell
         } else {
             return UITableViewCell()

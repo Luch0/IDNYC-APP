@@ -24,14 +24,14 @@ class DocumentCheckerView: UIView {
     
     lazy var identityTableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "document cell")
+        tableView.register(DocumentCheckerTableViewCell.self, forCellReuseIdentifier: "document cell")
         tableView.bounces = false
         return tableView
     }()
     
     lazy var residencyTableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "document cell")
+        tableView.register(DocumentCheckerTableViewCell.self, forCellReuseIdentifier: "document cell")
         tableView.bounces = false
         return tableView
     }()

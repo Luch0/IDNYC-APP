@@ -10,6 +10,7 @@
 		256B71CC8BAF5407083F9F9E /* Pods_IDNYC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1862015AA3BA468E5B475A83 /* Pods_IDNYC_APP.framework */; };
 		363D590255DBECAA5B6A4814 /* Pods_IDNYC_APPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */; };
 		7B3A6FB376ED420BAE3BADA1 /* Pods_IDNYC_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA18B394C2F2992465BE3E4 /* Pods_IDNYC_APPTests.framework */; };
+		E214757620A54888001A5B2F /* DocumentCheckerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */; };
 		E234D0BB20A14E7B00B1E4B4 /* DocumentChecker.json in Resources */ = {isa = PBXBuildFile; fileRef = E234D0BA20A14E7B00B1E4B4 /* DocumentChecker.json */; };
 		E234D0BD20A14EB400B1E4B4 /* DocumentCheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0BC20A14EB400B1E4B4 /* DocumentCheckerService.swift */; };
 		E234D0BF20A14F0D00B1E4B4 /* DocumentChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0BE20A14F0D00B1E4B4 /* DocumentChecker.swift */; };
@@ -65,6 +66,7 @@
 		5AF056D20E42FD7655C370C0 /* Pods-IDNYC-APPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPUITests/Pods-IDNYC-APPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDNYC_APPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E127D3B43D46523FC0ADE9 /* Pods-IDNYC-APPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPUITests/Pods-IDNYC-APPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerTableViewCell.swift; sourceTree = "<group>"; };
 		E234D0BA20A14E7B00B1E4B4 /* DocumentChecker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DocumentChecker.json; sourceTree = "<group>"; };
 		E234D0BC20A14EB400B1E4B4 /* DocumentCheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerService.swift; sourceTree = "<group>"; };
 		E234D0BE20A14F0D00B1E4B4 /* DocumentChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentChecker.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				E2FB86EC208F941C008083F6 /* CustomInfoView.xib */,
 				E2FB86EE208F944B008083F6 /* CustomInfoView.swift */,
+				E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */,
 				E2FB86E0208F8CAB008083F6 /* HomeView.swift */,
 				E234D0C020A1536D00B1E4B4 /* DocumentCheckerView.swift */,
 				E2FB86E2208F8CBA008083F6 /* EnrollmentCentersView.swift */,
@@ -488,6 +491,7 @@
 				E25154A4209CB6D000FB733D /* WhatIsIDNYCView.swift in Sources */,
 				E2FB86AD208F872B008083F6 /* IDNYC_APP.xcdatamodeld in Sources */,
 				E25154A2209CB6B600FB733D /* WhatIsIDNYCViewController.swift in Sources */,
+				E214757620A54888001A5B2F /* DocumentCheckerTableViewCell.swift in Sources */,
 				E234D0BF20A14F0D00B1E4B4 /* DocumentChecker.swift in Sources */,
 				E234D0BD20A14EB400B1E4B4 /* DocumentCheckerService.swift in Sources */,
 				E2FB86E5208F8CC8008083F6 /* SettingsView.swift in Sources */,

@@ -8,26 +8,43 @@
 
 import UIKit
 
-// TODO: delegation for button press, fill check and points calcualtion
+protocol DocumentCheckerTableViewCellDelegate: class {
+    func didCheckDocument(_ tag: Int)
+    func didUncheckDocument(_ tag: Int)
+}
 
 class DocumentCheckerTableViewCell: UITableViewCell {
+    
+    weak var delegate: DocumentCheckerTableViewCellDelegate?
     
     lazy var containerView: UIView = {
         let container = UIView()
         container.backgroundColor = .white
         container.layer.shadowOpacity = 1
-        container.layer.shadowOffset = CGSize(width: 0, height: 2)
+        container.layer.shadowOffset = CGSize(width: 0, height: 1)
         container.layer.shadowRadius = 1
         container.layer.shadowColor = UIColor(displayP3Red: 214/256, green: 71/256, blue: 41/256, alpha: 1.0).cgColor
         //d64729
         return container
     }()
 
-    lazy var checkBoxImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = #imageLiteral(resourceName: "unchecked")
-        return imageView
+    lazy var checkBoxButton: UIButton = {
+        let button = UIButton()
+        button.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        return button
     }()
+    
+    @objc private func buttonPressed() {
+        UIView.transition(with: checkBoxButton, duration: 0.1, options: .transitionCrossDissolve, animations: {
+            if self.checkBoxButton.imageView?.image == #imageLiteral(resourceName: "unchecked") {
+                self.checkBoxButton.setImage(#imageLiteral(resourceName: "checked"), for: .normal)
+            } else {
+                self.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+            }
+        }, completion: nil)
+        //delegate?.addedFriendToInviteList(self.tag)
+    }
     
     lazy var documentLabel: UILabel = {
         let label = UILabel()
@@ -70,14 +87,14 @@ class DocumentCheckerTableViewCell: UITableViewCell {
     }
     
     private func setupCheckBox() {
-        containerView.addSubview(checkBoxImageView)
-        checkBoxImageView.translatesAutoresizingMaskIntoConstraints = false;
+        containerView.addSubview(checkBoxButton)
+        checkBoxButton.translatesAutoresizingMaskIntoConstraints = false;
         NSLayoutConstraint.activate([
-            checkBoxImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1),
-            checkBoxImageView.heightAnchor.constraint(equalTo: checkBoxImageView.widthAnchor),
-            checkBoxImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8),
-            checkBoxImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            checkBoxImageView.bottomAnchor.constraint(lessThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor, constant: -2)
+            checkBoxButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.1),
+            checkBoxButton.heightAnchor.constraint(equalTo: checkBoxButton.widthAnchor),
+            checkBoxButton.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 4),
+            checkBoxButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 4),
+            checkBoxButton.bottomAnchor.constraint(lessThanOrEqualTo: containerView.bottomAnchor, constant: -4)
             ])
     }
     
@@ -85,10 +102,10 @@ class DocumentCheckerTableViewCell: UITableViewCell {
         containerView.addSubview(documentLabel)
         documentLabel.translatesAutoresizingMaskIntoConstraints = false;
         NSLayoutConstraint.activate([
-            documentLabel.topAnchor.constraint(equalTo: checkBoxImageView.topAnchor),
-            documentLabel.leadingAnchor.constraint(equalTo: checkBoxImageView.trailingAnchor, constant: 4),
-            documentLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -4),
-            documentLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -8),
+            documentLabel.topAnchor.constraint(equalTo: checkBoxButton.topAnchor),
+            documentLabel.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor, constant: 4),
+            documentLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -4),
+            documentLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -4),
             ])
     }
     

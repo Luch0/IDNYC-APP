@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
     private func setupNavBar() {
         navigationItem.title = "Home"
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana", size: 20)! ]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana-Bold", size: UIFont.systemFontSize)! ]
     }
     
     private func setupButtonActions() {

@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
     private func setupNavBar() {
         navigationItem.title = "Settings"
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana", size: UIFont.systemFontSize)! ]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana-Bold", size: UIFont.systemFontSize)! ]
     }
     
 }
@@ -41,6 +41,7 @@ extension SettingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settings cell", for: indexPath)
+        cell.textLabel?.font = UIFont(name: "Verdana", size: 18)!
         cell.textLabel?.text = options[indexPath.row]
         return cell
     }

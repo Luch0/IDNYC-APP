@@ -31,6 +31,8 @@ class DocumentCheckerViewController: UIViewController {
         documentCheckerView.residencyTableView.delegate = self
         documentCheckerView.identityTableView.dataSource = self
         documentCheckerView.residencyTableView.dataSource = self
+//        documentCheckerView.residencyTableView.sectionHeaderHeight = UITableViewAutomaticDimension
+//        documentCheckerView.residencyTableView.estimatedSectionHeaderHeight = 40
 //        documentCheckerView.identityTableView.rowHeight = UITableViewAutomaticDimension
 //        documentCheckerView.identityTableView.estimatedRowHeight = 140
 //        documentCheckerView.residencyTableView.rowHeight = UITableViewAutomaticDimension
@@ -63,15 +65,24 @@ class DocumentCheckerViewController: UIViewController {
             }
             self.identityChecker = onlineDocumentChecker.identity
             self.residencyChecker = onlineDocumentChecker.residency
-            dump(self.identityChecker)
-            dump(self.residencyChecker)
+            //dump(self.identityChecker)
+            //dump(self.residencyChecker)
         }, errorHandler: { print($0) })
     }
 
 }
 
 extension DocumentCheckerViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = UIFont(name: "Verdana-Bold", size: UIFont.systemFontSize)!
+//        header.textLabel?.lineBreakMode = .byWordWrapping
+//        header.textLabel?.numberOfLines = 0
+//        header.textLabel?.textColor = UIColor.orange
+    }
 }
 
 extension DocumentCheckerViewController: UITableViewDataSource {
@@ -107,8 +118,12 @@ extension DocumentCheckerViewController: UITableViewDataSource {
         }
     }
     
+    //TODO: might want to add another cell specifically for rach identification and residence
+    // think of a way to assign delegate to section&row, unlike just row
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let documentCell = tableView.dequeueReusableCell(withIdentifier: "document cell", for: indexPath) as! DocumentCheckerTableViewCell
+        documentCell.selectionStyle = .none
         if tableView == documentCheckerView.identityTableView {
             documentCell.documentLabel.text = identityChecker![indexPath.section].documents[indexPath.row].document
             return documentCell

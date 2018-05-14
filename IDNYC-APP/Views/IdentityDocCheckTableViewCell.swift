@@ -1,24 +1,24 @@
 //
-//  DocumentCheckerTableViewCell.swift
+//  IdentityDocCheckTableViewCell.swift
 //  IDNYC-APP
 //
-//  Created by Luis Calle on 5/10/18.
+//  Created by Luis Calle on 5/14/18.
 //  Copyright © 2018 Lucho. All rights reserved.
 //
 
 import UIKit
 
-protocol DocumentCheckerTableViewCellDelegate: class {
-    func didCheckDocument(row: Int, section: Int)
-    func didUncheckDocument(row: Int, section: Int)
+protocol IdentityDocCheckTableViewCellDelegate: class {
+    func didCheckIdentityDocument(_ tag: Int)
+    func didUncheckIdentityDocument(_ tag: Int)
 }
 
-class DocumentCheckerTableViewCell: UITableViewCell {
+class IdentityDocCheckTableViewCell: UITableViewCell {
     
-    weak var delegate: DocumentCheckerTableViewCellDelegate?
+    weak var delegate: IdentityDocCheckTableViewCellDelegate?
     
-    var row: Int?
-    var section: Int?
+    private var row: Int?
+    private var section: Int?
     
     lazy var containerView: UIView = {
         let container = UIView()
@@ -30,7 +30,7 @@ class DocumentCheckerTableViewCell: UITableViewCell {
         //d64729
         return container
     }()
-
+    
     lazy var checkBoxButton: UIButton = {
         let button = UIButton()
         button.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
@@ -42,12 +42,11 @@ class DocumentCheckerTableViewCell: UITableViewCell {
         UIView.transition(with: checkBoxButton, duration: 0.1, options: .transitionCrossDissolve, animations: {
             if self.checkBoxButton.imageView?.image == #imageLiteral(resourceName: "unchecked") {
                 self.checkBoxButton.setImage(#imageLiteral(resourceName: "checked"), for: .normal)
-                self.delegate?.didCheckDocument(row: self.row!, section: self.section!)
             } else {
-                self.delegate?.didUncheckDocument(row: self.row!, section: self.section!)
+                self.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
             }
         }, completion: nil)
-        //print("Section: \(section!) and row: \(row!)")
+        print("Section: \(section!) and row: \(row!)")
     }
     
     lazy var documentLabel: UILabel = {
@@ -59,7 +58,7 @@ class DocumentCheckerTableViewCell: UITableViewCell {
     }()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?){
-        super.init(style: style, reuseIdentifier: "document cell")
+        super.init(style: style, reuseIdentifier: "identity cell")
         commonInit()
     }
     
@@ -117,6 +116,5 @@ class DocumentCheckerTableViewCell: UITableViewCell {
         self.row = row
         self.section = section
     }
-    
 
 }

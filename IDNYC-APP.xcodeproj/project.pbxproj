@@ -18,6 +18,8 @@
 		E234D0C320A1538A00B1E4B4 /* DocumentCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0C220A1538A00B1E4B4 /* DocumentCheckerViewController.swift */; };
 		E25154A2209CB6B600FB733D /* WhatIsIDNYCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25154A1209CB6B600FB733D /* WhatIsIDNYCViewController.swift */; };
 		E25154A4209CB6D000FB733D /* WhatIsIDNYCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25154A3209CB6D000FB733D /* WhatIsIDNYCView.swift */; };
+		E2A7B66B20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7B66A20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift */; };
+		E2A7B66D20A9EC6100FAB784 /* ResidencyDocCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7B66C20A9EC6100FAB784 /* ResidencyDocCheckTableViewCell.swift */; };
 		E2B54268209229F500EF2C2C /* CentersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54267209229F500EF2C2C /* CentersListViewController.swift */; };
 		E2B5426A20922A1A00EF2C2C /* CentersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426920922A1A00EF2C2C /* CentersListView.swift */; };
 		E2B5426C20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */; };
@@ -75,6 +77,8 @@
 		E25154A1209CB6B600FB733D /* WhatIsIDNYCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsIDNYCViewController.swift; sourceTree = "<group>"; };
 		E25154A3209CB6D000FB733D /* WhatIsIDNYCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsIDNYCView.swift; sourceTree = "<group>"; };
 		E26C3A198C4E08287DDF6770 /* Pods-IDNYC-APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APP/Pods-IDNYC-APP.debug.xcconfig"; sourceTree = "<group>"; };
+		E2A7B66A20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityDocCheckTableViewCell.swift; sourceTree = "<group>"; };
+		E2A7B66C20A9EC6100FAB784 /* ResidencyDocCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResidencyDocCheckTableViewCell.swift; sourceTree = "<group>"; };
 		E2B54267209229F500EF2C2C /* CentersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListViewController.swift; sourceTree = "<group>"; };
 		E2B5426920922A1A00EF2C2C /* CentersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListView.swift; sourceTree = "<group>"; };
 		E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCenterTableViewCell.swift; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 				E2FB86EC208F941C008083F6 /* CustomInfoView.xib */,
 				E2FB86EE208F944B008083F6 /* CustomInfoView.swift */,
 				E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */,
+				E2A7B66A20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift */,
+				E2A7B66C20A9EC6100FAB784 /* ResidencyDocCheckTableViewCell.swift */,
 				E2FB86E0208F8CAB008083F6 /* HomeView.swift */,
 				E234D0C020A1536D00B1E4B4 /* DocumentCheckerView.swift */,
 				E2FB86E2208F8CBA008083F6 /* EnrollmentCentersView.swift */,
@@ -494,6 +500,8 @@
 				E214757620A54888001A5B2F /* DocumentCheckerTableViewCell.swift in Sources */,
 				E234D0BF20A14F0D00B1E4B4 /* DocumentChecker.swift in Sources */,
 				E234D0BD20A14EB400B1E4B4 /* DocumentCheckerService.swift in Sources */,
+				E2A7B66B20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift in Sources */,
+				E2A7B66D20A9EC6100FAB784 /* ResidencyDocCheckTableViewCell.swift in Sources */,
 				E2FB86E5208F8CC8008083F6 /* SettingsView.swift in Sources */,
 				E2FB86E9208F8D9A008083F6 /* IDNYCCentersAPIClient.swift in Sources */,
 				E234D0C320A1538A00B1E4B4 /* DocumentCheckerViewController.swift in Sources */,

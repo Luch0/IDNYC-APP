@@ -118,17 +118,20 @@ extension DocumentCheckerViewController: UITableViewDataSource {
         }
     }
     
-    //TODO: might want to add another cell specifically for rach identification and residence
-    // think of a way to assign delegate to section&row, unlike just row
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let documentCell = tableView.dequeueReusableCell(withIdentifier: "document cell", for: indexPath) as! DocumentCheckerTableViewCell
-        documentCell.selectionStyle = .none
         if tableView == documentCheckerView.identityTableView {
+            let documentCell = tableView.dequeueReusableCell(withIdentifier: "identity cell", for: indexPath) as! IdentityDocCheckTableViewCell
             documentCell.documentLabel.text = identityChecker![indexPath.section].documents[indexPath.row].document
+            documentCell.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+            documentCell.setCellRowAndSection(row: indexPath.row, section: indexPath.section)
+            documentCell.selectionStyle = .none
             return documentCell
         } else if tableView == documentCheckerView.residencyTableView {
+            let documentCell = tableView.dequeueReusableCell(withIdentifier: "residency cell", for: indexPath) as! ResidencyDocCheckTableViewCell
             documentCell.documentLabel.text = residencyChecker![indexPath.section].documents[indexPath.row].document
+            documentCell.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+            documentCell.setCellRowAndSection(row: indexPath.row, section: indexPath.section)
+            documentCell.selectionStyle = .none
             return documentCell
         } else {
             return UITableViewCell()

@@ -11,16 +11,30 @@ import UIKit
 class DocumentCheckerViewController: UIViewController {
 
     let documentCheckerView = DocumentCheckerView()
-    var identityChecker: [IdentityWrapper]? {
+    
+    var identityChecker = [IdentityWrapper]() {
         didSet {
             documentCheckerView.identityTableView.reloadData()
         }
     }
-    var residencyChecker: [ResidencyWrapper]? {
+    
+    var residencyChecker = [ResidencyWrapper]() {
         didSet {
             documentCheckerView.residencyTableView.reloadData()
         }
     }
+    
+    var checkedIdentityIndexPaths = [IndexPath]() {
+        didSet {
+            dump(checkedIdentityIndexPaths)
+        }
+    }
+    var checkedResidencyIndexPaths = [IndexPath]() {
+        didSet {
+            dump(checkedResidencyIndexPaths)
+        }
+    }
+    
     var documentChecker: DocumentChecker?
     var onlineDocumentChecker: DocumentChecker?
     
@@ -89,9 +103,9 @@ extension DocumentCheckerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if tableView == documentCheckerView.identityTableView {
-            return identityChecker![section].type
+            return identityChecker[section].type
         } else if tableView == documentCheckerView.residencyTableView {
-            return residencyChecker![section].type
+            return residencyChecker[section].type
         } else {
             return nil
         }
@@ -100,9 +114,9 @@ extension DocumentCheckerViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         //guard let identityChecker = identityChecker, let residencyChecker = residencyChecker else { return 0 }
         if tableView == documentCheckerView.identityTableView {
-            return identityChecker!.count
+            return identityChecker.count
         } else if tableView == documentCheckerView.residencyTableView {
-            return residencyChecker!.count
+            return residencyChecker.count
         } else {
             return 0
         }
@@ -110,9 +124,9 @@ extension DocumentCheckerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == documentCheckerView.identityTableView {
-            return identityChecker![section].documents.count
+            return identityChecker[section].documents.count
         } else if tableView == documentCheckerView.residencyTableView {
-            return residencyChecker![section].documents.count
+            return residencyChecker[section].documents.count
         } else {
             return 0
         }
@@ -121,20 +135,83 @@ extension DocumentCheckerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == documentCheckerView.identityTableView {
             let documentCell = tableView.dequeueReusableCell(withIdentifier: "identity cell", for: indexPath) as! IdentityDocCheckTableViewCell
-            documentCell.documentLabel.text = identityChecker![indexPath.section].documents[indexPath.row].document
-            documentCell.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+            documentCell.delegate = self
+            documentCell.documentLabel.text = "\(identityChecker[indexPath.section].documents[indexPath.row].document) (\(identityChecker[indexPath.section].documents[indexPath.row].points))"
+            if checkedIdentityIndexPaths.contains(indexPath) {
+                documentCell.checkBoxButton.setImage(#imageLiteral(resourceName: "checked"), for: .normal)
+            } else {
+                documentCell.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+            }
             documentCell.setCellRowAndSection(row: indexPath.row, section: indexPath.section)
             documentCell.selectionStyle = .none
             return documentCell
         } else if tableView == documentCheckerView.residencyTableView {
             let documentCell = tableView.dequeueReusableCell(withIdentifier: "residency cell", for: indexPath) as! ResidencyDocCheckTableViewCell
-            documentCell.documentLabel.text = residencyChecker![indexPath.section].documents[indexPath.row].document
-            documentCell.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+            documentCell.delegate = self
+            documentCell.documentLabel.text = "\(residencyChecker[indexPath.section].documents[indexPath.row].document) (\(residencyChecker[indexPath.section].documents[indexPath.row].points))"
+            if checkedResidencyIndexPaths.contains(indexPath) {
+                documentCell.checkBoxButton.setImage(#imageLiteral(resourceName: "checked"), for: .normal)
+            } else {
+                documentCell.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+            }
             documentCell.setCellRowAndSection(row: indexPath.row, section: indexPath.section)
             documentCell.selectionStyle = .none
             return documentCell
         } else {
             return UITableViewCell()
+        }
+    }
+
+}
+
+extension DocumentCheckerViewController: IdentityDocCheckTableViewCellDelegate {
+    func didCheckIdentityDocument(_ indexPath: IndexPath) {
+        checkedIdentityIndexPaths.append(indexPath)
+        let pointsTotal: Int = checkedIdentityIndexPaths.reduce(0){ $0 + identityChecker[$1.section].documents[$1.row].points }
+        if pointsTotal >= 3 {
+            documentCheckerView.identityLabel.text = "Identity 3/3"
+            documentCheckerView.identityLabel.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
+        } else {
+            documentCheckerView.identityLabel.text = "Identity \(pointsTotal)/3"
+            documentCheckerView.identityLabel.backgroundColor = .red
+        }
+    }
+    
+    func didUncheckIdentityDocument(_ indexPath: IndexPath) {
+        checkedIdentityIndexPaths = checkedIdentityIndexPaths.filter{ $0 != indexPath }
+        let pointsTotal: Int = checkedIdentityIndexPaths.reduce(0){ $0 + identityChecker[$1.section].documents[$1.row].points }
+        if pointsTotal >= 3 {
+            documentCheckerView.identityLabel.text = "Identity 3/3"
+            documentCheckerView.identityLabel.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
+        } else {
+            documentCheckerView.identityLabel.text = "Identity \(pointsTotal)/3"
+            documentCheckerView.identityLabel.backgroundColor = .red
+        }
+    }
+}
+
+extension DocumentCheckerViewController: ResidencyDocCheckTableViewCellDelegate {
+    func didCheckResidencyDocument(_ indexPath: IndexPath) {
+        checkedResidencyIndexPaths.append(indexPath)
+        let pointsTotal: Int = checkedResidencyIndexPaths.reduce(0){ $0 + residencyChecker[$1.section].documents[$1.row].points }
+        if pointsTotal >= 1 {
+            documentCheckerView.residencyLabel.text = "Residency 1/1"
+            documentCheckerView.residencyLabel.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
+        } else {
+            documentCheckerView.residencyLabel.text = "Residency \(pointsTotal)/1"
+            documentCheckerView.residencyLabel.backgroundColor = .red
+        }
+    }
+    
+    func didUncheckResidencyDocument(_ indexPath: IndexPath) {
+        checkedResidencyIndexPaths = checkedResidencyIndexPaths.filter{ $0 != indexPath }
+        let pointsTotal: Int = checkedResidencyIndexPaths.reduce(0){ $0 + residencyChecker[$1.section].documents[$1.row].points }
+        if pointsTotal >= 1 {
+            documentCheckerView.residencyLabel.text = "Residency 1/1"
+            documentCheckerView.residencyLabel.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
+        } else {
+            documentCheckerView.residencyLabel.text = "Residency \(pointsTotal)/1"
+            documentCheckerView.residencyLabel.backgroundColor = .red
         }
     }
 

@@ -38,21 +38,25 @@ class DocumentCheckerView: UIView {
     
     lazy var identityLabel: UILabel = {
         let label = UILabel()
-        label.text = "Identity"
+        label.text = "Identity 0/3"
         label.font = UIFont(name: "Verdana", size: 18)
         label.textColor = .white
-        label.backgroundColor = .green
+        label.backgroundColor = .red
         label.textAlignment = .center
+        label.layer.borderWidth = 1
+        label.layer.borderColor = UIColor.white.cgColor
         return label
     }()
     
     lazy var residencyLabel: UILabel = {
         let label = UILabel()
-        label.text = "Residency"
+        label.text = "Residency 0/1"
         label.font = UIFont(name: "Verdana", size: 18)
         label.textColor = .white
         label.backgroundColor = .red
         label.textAlignment = .center
+        label.layer.borderWidth = 1
+        label.layer.borderColor = UIColor.white.cgColor
         return label
     }()
     

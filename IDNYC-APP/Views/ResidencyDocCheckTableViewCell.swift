@@ -9,8 +9,8 @@
 import UIKit
 
 protocol ResidencyDocCheckTableViewCellDelegate: class {
-    func didCheckResidencyDocument(_ tag: Int)
-    func didUncheckResidencyDocument(_ tag: Int)
+    func didCheckResidencyDocument(_ indexPath: IndexPath)
+    func didUncheckResidencyDocument(_ indexPath: IndexPath)
 }
 
 class ResidencyDocCheckTableViewCell: UITableViewCell {
@@ -42,8 +42,12 @@ class ResidencyDocCheckTableViewCell: UITableViewCell {
         UIView.transition(with: checkBoxButton, duration: 0.1, options: .transitionCrossDissolve, animations: {
             if self.checkBoxButton.imageView?.image == #imageLiteral(resourceName: "unchecked") {
                 self.checkBoxButton.setImage(#imageLiteral(resourceName: "checked"), for: .normal)
+                let indexPath = IndexPath(row: self.row!, section: self.section!)
+                self.delegate?.didCheckResidencyDocument(indexPath)
             } else {
                 self.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+                let indexPath = IndexPath(row: self.row!, section: self.section!)
+                self.delegate?.didUncheckResidencyDocument(indexPath)
             }
         }, completion: nil)
         print("Section: \(section!) and row: \(row!)")

@@ -9,8 +9,8 @@
 import UIKit
 
 protocol IdentityDocCheckTableViewCellDelegate: class {
-    func didCheckIdentityDocument(_ tag: Int)
-    func didUncheckIdentityDocument(_ tag: Int)
+    func didCheckIdentityDocument(_ indexPath: IndexPath)
+    func didUncheckIdentityDocument(_ indexPath: IndexPath)
 }
 
 class IdentityDocCheckTableViewCell: UITableViewCell {
@@ -42,8 +42,12 @@ class IdentityDocCheckTableViewCell: UITableViewCell {
         UIView.transition(with: checkBoxButton, duration: 0.1, options: .transitionCrossDissolve, animations: {
             if self.checkBoxButton.imageView?.image == #imageLiteral(resourceName: "unchecked") {
                 self.checkBoxButton.setImage(#imageLiteral(resourceName: "checked"), for: .normal)
+                let indexPath = IndexPath(row: self.row!, section: self.section!)
+                self.delegate?.didCheckIdentityDocument(indexPath)
             } else {
                 self.checkBoxButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+                let indexPath = IndexPath(row: self.row!, section: self.section!)
+                self.delegate?.didUncheckIdentityDocument(indexPath)
             }
         }, completion: nil)
         print("Section: \(section!) and row: \(row!)")

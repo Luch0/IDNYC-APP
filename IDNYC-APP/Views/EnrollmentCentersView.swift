@@ -13,16 +13,8 @@ class EnrollmentCentersView: UIView {
     
     lazy var boroughsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-//        let cellSpacing: CGFloat = 1
-//        let numCells: CGFloat = 6
-//        let numSpaces: CGFloat = numCells + 1
-//        let itemWidth: CGFloat = ((bounds.width - (cellSpacing * numSpaces)) / numCells) * 1.5
-//        let itemHeight: CGFloat = bounds.height * 0.1
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing =  5
-//        layout.minimumLineSpacing = cellSpacing * 5
-//        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
-//        layout.sectionInset = UIEdgeInsetsMake(cellSpacing, cellSpacing, cellSpacing, cellSpacing)
+        layout.minimumLineSpacing = 5
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.register(BoroughCollectionViewCell.self, forCellWithReuseIdentifier: "boroughCell")
         collectionView.backgroundColor = .clear

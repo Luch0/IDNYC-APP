@@ -8,6 +8,9 @@
 
 import UIKit
 
+// This tableviewcell was used to plan out what both the identity and residency
+// would look like and also to test delegation with section and row
+
 protocol DocumentCheckerTableViewCellDelegate: class {
     func didCheckDocument(row: Int, section: Int)
     func didUncheckDocument(row: Int, section: Int)

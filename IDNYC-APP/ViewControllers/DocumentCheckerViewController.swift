@@ -83,13 +83,13 @@ class DocumentCheckerViewController: UIViewController {
     }
     
     private func highlightIdentityButton() {
-        self.documentCheckerView.identityButton.layer.borderWidth = 3
-        self.documentCheckerView.residencyButton.layer.borderWidth = 1
+        self.documentCheckerView.identityButton.layer.borderWidth = 1.5
+        self.documentCheckerView.residencyButton.layer.borderWidth = 0
     }
     
     private func highlightResidencyButton() {
-        self.documentCheckerView.identityButton.layer.borderWidth = 1
-        self.documentCheckerView.residencyButton.layer.borderWidth = 3
+        self.documentCheckerView.identityButton.layer.borderWidth = 0
+        self.documentCheckerView.residencyButton.layer.borderWidth = 1.5
     }
     
 //    private func loadDocumentChecker() {

@@ -42,8 +42,9 @@ class DocumentCheckerView: UIView {
         button.setTitle("Identity 0/3", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .red
-        button.layer.borderWidth = 1
+        //button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
+        //button.addBorder(toSide: .Top, withColor: UIColor.white.cgColor, andThickness: 2.0)
         return button
     }()
     
@@ -53,8 +54,9 @@ class DocumentCheckerView: UIView {
         button.setTitle("Residency 0/1", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .red
-        button.layer.borderWidth = 1
+        //button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.white.cgColor
+        //button.addBorder(toSide: .Top, withColor: UIColor.white.cgColor, andThickness: 2.0)
         return button
     }()
     

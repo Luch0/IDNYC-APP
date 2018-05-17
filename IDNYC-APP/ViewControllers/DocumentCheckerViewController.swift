@@ -45,6 +45,7 @@ class DocumentCheckerViewController: UIViewController {
         documentCheckerView.residencyTableView.delegate = self
         documentCheckerView.identityTableView.dataSource = self
         documentCheckerView.residencyTableView.dataSource = self
+        documentCheckerView.tableViewsScrollView.delegate = self
 //        documentCheckerView.residencyTableView.sectionHeaderHeight = UITableViewAutomaticDimension
 //        documentCheckerView.residencyTableView.estimatedSectionHeaderHeight = 40
 //        documentCheckerView.identityTableView.rowHeight = UITableViewAutomaticDimension
@@ -52,12 +53,43 @@ class DocumentCheckerViewController: UIViewController {
 //        documentCheckerView.residencyTableView.rowHeight = UITableViewAutomaticDimension
 //        documentCheckerView.residencyTableView.estimatedRowHeight = 140
         setupNavBar()
+        setButtonsTargets()
         //loadDocumentChecker()
         loadDocumentCheckerFromOnline()
+        highlightIdentityButton()
     }
     
     private func setupNavBar() {
         navigationItem.title = "Document Checker"
+    }
+    
+    private func setButtonsTargets() {
+        documentCheckerView.identityButton.addTarget(self, action:  #selector(clickedIdentity), for: .touchUpInside)
+        documentCheckerView.residencyButton.addTarget(self, action:  #selector(clickedResidency), for: .touchUpInside)
+    }
+    
+    @objc private func clickedIdentity() {
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+            self.documentCheckerView.tableViewsScrollView.contentOffset = CGPoint(x: 0, y: 0)
+        }, completion: nil)
+        highlightIdentityButton()
+    }
+    
+    @objc private func clickedResidency() {
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+            self.documentCheckerView.tableViewsScrollView.contentOffset = CGPoint(x: self.documentCheckerView.identityTableView.frame.width, y: 0)
+        }, completion: nil)
+        highlightResidencyButton()
+    }
+    
+    private func highlightIdentityButton() {
+        self.documentCheckerView.identityButton.layer.borderWidth = 3
+        self.documentCheckerView.residencyButton.layer.borderWidth = 1
+    }
+    
+    private func highlightResidencyButton() {
+        self.documentCheckerView.identityButton.layer.borderWidth = 1
+        self.documentCheckerView.residencyButton.layer.borderWidth = 3
     }
     
 //    private func loadDocumentChecker() {
@@ -169,11 +201,11 @@ extension DocumentCheckerViewController: IdentityDocCheckTableViewCellDelegate {
         checkedIdentityIndexPaths.append(indexPath)
         let pointsTotal: Int = checkedIdentityIndexPaths.reduce(0){ $0 + identityChecker[$1.section].documents[$1.row].points }
         if pointsTotal >= 3 {
-            documentCheckerView.identityLabel.text = "Identity 3/3"
-            documentCheckerView.identityLabel.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
+            documentCheckerView.identityButton.setTitle("Identity 3/3", for: .normal)
+            documentCheckerView.identityButton.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
         } else {
-            documentCheckerView.identityLabel.text = "Identity \(pointsTotal)/3"
-            documentCheckerView.identityLabel.backgroundColor = .red
+            documentCheckerView.identityButton.setTitle("Identity \(pointsTotal)/3", for: .normal)
+            documentCheckerView.identityButton.backgroundColor = .red
         }
     }
     
@@ -181,11 +213,11 @@ extension DocumentCheckerViewController: IdentityDocCheckTableViewCellDelegate {
         checkedIdentityIndexPaths = checkedIdentityIndexPaths.filter{ $0 != indexPath }
         let pointsTotal: Int = checkedIdentityIndexPaths.reduce(0){ $0 + identityChecker[$1.section].documents[$1.row].points }
         if pointsTotal >= 3 {
-            documentCheckerView.identityLabel.text = "Identity 3/3"
-            documentCheckerView.identityLabel.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
+            documentCheckerView.identityButton.setTitle("Identity 3/3", for: .normal)
+            documentCheckerView.identityButton.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
         } else {
-            documentCheckerView.identityLabel.text = "Identity \(pointsTotal)/3"
-            documentCheckerView.identityLabel.backgroundColor = .red
+            documentCheckerView.identityButton.setTitle("Identity \(pointsTotal)/3", for: .normal)
+            documentCheckerView.identityButton.backgroundColor = .red
         }
     }
 }
@@ -195,11 +227,11 @@ extension DocumentCheckerViewController: ResidencyDocCheckTableViewCellDelegate 
         checkedResidencyIndexPaths.append(indexPath)
         let pointsTotal: Int = checkedResidencyIndexPaths.reduce(0){ $0 + residencyChecker[$1.section].documents[$1.row].points }
         if pointsTotal >= 1 {
-            documentCheckerView.residencyLabel.text = "Residency 1/1"
-            documentCheckerView.residencyLabel.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
+            documentCheckerView.residencyButton.setTitle("Residency 1/1", for: .normal)
+            documentCheckerView.residencyButton.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
         } else {
-            documentCheckerView.residencyLabel.text = "Residency \(pointsTotal)/1"
-            documentCheckerView.residencyLabel.backgroundColor = .red
+            documentCheckerView.residencyButton.setTitle("Residency \(pointsTotal)/1", for: .normal)
+            documentCheckerView.residencyButton.backgroundColor = .red
         }
     }
     
@@ -207,12 +239,25 @@ extension DocumentCheckerViewController: ResidencyDocCheckTableViewCellDelegate 
         checkedResidencyIndexPaths = checkedResidencyIndexPaths.filter{ $0 != indexPath }
         let pointsTotal: Int = checkedResidencyIndexPaths.reduce(0){ $0 + residencyChecker[$1.section].documents[$1.row].points }
         if pointsTotal >= 1 {
-            documentCheckerView.residencyLabel.text = "Residency 1/1"
-            documentCheckerView.residencyLabel.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
+            documentCheckerView.residencyButton.setTitle("Residency 1/1", for: .normal)
+            documentCheckerView.residencyButton.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
         } else {
-            documentCheckerView.residencyLabel.text = "Residency \(pointsTotal)/1"
-            documentCheckerView.residencyLabel.backgroundColor = .red
+            documentCheckerView.residencyButton.setTitle("Residency \(pointsTotal)/1", for: .normal)
+            documentCheckerView.residencyButton.backgroundColor = .red
         }
     }
 
+}
+
+extension DocumentCheckerViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == documentCheckerView.tableViewsScrollView {
+            let index = Int(round(documentCheckerView.tableViewsScrollView.contentOffset.x/view.frame.width))
+            if index == 0 {
+                highlightIdentityButton()
+            } else {
+                highlightResidencyButton()
+            }
+        }
+    }
 }

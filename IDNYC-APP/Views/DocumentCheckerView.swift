@@ -10,7 +10,7 @@ import UIKit
 
 class DocumentCheckerView: UIView {
     
-    lazy var tableViewsScrollView: UIView = {
+    lazy var tableViewsScrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isPagingEnabled = true
         scrollView.bounces = false
@@ -36,29 +36,51 @@ class DocumentCheckerView: UIView {
         return tableView
     }()
     
-    lazy var identityLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Identity 0/3"
-        label.font = UIFont(name: "Verdana", size: 18)
-        label.textColor = .white
-        label.backgroundColor = .red
-        label.textAlignment = .center
-        label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor.white.cgColor
-        return label
+    lazy var identityButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = UIFont(name: "Verdana", size: 18)
+        button.setTitle("Identity 0/3", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .red
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.white.cgColor
+        return button
     }()
     
-    lazy var residencyLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Residency 0/1"
-        label.font = UIFont(name: "Verdana", size: 18)
-        label.textColor = .white
-        label.backgroundColor = .red
-        label.textAlignment = .center
-        label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor.white.cgColor
-        return label
+    lazy var residencyButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = UIFont(name: "Verdana", size: 18)
+        button.setTitle("Residency 0/1", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .red
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.white.cgColor
+        return button
     }()
+    
+//    lazy var identityLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "Identity 0/3"
+//        label.font = UIFont(name: "Verdana", size: 18)
+//        label.textColor = .white
+//        label.backgroundColor = .red
+//        label.textAlignment = .center
+//        label.layer.borderWidth = 1
+//        label.layer.borderColor = UIColor.white.cgColor
+//        return label
+//    }()
+//
+//    lazy var residencyLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "Residency 0/1"
+//        label.font = UIFont(name: "Verdana", size: 18)
+//        label.textColor = .white
+//        label.backgroundColor = .red
+//        label.textAlignment = .center
+//        label.layer.borderWidth = 1
+//        label.layer.borderColor = UIColor.white.cgColor
+//        return label
+//    }()
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
@@ -76,33 +98,33 @@ class DocumentCheckerView: UIView {
     }
     
     private func setupViews() {
-        setupIdentityLabel()
-        setupResidencyLabel()
+        setupIdentityButton()
+        setupResidencyButton()
         setupTableViewsScrollView()
         setupTableViewsContainer()
         setupIdentityTableView()
         setupResidencyTableView()
     }
     
-    private func setupIdentityLabel() {
-        addSubview(identityLabel)
-        identityLabel.translatesAutoresizingMaskIntoConstraints = false
+    private func setupIdentityButton() {
+        addSubview(identityButton)
+        identityButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            identityLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            identityLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            identityLabel.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
-            identityLabel.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor,multiplier: 0.1)
+            identityButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            identityButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            identityButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
+            identityButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor,multiplier: 0.1)
             ])
     }
     
-    private func setupResidencyLabel() {
-        addSubview(residencyLabel)
-        residencyLabel.translatesAutoresizingMaskIntoConstraints = false
+    private func setupResidencyButton() {
+        addSubview(residencyButton)
+        residencyButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            residencyLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            residencyLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            residencyLabel.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
-            residencyLabel.heightAnchor.constraint(equalTo: identityLabel.heightAnchor)
+            residencyButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            residencyButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            residencyButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
+            residencyButton.heightAnchor.constraint(equalTo: identityButton.heightAnchor)
             ])
     }
     
@@ -113,7 +135,7 @@ class DocumentCheckerView: UIView {
             tableViewsScrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             tableViewsScrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableViewsScrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            tableViewsScrollView.bottomAnchor.constraint(equalTo: identityLabel.topAnchor)
+            tableViewsScrollView.bottomAnchor.constraint(equalTo: identityButton.topAnchor)
             ])
     }
     

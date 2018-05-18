@@ -13,8 +13,8 @@ class WhatIsIDNYCViewController: UIViewController {
     let whatIsIDNYCView = WhatIsIDNYCView()
     
     override func viewDidLoad() {
-        view.addSubview(whatIsIDNYCView)
         super.viewDidLoad()
+        view.addSubview(whatIsIDNYCView)
         setupNavBar()
     }
     

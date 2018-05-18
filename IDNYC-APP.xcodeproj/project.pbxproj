@@ -24,6 +24,10 @@
 		E2B54268209229F500EF2C2C /* CentersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54267209229F500EF2C2C /* CentersListViewController.swift */; };
 		E2B5426A20922A1A00EF2C2C /* CentersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426920922A1A00EF2C2C /* CentersListView.swift */; };
 		E2B5426C20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */; };
+		E2DCAEE320AE7DF5003089DF /* AboutIDNYCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCAEE220AE7DF5003089DF /* AboutIDNYCViewController.swift */; };
+		E2DCAEE520AE7E0E003089DF /* AboutIDNYCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCAEE420AE7E0E003089DF /* AboutIDNYCView.swift */; };
+		E2DCAEE720AE8186003089DF /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCAEE620AE8186003089DF /* BenefitsViewController.swift */; };
+		E2DCAEE920AE819D003089DF /* BenefitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCAEE820AE819D003089DF /* BenefitsView.swift */; };
 		E2FB86A5208F872B008083F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86A4208F872B008083F6 /* AppDelegate.swift */; };
 		E2FB86AD208F872B008083F6 /* IDNYC_APP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86AB208F872B008083F6 /* IDNYC_APP.xcdatamodeld */; };
 		E2FB86AF208F872C008083F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FB86AE208F872C008083F6 /* Assets.xcassets */; };
@@ -84,6 +88,10 @@
 		E2B54267209229F500EF2C2C /* CentersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListViewController.swift; sourceTree = "<group>"; };
 		E2B5426920922A1A00EF2C2C /* CentersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListView.swift; sourceTree = "<group>"; };
 		E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCenterTableViewCell.swift; sourceTree = "<group>"; };
+		E2DCAEE220AE7DF5003089DF /* AboutIDNYCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutIDNYCViewController.swift; sourceTree = "<group>"; };
+		E2DCAEE420AE7E0E003089DF /* AboutIDNYCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutIDNYCView.swift; sourceTree = "<group>"; };
+		E2DCAEE620AE8186003089DF /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
+		E2DCAEE820AE819D003089DF /* BenefitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsView.swift; sourceTree = "<group>"; };
 		E2FB86A1208F872B008083F6 /* IDNYC-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IDNYC-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FB86A4208F872B008083F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2FB86AC208F872B008083F6 /* IDNYC_APP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IDNYC_APP.xcdatamodel; sourceTree = "<group>"; };
@@ -235,7 +243,9 @@
 			children = (
 				E2FB86DA208F8C77008083F6 /* HomeViewController.swift */,
 				E25154A1209CB6B600FB733D /* WhatIsIDNYCViewController.swift */,
+				E2DCAEE620AE8186003089DF /* BenefitsViewController.swift */,
 				E2FB86DC208F8C8C008083F6 /* EnrollmentCentersViewController.swift */,
+				E2DCAEE220AE7DF5003089DF /* AboutIDNYCViewController.swift */,
 				E2B54267209229F500EF2C2C /* CentersListViewController.swift */,
 				E234D0C220A1538A00B1E4B4 /* DocumentCheckerViewController.swift */,
 				E2FB86DE208F8C98008083F6 /* SettingsViewController.swift */,
@@ -257,8 +267,10 @@
 				E2FB86F4208FCF3B008083F6 /* BoroughCollectionViewCell.swift */,
 				E2B5426920922A1A00EF2C2C /* CentersListView.swift */,
 				E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */,
+				E2DCAEE420AE7E0E003089DF /* AboutIDNYCView.swift */,
 				E2FB86E4208F8CC8008083F6 /* SettingsView.swift */,
 				E25154A3209CB6D000FB733D /* WhatIsIDNYCView.swift */,
+				E2DCAEE820AE819D003089DF /* BenefitsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -502,6 +514,8 @@
 				E25154A2209CB6B600FB733D /* WhatIsIDNYCViewController.swift in Sources */,
 				E214757620A54888001A5B2F /* DocumentCheckerTableViewCell.swift in Sources */,
 				E234D0BF20A14F0D00B1E4B4 /* DocumentChecker.swift in Sources */,
+				E2DCAEE920AE819D003089DF /* BenefitsView.swift in Sources */,
+				E2DCAEE720AE8186003089DF /* BenefitsViewController.swift in Sources */,
 				E234D0BD20A14EB400B1E4B4 /* DocumentCheckerService.swift in Sources */,
 				E2A7B66B20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift in Sources */,
 				E2A7B66D20A9EC6100FAB784 /* ResidencyDocCheckTableViewCell.swift in Sources */,
@@ -510,9 +524,11 @@
 				E234D0C320A1538A00B1E4B4 /* DocumentCheckerViewController.swift in Sources */,
 				E2FB86A5208F872B008083F6 /* AppDelegate.swift in Sources */,
 				E2FB86E3208F8CBA008083F6 /* EnrollmentCentersView.swift in Sources */,
+				E2DCAEE320AE7DF5003089DF /* AboutIDNYCViewController.swift in Sources */,
 				E2B5426C20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift in Sources */,
 				E2FB86E7208F8D75008083F6 /* NetworkService.swift in Sources */,
 				E2FB86DB208F8C77008083F6 /* HomeViewController.swift in Sources */,
+				E2DCAEE520AE7E0E003089DF /* AboutIDNYCView.swift in Sources */,
 				E2FB86F5208FCF3B008083F6 /* BoroughCollectionViewCell.swift in Sources */,
 				E2FB86E1208F8CAB008083F6 /* HomeView.swift in Sources */,
 				E21F2A7920AD2DBB0028E591 /* UIView+AddBorder.swift in Sources */,

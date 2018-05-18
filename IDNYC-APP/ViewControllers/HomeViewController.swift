@@ -42,7 +42,8 @@ class HomeViewController: UIViewController {
     }
     
     @objc private func benefitsTapped() {
-        
+        let benefitsViewController = BenefitsViewController()
+        navigationController?.pushViewController(benefitsViewController, animated: true)
     }
 
 

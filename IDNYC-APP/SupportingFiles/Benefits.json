@@ -1,0 +1,182 @@
+{
+    "response": {
+            "benefits": [
+                  {
+                        "type": "Museums and Cultural Institutions",
+                        "description": "IDNYC cardholders are now eligible for free one-year memberships at over 35 participating institutions in 2018. Visit the Museums and Cultural Institutions page to find out more about the Museums and Cultural Institutions.",
+                  		"places":[
+                  			"American Museum of Natural History",
+							"BRIC",
+							"Bronx County Historical Society",
+							"Bronx Museum of the Arts",
+							"BAM (Brooklyn Academy of Music)",
+							"Brooklyn Children’s Museum",
+							"Carnegie Hall",
+							"Center for Performance Research",
+							"Central Park Zoo (enrollment is only available at the Bronx Zoo)",
+							"China Institute",
+							"The Drawing Center",
+							"Film Forum",
+							"Flushing Town Hall",
+							"International Print Center",
+							"Jacques Marchais Center for Tibetan Art",
+							"King Manor",
+							"Lincoln Center for the Performing Arts",
+							"Metropolitan Museum of Art",
+							"Metropolitan Opera",
+							"Museum at Eldridge Street",
+							"Museum of Arts and Design",
+							"Museum of Chinese in America",
+							"Museum of Jewish Heritage",
+							"Museum of Modern Art",
+							"Museum of the City of New York",
+							"New York Aquarium (enrollment is only available at the Bronx Zoo)",
+							"New York Botanical Garden",
+							"New York City Ballet",
+							"New York City Center",
+							"MoMA PS1",
+							"Park Avenue Armory",
+							"Pregones Theater",
+							"Prospect Park Zoo (enrollment is only available at the Bronx Zoo)",
+							"The Public Theater",
+							"Queens Museum",
+							"Queens Theatre",
+							"SculptureCenter",
+							"Snug Harbor Cultural Center & Botanical Garden",
+							"St. George Theatre",
+							"Staten Island Museum",
+							"Studio Museum in Harlem",
+							"Sugar Hill Children's Museum of Art & Storytelling",
+							"Symphony Space",
+							"Wildlife Conservation Society at the Bronx Zoo"
+						]
+                  },
+                  {
+                        "type": "Banks and Credit Unions",
+                        "description": "With your IDNYC Card, you can open a bank or credit union account at one of several financial institutions across New York City. Visit the Banks and Credit Unions page to find out more about the Banks and Credit Unions below.",
+                        "places": [
+                        	"Amalgamated Bank",
+							"USALLIANCE",
+							"Brooklyn Cooperative Federal Credit Union",
+							"Carver Federal Savings Bank",
+							"EastWest Bank",
+							"First Republic Bank",
+							"Lower East Side People's Federal Credit Union",
+							"Melrose Credit Union",
+							"Neighborhood Trust Federal Credit Union",
+							"PNC Bank",
+							"Spring Bank",
+							"University Settlement Federal Credit Union",
+							"Urban Upbound Federal Credit Union"
+						]
+                  },
+                  {
+                        "type": "Entertainment Discounts",
+                        "description": "With your IDNYC card, you will have access to exclusive entertainment discounts in New York City and nationwide. Visit the Entertainment Discounts page to find out more about the Entertainment Discounts below.",
+                        "places": [
+                        	"SoHo Playhouse",
+							"Entertainment Cruises",
+							"Chelsea Film Festival",
+							"Gulliver's Gate",
+							"New Victory Theater",
+							"New York Theatre Ballet and Ballet School NY",
+							"Alliance of Resident Theatres / New York",
+							"Sporting Events: Baseball, Basketball, Soccer and Hockey",
+							"Baruch Center for Performing Arts (BPAC)"
+						]
+                  },
+                  {
+                        "type": "Health",
+                        "description": "With your IDNYC card you can access benefits to help you stay healthy! Visit the Health page to find out more about the IDNYC card health benefits listed below.",
+                        "places":[
+                        	"Prescription Drug Discounts",
+							"NYC Health",
+							"NYC Health + Hospitals (H+H)",
+							"Supermarket Discounts"
+						]
+                  },
+                  {
+                        "type": "Fitness",
+                        "description": "With your IDNYC card, you can stay fit in every borough. Visit the Fitness page to learn more about the benefits listed below.",
+                        "places": [
+                        	"Aviator Sports and Events Center",
+							"Chelsea Piers: Skyrink & Golf Club",
+							"Bike New York",
+							"New York City Parks Department",
+							"YMCA of Greater New York",
+							"Citi Bike",
+							"New York Road Runners",
+							"Modell's Sporting Goods",
+							"Ballet School NY"
+						]
+                  },
+                  {
+                        "type": "Sporting Events",
+                        "description": "With your IDNYC card, you can get discounts on the hottest sporting events with discounts. Visit the Sporting Events page to learn more about the benefits listed below.",
+                        "places": [
+                        	"Aviator Sports and Events Center",
+							"Chelsea Piers: Skyrink & Golf Club",
+							"Bike New York",
+							"New York City Parks Department",
+							"YMCA of Greater New York",
+							"Citi Bike",
+							"New York Road Runners",
+							"Modell's Sporting Goods",
+							"Ballet School NY"
+						]
+                  },
+                  {
+                        "type": "Transportation",
+                        "description": "With your IDNYC card, you can travel across all five boroughs! Visit the Transportation page to learn more about the benefits listed below.",
+                        "places": [
+                        	"Zipcar",
+							"Citi Bike"
+						]
+                  },
+                  {
+                        "type": "Education",
+                        "description": "With your IDNYC card, you and your kids can learn just about anything with discounted classes. Visit the Education page to learn more about the benefits listed below.",
+                        "places": [
+                        	"KidPass",
+							"CourseHorse",
+							"Arts and Culture",
+							"Libraries"
+						]
+                  },
+                   {
+                        "type": "Teens & Young Adults",
+                        "description": "Use your IDNYC card to enjoy your city! Visit the Teens and Young Adults page to learn more about the benefits listed below.",
+                        "places": [
+                        	"Sporting Events: Baseball, Basketball, Soccer, and Hockey",
+							"Entertainment Benefits",
+							"Stay in Shape with IDNYC",
+							"Arts and Culture",
+							"Libraries"
+						]
+                  },
+                  {
+                        "type": "Libraries",
+                        "description": "You can use your IDNYC card at any public library in New York City. Visit the Libraries page to learn more about each library below.",
+                        "places": [
+                        	"Brooklyn Public Library Locations",
+							"Queens Library Locations",
+							"New York Public Library Locations"
+						]
+                  },
+                  {
+                        "type": "The IDNYC U.S. Veteran Designation",
+                        "description": "If you are a U.S. Veteran you can have \"Veteran\" printed on the front of your IDNYC card. Visit the IDNYC U.S. Veteran Designation page to learn more about the organizations below that accept the designation as proof of veteran status.",
+                        "places": [
+                        	"Access to veteran-specific services at the NYC Department of Small Businesses ",
+							"Discounts through the Queens Chamber of Commerce’s Queens VETS Program",
+							"Free Veterans Advantage Digital Plan"
+						]
+                  },
+                  {
+                        "type": "Animal Care Centers of New York",
+                        "description": "IDNYC cardholders will receive $25 off adoption fees for cats, dogs and rabbits at the Animal Care Centers of New York. These fees normally range from $50-$100. ACC adoptions include vaccinations, a microchip, spay/neuter, a free office visit at a participating veterinarian and a free identification tag. Animals available for adoption can be viewed on their website, or on ACC's free mobile app (available on Google Play and iTunes).",
+                         "places": []
+                  }
+            ]
+      }
+}

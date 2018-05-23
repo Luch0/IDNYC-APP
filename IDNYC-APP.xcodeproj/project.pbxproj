@@ -17,6 +17,10 @@
 		E234D0BF20A14F0D00B1E4B4 /* DocumentChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0BE20A14F0D00B1E4B4 /* DocumentChecker.swift */; };
 		E234D0C120A1536D00B1E4B4 /* DocumentCheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0C020A1536D00B1E4B4 /* DocumentCheckerView.swift */; };
 		E234D0C320A1538A00B1E4B4 /* DocumentCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0C220A1538A00B1E4B4 /* DocumentCheckerViewController.swift */; };
+		E24AB48D20B4CFEE00023EB4 /* Benefits.json in Resources */ = {isa = PBXBuildFile; fileRef = E24AB48C20B4CFEE00023EB4 /* Benefits.json */; };
+		E24AB48F20B4D04500023EB4 /* Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AB48E20B4D04500023EB4 /* Benefit.swift */; };
+		E24AB49120B4D33500023EB4 /* BenefitsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AB49020B4D33500023EB4 /* BenefitsService.swift */; };
+		E24AB49320B4DF2F00023EB4 /* BenefitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AB49220B4DF2F00023EB4 /* BenefitTableViewCell.swift */; };
 		E25154A2209CB6B600FB733D /* WhatIsIDNYCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25154A1209CB6B600FB733D /* WhatIsIDNYCViewController.swift */; };
 		E25154A4209CB6D000FB733D /* WhatIsIDNYCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25154A3209CB6D000FB733D /* WhatIsIDNYCView.swift */; };
 		E2A7B66B20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7B66A20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift */; };
@@ -80,6 +84,10 @@
 		E234D0BE20A14F0D00B1E4B4 /* DocumentChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentChecker.swift; sourceTree = "<group>"; };
 		E234D0C020A1536D00B1E4B4 /* DocumentCheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerView.swift; sourceTree = "<group>"; };
 		E234D0C220A1538A00B1E4B4 /* DocumentCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerViewController.swift; sourceTree = "<group>"; };
+		E24AB48C20B4CFEE00023EB4 /* Benefits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Benefits.json; sourceTree = "<group>"; };
+		E24AB48E20B4D04500023EB4 /* Benefit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benefit.swift; sourceTree = "<group>"; };
+		E24AB49020B4D33500023EB4 /* BenefitsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsService.swift; sourceTree = "<group>"; };
+		E24AB49220B4DF2F00023EB4 /* BenefitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitTableViewCell.swift; sourceTree = "<group>"; };
 		E25154A1209CB6B600FB733D /* WhatIsIDNYCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsIDNYCViewController.swift; sourceTree = "<group>"; };
 		E25154A3209CB6D000FB733D /* WhatIsIDNYCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsIDNYCView.swift; sourceTree = "<group>"; };
 		E26C3A198C4E08287DDF6770 /* Pods-IDNYC-APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APP/Pods-IDNYC-APP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +240,7 @@
 				E2FB86A4208F872B008083F6 /* AppDelegate.swift */,
 				E21F2A7820AD2DBB0028E591 /* UIView+AddBorder.swift */,
 				E234D0BA20A14E7B00B1E4B4 /* DocumentChecker.json */,
+				E24AB48C20B4CFEE00023EB4 /* Benefits.json */,
 				E2FB86AE208F872C008083F6 /* Assets.xcassets */,
 				E2FB86B0208F872C008083F6 /* LaunchScreen.storyboard */,
 			);
@@ -266,6 +275,7 @@
 				E2FB86E2208F8CBA008083F6 /* EnrollmentCentersView.swift */,
 				E2FB86F4208FCF3B008083F6 /* BoroughCollectionViewCell.swift */,
 				E2B5426920922A1A00EF2C2C /* CentersListView.swift */,
+				E24AB49220B4DF2F00023EB4 /* BenefitTableViewCell.swift */,
 				E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */,
 				E2DCAEE420AE7E0E003089DF /* AboutIDNYCView.swift */,
 				E2FB86E4208F8CC8008083F6 /* SettingsView.swift */,
@@ -280,6 +290,7 @@
 			children = (
 				E2FB86E6208F8D75008083F6 /* NetworkService.swift */,
 				E234D0BC20A14EB400B1E4B4 /* DocumentCheckerService.swift */,
+				E24AB49020B4D33500023EB4 /* BenefitsService.swift */,
 				E2FB86F0208FB90F008083F6 /* LocationService.swift */,
 				E2FB86E8208F8D9A008083F6 /* IDNYCCentersAPIClient.swift */,
 			);
@@ -291,6 +302,7 @@
 			children = (
 				E2FB86EA208F8DB1008083F6 /* IDNYCCenter.swift */,
 				E234D0BE20A14F0D00B1E4B4 /* DocumentChecker.swift */,
+				E24AB48E20B4D04500023EB4 /* Benefit.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -403,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24AB48D20B4CFEE00023EB4 /* Benefits.json in Resources */,
 				E234D0BB20A14E7B00B1E4B4 /* DocumentChecker.json in Resources */,
 				E2FB86B2208F872C008083F6 /* LaunchScreen.storyboard in Resources */,
 				E2FB86AF208F872C008083F6 /* Assets.xcassets in Resources */,
@@ -513,11 +526,13 @@
 				E2FB86AD208F872B008083F6 /* IDNYC_APP.xcdatamodeld in Sources */,
 				E25154A2209CB6B600FB733D /* WhatIsIDNYCViewController.swift in Sources */,
 				E214757620A54888001A5B2F /* DocumentCheckerTableViewCell.swift in Sources */,
+				E24AB48F20B4D04500023EB4 /* Benefit.swift in Sources */,
 				E234D0BF20A14F0D00B1E4B4 /* DocumentChecker.swift in Sources */,
 				E2DCAEE920AE819D003089DF /* BenefitsView.swift in Sources */,
 				E2DCAEE720AE8186003089DF /* BenefitsViewController.swift in Sources */,
 				E234D0BD20A14EB400B1E4B4 /* DocumentCheckerService.swift in Sources */,
 				E2A7B66B20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift in Sources */,
+				E24AB49320B4DF2F00023EB4 /* BenefitTableViewCell.swift in Sources */,
 				E2A7B66D20A9EC6100FAB784 /* ResidencyDocCheckTableViewCell.swift in Sources */,
 				E2FB86E5208F8CC8008083F6 /* SettingsView.swift in Sources */,
 				E2FB86E9208F8D9A008083F6 /* IDNYCCentersAPIClient.swift in Sources */,
@@ -529,6 +544,7 @@
 				E2FB86E7208F8D75008083F6 /* NetworkService.swift in Sources */,
 				E2FB86DB208F8C77008083F6 /* HomeViewController.swift in Sources */,
 				E2DCAEE520AE7E0E003089DF /* AboutIDNYCView.swift in Sources */,
+				E24AB49120B4D33500023EB4 /* BenefitsService.swift in Sources */,
 				E2FB86F5208FCF3B008083F6 /* BoroughCollectionViewCell.swift in Sources */,
 				E2FB86E1208F8CAB008083F6 /* HomeView.swift in Sources */,
 				E21F2A7920AD2DBB0028E591 /* UIView+AddBorder.swift in Sources */,

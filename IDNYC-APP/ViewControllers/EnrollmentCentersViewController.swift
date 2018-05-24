@@ -80,7 +80,7 @@ class EnrollmentCentersViewController: UIViewController {
             centerLocation.appearAnimation = .pop
             centerLocation.title = center.name
             centerLocation.snippet = "\(center.address1), \(center.city), \(center.zip)"
-            centerLocation.icon = #imageLiteral(resourceName: "centerLocationTall")
+            centerLocation.icon = #imageLiteral(resourceName: "IDNYCPin3")
             centerLocation.map = self.enrollmentCentersView.centersMapView
         }
     }

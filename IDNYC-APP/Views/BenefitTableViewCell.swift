@@ -8,6 +8,18 @@
 
 import UIKit
 
+//class ExpandingTableViewCellContent {
+//    var type: String?
+//    var description: String?
+//    var expanded: Bool
+//    
+//    init(type: String, description: String) {
+//        self.type = type
+//        self.description = description
+//        self.expanded = false
+//    }
+//}
+
 class BenefitTableViewCell: UITableViewCell {
 
     lazy var containerView: UIView = {

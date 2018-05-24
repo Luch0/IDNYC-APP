@@ -12,12 +12,15 @@ class BenefitsViewController: UIViewController {
 
     let benefitsView = BenefitsView()
     var benefits: [Benefit]?
+    var isExpandedCell = [Bool]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(benefitsView)
         benefitsView.benefitsTableView.delegate = self
         benefitsView.benefitsTableView.dataSource = self
+        benefitsView.benefitsTableView.estimatedRowHeight = 50
+        benefitsView.benefitsTableView.rowHeight = UITableViewAutomaticDimension
         setupNavBar()
         loadBenefits()
     }
@@ -28,6 +31,7 @@ class BenefitsViewController: UIViewController {
     
     private func loadBenefits() {
         benefits = BenefitsService.manager.loadBenefits(filename: "Benefits", type: "json")
+        isExpandedCell = Array(repeating: false, count: benefits!.count)
         guard benefits != nil else {
             print("Error retrieving data")
             return
@@ -37,7 +41,10 @@ class BenefitsViewController: UIViewController {
 }
 
 extension BenefitsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        isExpandedCell[indexPath.row] = !isExpandedCell[indexPath.row]
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
 }
 
 extension BenefitsViewController: UITableViewDataSource {
@@ -47,9 +54,18 @@ extension BenefitsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let benefitCell = tableView.dequeueReusableCell(withIdentifier: "benefit cell", for: indexPath) as! BenefitTableViewCell
+        benefitCell.selectionStyle = .none
         let benefit = benefits![indexPath.row]
         benefitCell.typeLabel.text = benefit.type
-        benefitCell.descriptionLabel.text = benefit.description
+        // check if cell is expanded or not
+        //benefitCell.descriptionLabel.text = isExpandedCell[indexPath.row] ? benefit.description : ""
+        if(isExpandedCell[indexPath.row]) {
+            benefitCell.arrowButton.setImage(#imageLiteral(resourceName: "up"), for: .normal)
+            benefitCell.descriptionLabel.text = benefit.description
+        } else {
+            benefitCell.arrowButton.setImage(#imageLiteral(resourceName: "down"), for: .normal)
+            benefitCell.descriptionLabel.text = ""
+        }
         return benefitCell
     }
     

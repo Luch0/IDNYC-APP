@@ -83,7 +83,7 @@ extension SettingsViewController: UITableViewDelegate {
         
         mailComposerVC.setToRecipients(["luiscalle@ac.c4q.nyc"])
         mailComposerVC.setSubject("Feedback")
-        mailComposerVC.setMessageBody("Message", isHTML: false)
+        mailComposerVC.setMessageBody("", isHTML: false)
         
         return mailComposerVC
     }

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.tintColor =  UIColor(displayP3Red: 214/256, green: 71/256, blue: 41/256, alpha: 1.0)
         view.addSubview(homeView)
         setupNavBar()
         setupButtonActions()

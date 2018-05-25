@@ -19,5 +19,5 @@ struct ResponseWrapper: Codable {
 struct Benefit: Codable {
     let type: String
     let description: String
-    let places: [String]
+    let places: [String]?
 }

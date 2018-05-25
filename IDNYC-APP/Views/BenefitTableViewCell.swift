@@ -8,18 +8,6 @@
 
 import UIKit
 
-//class ExpandingTableViewCellContent {
-//    var type: String?
-//    var description: String?
-//    var expanded: Bool
-//    
-//    init(type: String, description: String) {
-//        self.type = type
-//        self.description = description
-//        self.expanded = false
-//    }
-//}
-
 class BenefitTableViewCell: UITableViewCell {
 
     lazy var containerView: UIView = {
@@ -36,12 +24,13 @@ class BenefitTableViewCell: UITableViewCell {
     lazy var arrowButton: UIButton = {
         let button = UIButton()
         button.setImage(#imageLiteral(resourceName: "down"), for: .normal)
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        button.isUserInteractionEnabled = false
+        //button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         return button
     }()
     
-    @objc private func buttonPressed() {
-    }
+//    @objc private func buttonPressed() {
+//    }
     
     lazy var typeLabel: UILabel = {
         let label = UILabel()

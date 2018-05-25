@@ -61,7 +61,13 @@ extension BenefitsViewController: UITableViewDataSource {
         //benefitCell.descriptionLabel.text = isExpandedCell[indexPath.row] ? benefit.description : ""
         if(isExpandedCell[indexPath.row]) {
             benefitCell.arrowButton.setImage(#imageLiteral(resourceName: "up"), for: .normal)
-            benefitCell.descriptionLabel.text = benefit.description
+            if let places = benefit.places {
+                let restOfDescription = places.reduce("\n"){ $0 + "\n● " + $1 }
+                let fullDescription = "\(benefit.description)\(restOfDescription)"
+                benefitCell.descriptionLabel.text = fullDescription
+            } else {
+                benefitCell.descriptionLabel.text = benefit.description
+            }
         } else {
             benefitCell.arrowButton.setImage(#imageLiteral(resourceName: "down"), for: .normal)
             benefitCell.descriptionLabel.text = ""

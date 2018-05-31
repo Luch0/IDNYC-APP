@@ -111,4 +111,16 @@ class HomeView: UIView {
             ])
     }
     
+    func setEnglish() {
+        whatIsIDNYCButton.setTitle("What is IDNYC?", for: .normal)
+        documentCheckerButton.setTitle("Document Checker", for: .normal)
+        benefitsButton.setTitle("Benefits", for: .normal)
+    }
+    
+    func setSpanish() {
+        whatIsIDNYCButton.setTitle("¿Que es IDNYC?", for: .normal)
+        documentCheckerButton.setTitle("Chequeo de Documentos", for: .normal)
+        benefitsButton.setTitle("Beneficios", for: .normal)
+    }
+    
 }

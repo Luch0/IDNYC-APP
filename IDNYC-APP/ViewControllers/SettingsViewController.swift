@@ -10,6 +10,11 @@ import UIKit
 import MessageUI
 import SafariServices
 
+extension Notification.Name {
+    static let english = Notification.Name("English")
+    static let spanish = Notification.Name("Spanish")
+}
+
 class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
     
     let settingsView = SettingsView()
@@ -71,8 +76,10 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
         dummyTextField.resignFirstResponder()
         if LanguageUserDefaultsHelper.manager.getSelectedLanguage()! == "English" {
             navigationItem.title = "Settings"
+            NotificationCenter.default.post(name: .english, object: nil)
         } else {
             navigationItem.title = "Opciones"
+            NotificationCenter.default.post(name: .spanish, object: nil)
         }
         settingsView.settingsTableView.reloadData()
     }

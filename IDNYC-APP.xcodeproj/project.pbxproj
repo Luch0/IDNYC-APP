@@ -12,7 +12,6 @@
 		7B3A6FB376ED420BAE3BADA1 /* Pods_IDNYC_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA18B394C2F2992465BE3E4 /* Pods_IDNYC_APPTests.framework */; };
 		E20DACAB20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20DACAA20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift */; };
 		E214757620A54888001A5B2F /* DocumentCheckerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */; };
-		E21F2A7920AD2DBB0028E591 /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21F2A7820AD2DBB0028E591 /* UIView+AddBorder.swift */; };
 		E234D0BB20A14E7B00B1E4B4 /* DocumentChecker.json in Resources */ = {isa = PBXBuildFile; fileRef = E234D0BA20A14E7B00B1E4B4 /* DocumentChecker.json */; };
 		E234D0BD20A14EB400B1E4B4 /* DocumentCheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0BC20A14EB400B1E4B4 /* DocumentCheckerService.swift */; };
 		E234D0BF20A14F0D00B1E4B4 /* DocumentChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0BE20A14F0D00B1E4B4 /* DocumentChecker.swift */; };
@@ -81,7 +80,6 @@
 		79E127D3B43D46523FC0ADE9 /* Pods-IDNYC-APPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPUITests/Pods-IDNYC-APPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E20DACAA20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageUserDefaultsHelper.swift; sourceTree = "<group>"; };
 		E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerTableViewCell.swift; sourceTree = "<group>"; };
-		E21F2A7820AD2DBB0028E591 /* UIView+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddBorder.swift"; sourceTree = "<group>"; };
 		E234D0BA20A14E7B00B1E4B4 /* DocumentChecker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DocumentChecker.json; sourceTree = "<group>"; };
 		E234D0BC20A14EB400B1E4B4 /* DocumentCheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerService.swift; sourceTree = "<group>"; };
 		E234D0BE20A14F0D00B1E4B4 /* DocumentChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentChecker.swift; sourceTree = "<group>"; };
@@ -242,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				E2FB86A4208F872B008083F6 /* AppDelegate.swift */,
-				E21F2A7820AD2DBB0028E591 /* UIView+AddBorder.swift */,
 				E234D0BA20A14E7B00B1E4B4 /* DocumentChecker.json */,
 				E24AB48C20B4CFEE00023EB4 /* Benefits.json */,
 				E2FB86AE208F872C008083F6 /* Assets.xcassets */,
@@ -554,7 +551,6 @@
 				E24AB49120B4D33500023EB4 /* BenefitsService.swift in Sources */,
 				E2FB86F5208FCF3B008083F6 /* BoroughCollectionViewCell.swift in Sources */,
 				E2FB86E1208F8CAB008083F6 /* HomeView.swift in Sources */,
-				E21F2A7920AD2DBB0028E591 /* UIView+AddBorder.swift in Sources */,
 				E2FB86DF208F8C98008083F6 /* SettingsViewController.swift in Sources */,
 				E2B5426A20922A1A00EF2C2C /* CentersListView.swift in Sources */,
 				E243D2A120BFB22200627A3F /* APIKeys.swift in Sources */,

@@ -11,41 +11,42 @@ import MessageUI
 import SafariServices
 
 class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
-
+    
     let settingsView = SettingsView()
+    let languagePickerView = UIPickerView()
     var dummyTextField: UITextField!
     var currentLanguage: String!
     
-    let options:[String] = ["Change Language","About IDNYC","Feedback", "Visit Official Site"]
+    let options:[String] = ["Change Language","About IDNYC", "Feedback", "Visit Official Site"]
+    let options_es:[String] = ["Cambiar Idioma","Sobre IDNYC", "Opiniónes", "Visitar el Sitio Oficial"]
     let languages: [String] = ["English", "Español"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentLanguage = "English"
+        currentLanguage = LanguageUserDefaultsHelper.manager.getSelectedLanguage() ?? "English"
         dummyTextField = UITextField(frame: .zero)
         view.addSubview(dummyTextField)
+        view.addSubview(settingsView)
         settingsView.settingsTableView.delegate = self
         settingsView.settingsTableView.dataSource = self
-        view.addSubview(settingsView)
+        languagePickerView.delegate = self
+        languagePickerView.delegate = self
         setupLanguagePickerViewToolbar()
         setupNavBar()
     }
 
     private func setupNavBar() {
-        navigationItem.title = "Settings"
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage()! == "English" {
+            navigationItem.title = "Settings"
+        } else {
+            navigationItem.title = "Opciones"
+        }
         navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana-Bold", size: UIFont.systemFontSize)! ]
     }
     
     private func setupLanguagePickerViewToolbar() {
-        let picker = UIPickerView()
-        
-        picker.delegate = self
-        picker.delegate = self
-        
-        picker.showsSelectionIndicator = true
-        picker.delegate = self
-        picker.dataSource = self
+        languagePickerView.showsSelectionIndicator = true
         
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
@@ -58,12 +59,22 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         
-        dummyTextField.inputView = picker
+        dummyTextField.inputView = languagePickerView
         dummyTextField.inputAccessoryView = toolBar
     }
     
     @objc private func pickerDonePressed() {
         print("Done")
+        let indexPicked = languagePickerView.selectedRow(inComponent: 0)
+        currentLanguage = languages[indexPicked]
+        LanguageUserDefaultsHelper.manager.saveSelectedLanguage(language: currentLanguage)
+        dummyTextField.resignFirstResponder()
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage()! == "English" {
+            navigationItem.title = "Settings"
+        } else {
+            navigationItem.title = "Opciones"
+        }
+        settingsView.settingsTableView.reloadData()
     }
     
     @objc private func cancelPickerPressed() {
@@ -78,13 +89,13 @@ extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selection = options[indexPath.row]
         switch selection {
-        case "Change Language":
+        case "Change Language", "Cambiar Idioma":
             changeLanguagePressed()
-        case "About IDNYC":
+        case "About IDNYC", "Sobre IDNYC":
             aboutIDNYCPressed()
-        case "Feedback":
+        case "Feedback", "Opiniónes":
             feedbackPressed()
-        case "Visit Official Site":
+        case "Visit Official Site", "Visitar el Sitio Oficial":
             visitOfficialSitePressed()
         default:
             print("error")
@@ -93,6 +104,7 @@ extension SettingsViewController: UITableViewDelegate {
     
     func changeLanguagePressed() {
         print("change language pressed")
+        print(currentLanguage)
         dummyTextField.becomeFirstResponder()
 //        UIView.animate(withDuration: 0.2) {
 //            self.settingsView.languagePickerView.frame = CGRect(x: 0, y: self.view.bounds.size.height - self.settingsView.languagePickerView.bounds.size.height - (self.tabBarController?.tabBar.frame.size.height)!, width: self.settingsView.languagePickerView.bounds.size.width, height: self.settingsView.languagePickerView.bounds.size.height)
@@ -143,7 +155,11 @@ extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settings cell", for: indexPath)
         cell.textLabel?.font = UIFont(name: "Verdana", size: 18)!
-        cell.textLabel?.text = options[indexPath.row]
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage()! == "English" {
+            cell.textLabel?.text = options[indexPath.row]
+        } else {
+            cell.textLabel?.text = options_es[indexPath.row]
+        }
         return cell
     }
 }
@@ -170,6 +186,6 @@ extension SettingsViewController: UIPickerViewDataSource {
 
 extension SettingsViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("selected: \(languages[row])")
+        //print("selected: \(languages[row])")
     }
 }

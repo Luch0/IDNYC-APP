@@ -13,14 +13,21 @@ import SafariServices
 class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
 
     let settingsView = SettingsView()
+    var dummyTextField: UITextField!
+    var currentLanguage: String!
     
     let options:[String] = ["Change Language","About IDNYC","Feedback", "Visit Official Site"]
+    let languages: [String] = ["English", "Español"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentLanguage = "English"
+        dummyTextField = UITextField(frame: .zero)
+        view.addSubview(dummyTextField)
         settingsView.settingsTableView.delegate = self
         settingsView.settingsTableView.dataSource = self
         view.addSubview(settingsView)
+        setupLanguagePickerViewToolbar()
         setupNavBar()
     }
 
@@ -28,6 +35,40 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
         navigationItem.title = "Settings"
         navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana-Bold", size: UIFont.systemFontSize)! ]
+    }
+    
+    private func setupLanguagePickerViewToolbar() {
+        let picker = UIPickerView()
+        
+        picker.delegate = self
+        picker.delegate = self
+        
+        picker.showsSelectionIndicator = true
+        picker.delegate = self
+        picker.dataSource = self
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(pickerDonePressed))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPickerPressed))
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        dummyTextField.inputView = picker
+        dummyTextField.inputAccessoryView = toolBar
+    }
+    
+    @objc private func pickerDonePressed() {
+        print("Done")
+    }
+    
+    @objc private func cancelPickerPressed() {
+        print("Cancel")
+        dummyTextField.resignFirstResponder()
     }
     
 }
@@ -51,7 +92,11 @@ extension SettingsViewController: UITableViewDelegate {
     }
     
     func changeLanguagePressed() {
-        
+        print("change language pressed")
+        dummyTextField.becomeFirstResponder()
+//        UIView.animate(withDuration: 0.2) {
+//            self.settingsView.languagePickerView.frame = CGRect(x: 0, y: self.view.bounds.size.height - self.settingsView.languagePickerView.bounds.size.height - (self.tabBarController?.tabBar.frame.size.height)!, width: self.settingsView.languagePickerView.bounds.size.width, height: self.settingsView.languagePickerView.bounds.size.height)
+//        }
     }
     
     func aboutIDNYCPressed() {
@@ -64,7 +109,7 @@ extension SettingsViewController: UITableViewDelegate {
         if MFMailComposeViewController.canSendMail() {
             self.present(mailComposeViewController, animated: true, completion: nil)
         } else {
-            print("This iPhone does not have email setup!")
+            print("Email not available")
         }
     }
     
@@ -106,5 +151,25 @@ extension SettingsViewController: UITableViewDataSource {
 extension SettingsViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension SettingsViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return languages.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return languages[row]
+    }
+}
+
+extension SettingsViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("selected: \(languages[row])")
     }
 }

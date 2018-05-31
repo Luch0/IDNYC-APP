@@ -10,11 +10,22 @@ import UIKit
 
 class SettingsView: UIView {
     
+    lazy var dummyTextField: UITextField = {
+        let textField = UITextField(frame: .zero)
+        return textField
+    }()
+    
     lazy var settingsTableView: UITableView = {
         let tableView = UITableView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "settings cell")
         tableView.separatorStyle = .none
         return tableView
+    }()
+    
+    lazy var languagePickerView: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.backgroundColor = .yellow
+        return pickerView
     }()
 
     override init(frame: CGRect) {
@@ -33,7 +44,9 @@ class SettingsView: UIView {
     }
     
     private func setupViews() {
+        addSubview(dummyTextField)
         setupSettingsTableView()
+        //setupLanguagePickerView()
     }
     
     private func setupSettingsTableView() {
@@ -44,6 +57,17 @@ class SettingsView: UIView {
             settingsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             settingsTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             settingsTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+            ])
+    }
+    
+    private func setupLanguagePickerView() {
+        addSubview(languagePickerView)
+        languagePickerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            languagePickerView.topAnchor.constraint(equalTo: self.bottomAnchor),
+            languagePickerView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
+            languagePickerView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.4),
+            languagePickerView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor)
             ])
     }
 

@@ -10,6 +10,7 @@
 		256B71CC8BAF5407083F9F9E /* Pods_IDNYC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1862015AA3BA468E5B475A83 /* Pods_IDNYC_APP.framework */; };
 		363D590255DBECAA5B6A4814 /* Pods_IDNYC_APPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */; };
 		7B3A6FB376ED420BAE3BADA1 /* Pods_IDNYC_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA18B394C2F2992465BE3E4 /* Pods_IDNYC_APPTests.framework */; };
+		E20DACAB20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20DACAA20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift */; };
 		E214757620A54888001A5B2F /* DocumentCheckerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */; };
 		E21F2A7920AD2DBB0028E591 /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21F2A7820AD2DBB0028E591 /* UIView+AddBorder.swift */; };
 		E234D0BB20A14E7B00B1E4B4 /* DocumentChecker.json in Resources */ = {isa = PBXBuildFile; fileRef = E234D0BA20A14E7B00B1E4B4 /* DocumentChecker.json */; };
@@ -77,6 +78,7 @@
 		5AF056D20E42FD7655C370C0 /* Pods-IDNYC-APPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPUITests/Pods-IDNYC-APPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDNYC_APPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E127D3B43D46523FC0ADE9 /* Pods-IDNYC-APPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDNYC-APPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IDNYC-APPUITests/Pods-IDNYC-APPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E20DACAA20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageUserDefaultsHelper.swift; sourceTree = "<group>"; };
 		E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerTableViewCell.swift; sourceTree = "<group>"; };
 		E21F2A7820AD2DBB0028E591 /* UIView+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddBorder.swift"; sourceTree = "<group>"; };
 		E234D0BA20A14E7B00B1E4B4 /* DocumentChecker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DocumentChecker.json; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				E2FB86E6208F8D75008083F6 /* NetworkService.swift */,
+				E20DACAA20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift */,
 				E234D0BC20A14EB400B1E4B4 /* DocumentCheckerService.swift */,
 				E24AB49020B4D33500023EB4 /* BenefitsService.swift */,
 				E2FB86F0208FB90F008083F6 /* LocationService.swift */,
@@ -543,6 +546,7 @@
 				E2B5426C20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift in Sources */,
 				E2FB86E7208F8D75008083F6 /* NetworkService.swift in Sources */,
 				E2FB86DB208F8C77008083F6 /* HomeViewController.swift in Sources */,
+				E20DACAB20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift in Sources */,
 				E2DCAEE520AE7E0E003089DF /* AboutIDNYCView.swift in Sources */,
 				E24AB49120B4D33500023EB4 /* BenefitsService.swift in Sources */,
 				E2FB86F5208FCF3B008083F6 /* BoroughCollectionViewCell.swift in Sources */,

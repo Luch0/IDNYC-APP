@@ -18,6 +18,7 @@
 		E234D0BF20A14F0D00B1E4B4 /* DocumentChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0BE20A14F0D00B1E4B4 /* DocumentChecker.swift */; };
 		E234D0C120A1536D00B1E4B4 /* DocumentCheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0C020A1536D00B1E4B4 /* DocumentCheckerView.swift */; };
 		E234D0C320A1538A00B1E4B4 /* DocumentCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234D0C220A1538A00B1E4B4 /* DocumentCheckerViewController.swift */; };
+		E243D2A120BFB22200627A3F /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E243D2A020BFB22200627A3F /* APIKeys.swift */; };
 		E24AB48D20B4CFEE00023EB4 /* Benefits.json in Resources */ = {isa = PBXBuildFile; fileRef = E24AB48C20B4CFEE00023EB4 /* Benefits.json */; };
 		E24AB48F20B4D04500023EB4 /* Benefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AB48E20B4D04500023EB4 /* Benefit.swift */; };
 		E24AB49120B4D33500023EB4 /* BenefitsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AB49020B4D33500023EB4 /* BenefitsService.swift */; };
@@ -86,6 +87,7 @@
 		E234D0BE20A14F0D00B1E4B4 /* DocumentChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentChecker.swift; sourceTree = "<group>"; };
 		E234D0C020A1536D00B1E4B4 /* DocumentCheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerView.swift; sourceTree = "<group>"; };
 		E234D0C220A1538A00B1E4B4 /* DocumentCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerViewController.swift; sourceTree = "<group>"; };
+		E243D2A020BFB22200627A3F /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		E24AB48C20B4CFEE00023EB4 /* Benefits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Benefits.json; sourceTree = "<group>"; };
 		E24AB48E20B4D04500023EB4 /* Benefit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benefit.swift; sourceTree = "<group>"; };
 		E24AB49020B4D33500023EB4 /* BenefitsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsService.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				E2FB86E6208F8D75008083F6 /* NetworkService.swift */,
+				E243D2A020BFB22200627A3F /* APIKeys.swift */,
 				E20DACAA20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift */,
 				E234D0BC20A14EB400B1E4B4 /* DocumentCheckerService.swift */,
 				E24AB49020B4D33500023EB4 /* BenefitsService.swift */,
@@ -554,6 +557,7 @@
 				E21F2A7920AD2DBB0028E591 /* UIView+AddBorder.swift in Sources */,
 				E2FB86DF208F8C98008083F6 /* SettingsViewController.swift in Sources */,
 				E2B5426A20922A1A00EF2C2C /* CentersListView.swift in Sources */,
+				E243D2A120BFB22200627A3F /* APIKeys.swift in Sources */,
 				E2FB86F1208FB90F008083F6 /* LocationService.swift in Sources */,
 				E2FB86EF208F944B008083F6 /* CustomInfoView.swift in Sources */,
 				E2FB86EB208F8DB1008083F6 /* IDNYCCenter.swift in Sources */,

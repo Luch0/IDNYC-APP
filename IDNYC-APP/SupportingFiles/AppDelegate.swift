@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        GMSServices.provideAPIKey("AIzaSyBfzltRK2Xim_6qAhgJva_sPNYjv0997fM")
-        GMSPlacesClient.provideAPIKey("AIzaSyBfzltRK2Xim_6qAhgJva_sPNYjv0997fM")
+        GMSServices.provideAPIKey(APIKeys.GMSServicesKey)
+        GMSPlacesClient.provideAPIKey(APIKeys.GMSPlacesClientKey)
         
         let homeViewController = HomeViewController()
         let homeNavCon = UINavigationController(rootViewController: homeViewController)

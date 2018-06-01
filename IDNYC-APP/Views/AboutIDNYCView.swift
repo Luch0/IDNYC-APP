@@ -99,5 +99,21 @@ class AboutIDNYCView: UIView {
             descriptionText.bottomAnchor.constraint(equalTo: fullContentView.bottomAnchor, constant: -8),
             ])
     }
+    
+    func setSpanish() {
+        descriptionText.text = """
+        Residentes de la Ciudad de Nueva York ahora pueden inscribirse para IDNYC - una tarjeta de identificación emitida por el gobierno que está disponible para todos los residentes de la ciudad de 14 años y mayores. El estado migratorio no importa. Alcalde Bill de Blasio, anunció esta iniciativa en su Estado de la Ciudad en enero de 2014 y menos de un año más tarde con orgullo puso en marcha el mayor programa de tarjeta de identificación municipal en la nación.
+        
+        Todos los residentes de la Ciudad de Nueva York mayores de 14 años pueden obtener una tarjeta de IDNYC. Los solicitantes deben completar una solicitud y enviarlo a un centro de inscripciones IDNYC . Asimismo, los solicitantes a presentar una prueba de identidad y residencia en la ciudad de Nueva York. Se aceptan muchos tipos de documentos, todos los cuales se enumeran en la página de documentación . Debe presentar su solicitud y prueba de identidad y residencia en persona en un centro de inscripción IDNYC o un Centro de Inscripción IDNYC Pop-Up, que viaja a de toda la ciudad. Después de aplicar para la tarjeta, que será enviado a usted por correo.
+        
+        La tarjeta IDNYC es gratuita para todos los neoyorquinos que se aplican hasta el 31 de diciembre de 2018. tarjetas tienen una validez de cinco años a partir de la fecha de la solicitud es aprobada. El proceso de solicitud es accesible para personas con dominio limitado del Inglés y las personas con discapacidades.
+        
+        La tarjeta IDNYC es un documento accesible y segura que permite a los residentes acceder a servicios de la Ciudad y de la admisión subvención a edificios de la ciudad, como las escuelas. Además, la tarjeta puede ser presentada como prueba de identificación para interactuar con la policía y es una forma aceptada de identificación para abrir una cuenta bancaria en las instituciones financieras seleccionadas.
+        
+        Usted es capaz de utilizar su tarjeta de IDNYC en cualquier biblioteca pública de Nueva York. La tarjeta se puede integrar con su cuenta en el New York, Brooklyn y Queens sistemas de bibliotecas públicas. Esta es la primera vez que una sola tarjeta se puede utilizar en los tres sistemas. Para utilizar su tarjeta IDNYC en una biblioteca, pregunte a un bibliotecario o un empleado de la biblioteca en su sucursal local para conectar la tarjeta de IDNYC con su cuenta de la biblioteca o registrarse para obtener una nueva cuenta de la biblioteca y utilizar su tarjeta IDNYC como su tarjeta de la biblioteca.
+        
+        Por otra parte, una serie de beneficios adicionales están disponibles para los titulares de tarjetas IDNYC incluyendo la oportunidad de inscribirse para la membresía gratuita de un año a 40 de los principales museos de la ciudad, parques zoológicos, salas de conciertos, y los jardines botánicos. La tarjeta IDNYC ofrece un paquete completo de beneficios interesantes que incluye descuentos en entradas de cine, eventos deportivos, medicamentos recetados, centros de fitness y de salud, supermercados y atracciones de Nueva York. La tarjeta también es aceptada en una serie de bancos y cooperativas de crédito en la ciudad para abrir una cuenta bancaria.
+        """
+    }
 
 }

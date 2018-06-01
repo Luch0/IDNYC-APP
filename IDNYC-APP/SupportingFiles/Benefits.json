@@ -114,15 +114,11 @@
                         "type": "Sporting Events",
                         "description": "With your IDNYC card, you can get discounts on the hottest sporting events with discounts. Visit the Sporting Events page to learn more about the benefits listed below.",
                         "places": [
-                        	"Aviator Sports and Events Center",
-							"Chelsea Piers: Skyrink & Golf Club",
-							"Bike New York",
-							"New York City Parks Department",
-							"YMCA of Greater New York",
-							"Citi Bike",
-							"New York Road Runners",
-							"Modell's Sporting Goods",
-							"Ballet School NY"
+                            "Brooklyn Sports and Entertainment",
+                            "New York City Football Club",
+                            "IDNYC Entertainment Deals",
+                            "Modell's Sporting Goods",
+                            "Estado Fisico",
 						]
                   },
                   {

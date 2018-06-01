@@ -1,0 +1,177 @@
+{
+    "response": {
+            "benefits": [
+                  {
+                        "type": "Museos e Instituciones Culturales",
+                        "description": "Los titulares de tarjetas IDNYC ahora son elegibles para la membresía gratuita de un año a más de 35 instituciones que participan en 2018. Visita la página de Museo y la Cultura instituciones para averiguar más acerca de los museos e instituciones culturales.",
+                  		"places":[
+                  			"Museo Americano de Historia Nacional",
+							"BRIC",
+							"Bronx County Sociedad Historica",
+							"Bronx Museo de las Artes",
+							"BAM (Brooklyn Academia de Musica)",
+							"Brooklyn Museo de los Niños",
+							"Carnegie Hall",
+							"Centro para la Investigación del Rendimiento",
+							"Zoológico del Parque Central (matrícula sólo está disponible en el Zoológico del Bronx)",
+							"China Institute",
+							"The Drawing Center",
+							"Film Forum",
+							"Flushing Town Hall",
+							"International Print Center",
+							"Jacques Marchais Center for Tibetan Art",
+							"King Manor",
+							"Lincoln Center for the Performing Arts",
+							"Metropolitan Museuo de las Artes",
+							"Metropolitan Opera",
+							"Museo en Eldridge Street",
+							"Museo de Arts and Design",
+							"Museo de Chinese in America",
+							"Museo de Jewish Heritage",
+							"Museo de Modern Art",
+							"Museo de the City of New York",
+							"New York Aquarium (matrícula sólo está disponible en el Zoológico del Bronx)",
+							"New York Botanical Garden",
+							"New York City Ballet",
+							"New York City Center",
+							"MoMA PS1",
+							"Park Avenue Armory",
+							"Pregones Theater",
+							"Prospect Park Zoo (matrícula sólo está disponible en el Zoológico del Bronx)",
+							"The Public Theater",
+							"Queens Museum",
+							"Queens Theatre",
+							"SculptureCenter",
+							"Snug Harbor Cultural Center & Botanical Garden",
+							"St. George Theatre",
+							"Museo de Staten Island",
+							"Studio Museum en Harlem",
+							"Sugar Hill Children's Museum of Art & Storytelling",
+							"Symphony Space",
+							"Wildlife Conservation Society en el Zoológico del Bronx"
+						]
+                  },
+                  {
+                        "type": "Los Bancos y las Cooperativas de Crédito",
+                        "description": "Con su tarjeta IDNYC, puede abrir una cuenta de banco o cooperativa de crédito en una de varias instituciones financieras a través de la ciudad de Nueva York. Visita la página de bancos y cooperativas de crédito para obtener más información sobre los bancos y cooperativas de abajo.",
+                        "places": [
+                        	"Amalgamated Bank",
+							"USALLIANCE",
+							"Brooklyn Cooperative Federal Credit Union",
+							"Carver Federal Savings Bank",
+							"EastWest Bank",
+							"First Republic Bank",
+							"Lower East Side People's Federal Credit Union",
+							"Melrose Credit Union",
+							"Neighborhood Trust Federal Credit Union",
+							"PNC Bank",
+							"Spring Bank",
+							"University Settlement Federal Credit Union",
+							"Urban Upbound Federal Credit Union"
+						]
+                  },
+                  {
+                        "type": "Descuentos Entretenimiento",
+                        "description": "Con su tarjeta IDNYC, usted tendrá acceso a descuentos exclusivos de entretenimiento en la ciudad de Nueva York y en todo el país. Visita la página Descuentos entretenimiento para averiguar más acerca de los Descuentos Entretenimiento abajo.",
+                        "places": [
+                        	"SoHo Playhouse",
+							"Entertainment Cruises",
+							"Chelsea Film Festival",
+							"Gulliver's Gate",
+							"New Victory Theater",
+							"New York Theatre Ballet y Ballet School NY",
+							"Alliance of Resident Theatres / New York",
+							"Eventos deportivos: béisbol, baloncesto, fútbol y hockey",
+							"Baruch Center for Performing Arts (BPAC)"
+						]
+                  },
+                  {
+                        "type": "Salud",
+                        "description": "Con su tarjeta IDNYC se puede acceder a los beneficios para ayudarle a mantenerse saludable! Visita la página de Salud para averiguar más acerca de los beneficios para la salud de tarjetas IDNYC se enumeran a continuación.",
+                        "places":[
+                        	"Prescripción descuentos en medicamentos",
+							"NYC Health",
+							"NYC Health + Hospitals (H+H)",
+							"Descuentos de supermercados"
+						]
+                  },
+                  {
+                        "type": "Estado Fisico",
+                        "description": "Con su tarjeta IDNYC, puede mantenerse en forma en cada condado. Visita la página de Gimnasio para aprender más acerca de los beneficios enumerados a continuación.",
+                        "places": [
+                        	"Aviator Sports y centro de eventos",
+							"Chelsea Piers: Skyrink & Club de Golf",
+							"Bicicelta Nueva York",
+							"Departamento de Parques de la Ciudad de Nueva York",
+							"YMCA of Greater New York",
+							"Citi Bike",
+							"New York Road Runners",
+							"Modell's Sporting Goods",
+							"Ballet School NY"
+						]
+                  },
+                  {
+                        "type": "Eventos Deportivos",
+                        "description": "Con su tarjeta IDNYC, puede obtener descuentos en los eventos deportivos más calientes con descuentos. Visita la página de eventos deportivos para aprender más acerca de los beneficios enumerados a continuación.",
+                        "place": [
+                        	"Brooklyn Sports and Entertainment",
+							"New York City Football Club",
+							"IDNYC Entertainment Deals",
+							"Modell's Sporting Goods",
+							"Estado Fisico"
+						]
+                  },
+                  {
+                        "type": "Transporte",
+                        "description": "Con su tarjeta IDNYC, se puede viajar a través de los cinco condados! Visita la página de Transporte para aprender más acerca de los beneficios enumerados a continuación.",
+                        "places": [
+                        	"Zipcar",
+							"Citi Bike"
+						]
+                  },
+                  {
+                        "type": "Educación",
+                        "description": "Con su tarjeta IDNYC, usted y sus hijos pueden aprender casi cualquier cosa con clases reducidos. Visita la página de Educación para aprender más acerca de los beneficios enumerados a continuación.",
+                        "places": [
+                        	"KidPass",
+							"CourseHorse",
+							"Artes y Cultura",
+							"Bibliotecas"
+						]
+                  },
+                   {
+                        "type": "Los adolescentes y jóvenes adultos",
+                        "description": "Utilice su tarjeta de IDNYC para disfrutar de su ciudad! Visita la página de adolescentes y adultos jóvenes a aprender más acerca de los beneficios enumerados a continuación.",
+                        "places": [
+                        	"Eventos deportivos: béisbol, baloncesto, fútbol y hockey",
+							"Beneficios de entretenimiento",
+							"Mantente en forma con IDNYC",
+							"Artes and Cultura",
+							"Bibliotecas"
+						]
+                  },
+                  {
+                        "type": "Bibliotecas",
+                        "description": "Usted puede utilizar su tarjeta IDNYC en cualquier biblioteca pública en la ciudad de Nueva York. Visita la página de Bibliotecas para aprender más sobre cada biblioteca a continuación.",
+                        "places": [
+                        	"Biblioteca Pública de Brooklyn",
+							"Biblioteca de Queens",
+							"Biblioteca Pública de Nueva York"
+						]
+                  },
+                  {
+                        "type": "La Denominación de Veteranos IDNYC de EE.UU.",
+                        "description": "Si usted es un veterano de los EEUU puede tener \"Veterano\" impreso en la parte delantera de su tarjeta IDNYC. Visita la página Designación de Veteranos de EE.UU. IDNYC para aprender más sobre las organizaciones que a continuación aceptar la designación como prueba de la condición de veterano.",
+                        "places": [
+                        	"Servicios específicos de veteranos en el Departamento de Servicios de Negocios Pequeños NYC",
+							"Descuentos a través de la Cámara de Comercio de Queens del Programa VETS Queens",
+							"Veterans Advantage Digital Plan gratuito"
+						]
+                  },
+                  {
+                        "type": "Centros de Cuidado de Animales de Nueva York",
+                        "description": "Los titulares de tarjetas IDNYC recibirán $ 25 de descuento en las tarifas de adopción de perros, gatos y conejos a los Centros de Cuidado de Animales de Nueva York. Estos cargos normalmente oscilan entre $ 50- $ 100. adopciones ACC incluyen vacunas, microchip, esterilización / castración, una consulta de forma gratuita en un veterinario participante y una etiqueta de identificación gratuita. Animales disponibles para adopción se pueden ver en su página web, o en la aplicación móvil libre de ACC (disponible en Google Play e iTunes)."
+                  }
+            ]
+      }
+}

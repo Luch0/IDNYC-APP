@@ -1,0 +1,469 @@
+{
+    "response": {
+            "identity": [
+                  {
+                        "type": "Pasaporte de EE.UU.",
+                        "documents": [
+                              {
+                                    "document": "Pasaporte Estados Unidos o tarjeta de pasaporte de Estados Unidos",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Pasaporte expirado o tarjeta de pasaporte de Estados Unidos - el plazo de tres años",
+                                    "points": 2
+                              }
+                        ]
+                  },
+                  {
+                        "type": "Pasaporte Extranjero",
+                        "documents": [
+                              {
+                                    "document": "Pasaporte extranjero - legible por máquina",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Pasaporte extranjero - NO legible por máquina",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Pasaporte extranjero expirado - expirado el plazo de tres años",
+                                    "points": 2
+                              }
+                        ]
+                  },
+                  {
+                        "type": "Visa / Permisos",
+                        "documents": [
+                              {
+                                    "document": "Visa emitidas por el Departamento de Estado de Estados Unidos (con foto)",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Tarjeta de residencia permanente (Green Card) ",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Permiso de trabajo corriente de Estados Unidos",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Certificado de Ciudadanía / Naturalización",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Aviso de aprobación en el Formulario I-797, I-797A, I-797B o I-797D emitido por Servicio de Ciudadanía e Inmigración (USCIS)",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Formulario I-94 con la foto y la huella digital",
+                                    "points": 2
+                              }           
+                        ]
+                  },
+                  {
+                        "type": "Documentos de Identificación del Gobierno de EE.UU.",
+                        "documents": [
+                              {
+                                    "document": "Tarjeta de identificación del estado de Estados Unidos",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Mercante de los EEUU Mariner de credenciales",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Departamento de Estado de conducir licencia o tarjeta de identificación del conductor No-EEUU sin actual Dirección de la casa",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "EE.UU. ID Tribal",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Tarjeta IDNYC sin una dirección de la corriente (corriente o expirado el plazo de 60 días)",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Tarjeta de la Seguridad Social",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Tarjeta de acceso común",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Tarjeta de identificación de los veteranos",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Tarjeta de Identificación de Salud de Veteranos",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Beneficios tarjeta de Estado de Nueva York sin la foto",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Estado de Nueva York Electrónica de Beneficios (EBT) / Tarjeta de Identificación de Beneficios en Común (Common) con la foto",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Estado de Nueva York Departamento de Correcciones y Supervisión Comunitaria (DOCCS) Publicado Tarjeta de Identificación de Delincuentes (con fecha de 1 año)",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "MetroCard de tarifa reducida para personas mayores y personas con discapacidad",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Tarjeta de identificación de Access-A-Ride ",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Departamento de Parques y Recreación de Nueva York emitió la tarjeta de miembro Centro de Recreación",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Tarjeta de registro de votantes de Estados Unidos",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Tarjeta de Registro de Servicio Selectivo",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Certificado de nacimiento Americano",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Número de identificación de contribuyente individual para los Estados Unidos (ITIN) tarjeta",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Número de identificación de contribuyente individual de Estados Unidos (ITIN) Carta Asignación",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Certificado de nacimiento de su hijo Unidos - lista solicitante como padre biológico",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Certificado de matrimonio, pareja de hecho, unión civil, el divorcio o disolución",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Estado de Nueva York Oficina de Salud (OMH) tarjeta de identificación con foto de instalación",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Estado de Nueva York Oficina de Salud (OMH) institución mental para pacientes hospitalizados de fotos tarjeta de identificación. También prueba de residencia",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Nueva York Departamento de Policía (NYPD) Licencia Restringida arma de mano",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "Tarjeta de identificación Medicare",
+                                    "points": 1
+                              }                                   
+                        ]
+                  },
+                  {
+                        "type": "Licencia de Conductor de EE.UU.",
+                        "documents": [
+                              {
+                                    "document": "Estado de EE.UU. Licencia de conducir o ID de estudiante Permiso de fotos",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Estado de Nueva York (NYS) Departamento de Vehículos Motorizados de licencia de conducir o permiso de aprendizaje con una dirección de la ciudad de Nueva York",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "Licencia caducada una de NYS DMV conductor / permiso de aprendizaje con un permiso provisional DMV no vencido que lleva el mismo número de identificación como la licencia / permiso",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "Tarjeta de identificación del DMV Estado de Nueva York para no conductores con una dirección de la ciudad de Nueva York",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "Una tarjeta de identificación expirado NYS DMV no conductores con una tarjeta de identificación provisional DMV no vencido que lleva el mismo número de identificación como la tarjeta de identificación",
+                                    "points": 4
+                              },
+                              {
+                                    "document": "Licencia del Estado de Nueva York DMV conductor interino / tarjeta de Permiso de Aprendizaje / ID de no conductor",
+                                    "points": 3
+                              }        
+                        ]
+                  },
+                  {
+                        "type": "Licencia de Conducir Extranjera",
+                        "documents": [
+                              {
+                                    "document": "Licencia de conducir extranjera - legible por máquina ",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Licencia de conducir extranjera - NO legible por máquina ",
+                                    "points": 1
+                              }      
+                        ]
+                  },
+                  {
+                        "type": "Documentos de Identidad Para Extranjeros",
+                        "documents": [
+                              {
+                                    "document": "Tarjeta de identificación nacional extrangera - legible por máquina",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Tarjeta de identificación consular",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Extranjera tarjeta de identificación nacional - NO legible por máquina",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Tarjeta de identificación con foto militar extranjera",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Certificado de nacimiento en el extranjero",
+                                    "points": 1
+                              }      
+                        ]
+                  },
+                  {
+                        "type": "EEUU Profesional / Educación ID",
+                        "documents": [
+                              {
+                                    "document": "EE.UU., estatal o identificación de empleado del gobierno local Federal",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Tarjeta de identificación segura Pass Procurador Sistema Unificado de Cortes del Estado de NY",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Tarjeta de Identificación Profesional del Departamento de Educación del Estado de NY",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Identificación de Servicios Uniformados de los Estados Unidos",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Educativa tarjeta institución ID: media, secundaria, postsecundaria escuelas, colegios y universidades con la fecha de nacimiento",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Tarjeta de Identificación institución educativa: media, secundaria, postsecundaria escuelas, colegios y universidades sin fecha de nacimiento",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Tarjeta de Identificación del Programa de Empleo Juvenil de Verano de Nueva York",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Formulario de Verificación de Programa de Verano de Empleo Juvenil",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Certificado de estudios de Estados Unidos de alta shcool o escuela post-secundaria, colegio o universidad con la fecha de nacimiento",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Certificado de estudios de Estados Unidos de la escuela secundaria o la escuela post-secundaria, colegio o universidad sin la fecha de nacimiento",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Diploma de una escuela secundaria de Estados Unidos, el programa de equivalencia de escuela secundaria o secundaria estadounidense post, colegio o universidad con fecha de nacimiento",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Diploma de una escuela secundaria de Estados Unidos, el programa de equivalencia de escuela secundaria, o US escuela post-secundaria, colegio o universidad sin fecha de nacimiento",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Formulario de Verificación DOE estudiante emitido por escuelas del DOE (este documento todavía no está disponible, por favor revise las actualizaciones)",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Empleado, consultor o miembro de la junta tarjeta de identificación de organización situada en los Estados Unidos",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Unión de EE.UU. identificación con foto",
+                                    "points": 1
+                              }        
+                        ]
+                  }
+            ],
+            "residency": [ 
+                  {
+                        "type": "Facturas",
+                        "documents": [
+                              {
+                                    "document": "Cable, teléfono, o factura de servicios públicos (con fecha dentro de los 60 días)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Declaración, recibo o registro de una institución de salud",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Factura de seguros, declaración o registro (dueño de una casa, la vida, inquilino del, automóvil, seguro de salud, de fecha dentro de los 60 días)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Bancario, proyecto de ley cuenta financiera o tarjeta de crédito, declaración o aviso (con fecha dentro de los 60 días)",
+                                    "points": 1
+                              }     
+                        ]
+                  },
+                  {
+                        "type": "Cartas",
+                        "documents": [
+                              {
+                                    "document": "Carta de Autoridad de Vivienda de la Ciudad de Nueva York (NYCHA) (con fecha dentro de los 60 días)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta de Administración de Nueva York por la agencia de cuidado de crianza infantil Servicios (con fecha dentro de los 60 días)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta del abrigo sin hogar en NYC (debe indicar solicitante ha alojado en el refugio durante 15 días y refugio permite a los residentes a permanecer durante más de 30 días) ",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta del centro de atención residencial operado, certificado, o financiado por Estado de Nueva York Oficina para Personas con Discapacidades del Desarrollo (OPWDD), Departamento de Salud (DOH Estado de Nueva York), Estado de Nueva York o del Departamento de Salud e Higiene Mental (DOHMH NYC) Nueva York",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Aviso de la decisión o determinación de Discapacidad de Desarrollo emitido por Estado de Nueva York Oficina para Personas con Discapacidades del Desarrollo (OPWDD) y prueba de residencia para el solicitante y el cuidador",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta de confirmación de residencia de las Naciones Unidas (ONU) diplomáticos y sus familias",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta del director o persona designada por el director de un Head Start, Early Learn, o cualquier escuela NYC DOE donde está inscrito hijo del solicitante (con fecha dentro de los 60 días)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta de un director o persona designada por el director de una escuela privada o parroquial, donde solicitante o del solicitante niño es un estudiante de esta escuela (para los estudiantes y sus padres / tutores, de fecha dentro de los 60 días)",
+                                    "points": 1
+                              }        
+                        ]
+                  },
+                  {
+                        "type": "Propiedad",
+                        "documents": [
+                              {
+                                    "document": "Actual contrato de arrendamiento residencial propiedad o subarrendamiento",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Declaración de impuesto a la propiedad local (con fecha de 1 año)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Recibo de pago de la hipoteca de la propiedad (con fecha dentro de los 60 días)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "NYCHA arrendamiento y adición de aviso del alquiler",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "United States Postal Service (USPS) Cambio de Dirección de confirmación (con fecha dentro de los 60 días)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "NYC Preservación de la Vivienda y Desarrollo (HPD) Sección 8 Renta Formulario de Distribución",
+                                    "points": 1
+                              }           
+                        ]
+                  },
+                  {
+                        "type": "Otro",
+                        "documents": [
+                              {
+                                    "document": "Licencia del Estado de Nueva York DMV conductor interino, permiso de aprendizaje, o tarjeta de identificación de no conductor. También, 2 puntos de ID, incluyendo, DOB",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Estado de Nueva York Oficina de Salud (OMH) institución mental para pacientes hospitalizados de fotos tarjeta de identificación. También 1 punto de ID, incluyendo identificación con foto",
+                                    "points": 2
+                              },
+                              {
+                                    "document": "Comprobante de pago de empleo (más de 60 Días)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Formas del IRS W-2, 1099-MISC, 1095-A, 1095-B, y 1095-C (aceptan a través de 15 de abril del año siguiente al año fiscal en el formulario)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta o documento emitido por el Servicio de Impuestos Internos (IRS), o el Departamento de Impuestos y Finanzas del Estado de NY (DTF) (con fecha de 1 año)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Declaración de impuestos con el comprobante de presentación (fecha dentro de 1 año de fecha de presentación)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Citación judicial u orden judicial Publicado por Estado de Nueva York (NYC incluyendo tribunales) o corte federal (con fecha dentro de los 60 días)",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "HRA \"Respuesta a la solicitud de informe Presupuesto de cálculo\" (con fecha dentro de los 60 días) ",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Formulario de Verificación DOE estudiante emitido por escuelas del DOE (este documento todavía no está disponible, por favor revise las actualizaciones)",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Formulario de Verificación de Programa de Verano de Empleo Juvenil",
+                                    "points": 3
+                              },
+                              {
+                                    "document": "Formulario \"Verificación de la liberación\", emitido por el Departamento de Salud y Servicios Humanos, Oficina de Reubicación de Refugiados, División de Servicios para Niños",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Servicio de Inmigración y Control de Aduanas (ICE) Orden de Supervisión (con fecha de 1 año)",
+                                    "points": 1
+                              }
+                        ]
+                  },
+                  {
+                        "type": "No Dirección Estable / Sobrevivientes de Violencia Doméstica",
+                        "documents": [
+                              {
+                                    "document": "El cuidado de carta emitida por la organización sin fines de lucro o institución religiosa en NYC servir a los individuos o sobrevivientes de la violencia doméstica sin hogar. Entidad debe recibir actualmente fondos municipales. La carta debe indicar solicitante ha recibido servicios de la entidad para últimos 60 días y puede utilizar la dirección de la entidad para fines de correo (con fecha dentro de los 14 días). Dirección en la tarjeta será \"la atención de\" la organización",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta de la agencia de la ciudad, organización no lucrativa o institución religiosa en Nueva York que ofrece servicios a las personas sin domicilio (con fecha dentro de los 30 días). No hay ninguna dirección que aparezca en la tarjeta",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta de la agencia de la ciudad, organización no lucrativa o institución religiosa en Nueva York que ofrece servicios a los sobrevivientes de la violencia doméstica (con fecha dentro de los 30 días). No hay ninguna dirección o apartado de correos que aparecen en la tarjeta",
+                                    "points": 1
+                              },
+                              {
+                                    "document": "Carta expedida por un hospital o clínica de salud en la ciudad de Nueva York (con fecha dentro de los 30 días)",
+                                    "points": 1
+                              }
+                        ]
+                  }
+            ]
+      }
+}

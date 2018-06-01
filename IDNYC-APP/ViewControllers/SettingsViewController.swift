@@ -29,6 +29,7 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         currentLanguage = LanguageUserDefaultsHelper.manager.getSelectedLanguage() ?? "English"
+        LanguageUserDefaultsHelper.manager.saveSelectedLanguage(language: currentLanguage)
         dummyTextField = UITextField(frame: .zero)
         view.addSubview(dummyTextField)
         view.addSubview(settingsView)
@@ -146,7 +147,11 @@ extension SettingsViewController: UITableViewDelegate {
         mailComposerVC.mailComposeDelegate = self
         
         mailComposerVC.setToRecipients(["luiscalle@ac.c4q.nyc"])
-        mailComposerVC.setSubject("Feedback")
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
+            mailComposerVC.setSubject("Opiniónes")
+        } else {
+            mailComposerVC.setSubject("Feedback")
+        }
         mailComposerVC.setMessageBody("", isHTML: false)
         
         return mailComposerVC

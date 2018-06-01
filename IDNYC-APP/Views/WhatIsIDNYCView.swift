@@ -99,4 +99,12 @@ class WhatIsIDNYCView: UIView {
             ])
     }
     
+    func setSpanish() {
+        descriptionText.text = """
+        IDNYC es una tarjeta gratuita de identificación para todos los residentes de la Ciudad de Nueva York, lo que nos da a todos la oportunidad de mostrar lo que somos-Neoyorquinos. Como una tarjeta de identificación con foto emitida por el gobierno, IDNYC asegura la tranquilidad y el acceso a los servicios municipales que vienen de tener identificación reconocido. IDNYC beneficia a todos los residentes de la ciudad, incluidos los más vulnerables comunidades las personas sin hogar, los jóvenes, los ancianos, los inmigrantes indocumentados, el ex convicto y otros que pueden tener dificultades para obtener otro tipo de identificación emitida por el gobierno.
+        
+        los titulares de tarjetas IDNYC pueden acceder a los servicios y programas que ofrece la ciudad, así como por las empresas. IDNYC ayuda a mejorar la seguridad pública, al servir como un documento de identidad reconocido para interactuar con policía de Nueva York. También ayuda a los neoyorquinos a obtener acceso a todos los edificios municipales que proveen servicios al público y se acepta como una forma de identificación para el acceso a numerosos programas y servicios de la Ciudad. IDNYC también proporciona una serie dinámica de beneficios a los titulares de tarjetas, incluyendo una suscripción gratuita de un año en muchos de los principales museos de la ciudad, parques zoológicos, salas de conciertos, y los jardines botánicos.
+        """
+    }
+    
 }

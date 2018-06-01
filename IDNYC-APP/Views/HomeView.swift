@@ -119,7 +119,7 @@ class HomeView: UIView {
     
     func setSpanish() {
         whatIsIDNYCButton.setTitle("¿Que es IDNYC?", for: .normal)
-        documentCheckerButton.setTitle("Chequeo de Documentos", for: .normal)
+        documentCheckerButton.setTitle("Verificar Documentos", for: .normal)
         benefitsButton.setTitle("Beneficios", for: .normal)
     }
     

@@ -19,7 +19,12 @@ class WhatIsIDNYCViewController: UIViewController {
     }
     
     private func setupNavBar() {
-        navigationItem.title = "What is IDNYC?"
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
+            navigationItem.title = "¿Que es IDNYC?"
+            whatIsIDNYCView.setSpanish()
+        } else {
+            navigationItem.title = "What is IDNYC?"
+        }
     }
     
 }

@@ -19,7 +19,12 @@ class AboutIDNYCViewController: UIViewController {
     }
     
     private func setupNavBar() {
-        navigationItem.title = "About IDNYC"
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
+            navigationItem.title = "Sobre IDNYC"
+            aboutIDNYCView.setSpanish()
+        } else {
+            navigationItem.title = "About IDNYC"
+        }
     }
 
 }

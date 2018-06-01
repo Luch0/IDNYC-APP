@@ -26,11 +26,19 @@ class BenefitsViewController: UIViewController {
     }
     
     private func setupNavBar() {
-        navigationItem.title = "Benefits"
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
+            navigationItem.title = "Beneficios"
+        } else {
+            navigationItem.title = "Benefits"
+        }
     }
     
     private func loadBenefits() {
-        benefits = BenefitsService.manager.loadBenefits(filename: "Benefits", type: "json")
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
+            benefits = BenefitsService.manager.loadBenefits(filename: "Benefits_es", type: "json")
+        } else {
+            benefits = BenefitsService.manager.loadBenefits(filename: "Benefits", type: "json")
+        }
         isExpandedCell = Array(repeating: false, count: benefits!.count)
         guard benefits != nil else {
             print("Error retrieving data")

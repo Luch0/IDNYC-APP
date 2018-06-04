@@ -24,15 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let homeViewController = HomeViewController()
         let homeNavCon = UINavigationController(rootViewController: homeViewController)
-        homeViewController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "homeIcon"), tag: 1)
         
         let enrollmentCentersVC = EnrollmentCentersViewController()
         let enrollmentCentersNavCon = UINavigationController(rootViewController: enrollmentCentersVC)
-        enrollmentCentersVC.tabBarItem = UITabBarItem(title: "Centers", image: #imageLiteral(resourceName: "centersIcon"), tag: 1)
-        
+
         let settingsViewController = SettingsViewController()
         let settingsNavCon = UINavigationController(rootViewController: settingsViewController)
-        settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: #imageLiteral(resourceName: "settingsIcon"), tag: 1)
+        
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == nil  || LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "English" {
+            homeViewController.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "homeIcon"), tag: 1)
+            enrollmentCentersVC.tabBarItem = UITabBarItem(title: "Centers", image: #imageLiteral(resourceName: "centersIcon"), tag: 1)
+            settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: #imageLiteral(resourceName: "settingsIcon"), tag: 1)
+        } else {
+            homeViewController.tabBarItem = UITabBarItem(title: "Inicio", image: #imageLiteral(resourceName: "homeIcon"), tag: 1)
+            enrollmentCentersVC.tabBarItem = UITabBarItem(title: "Centros", image: #imageLiteral(resourceName: "centersIcon"), tag: 1)
+            settingsViewController.tabBarItem = UITabBarItem(title: "Opciones", image: #imageLiteral(resourceName: "settingsIcon"), tag: 1)
+        }
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [homeNavCon, enrollmentCentersNavCon, settingsNavCon]

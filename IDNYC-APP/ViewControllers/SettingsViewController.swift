@@ -77,9 +77,15 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
         dummyTextField.resignFirstResponder()
         if LanguageUserDefaultsHelper.manager.getSelectedLanguage()! == "English" {
             navigationItem.title = "Settings"
+            tabBarController?.tabBar.items?[0].title = "Home"
+            tabBarController?.tabBar.items?[1].title = "Centers"
+            tabBarController?.tabBar.items?[2].title = "Options"
             NotificationCenter.default.post(name: .english, object: nil)
         } else {
             navigationItem.title = "Opciones"
+            tabBarController?.tabBar.items?[0].title = "Inicio"
+            tabBarController?.tabBar.items?[1].title = "Centros"
+            tabBarController?.tabBar.items?[2].title = "Opciones"
             NotificationCenter.default.post(name: .spanish, object: nil)
         }
         settingsView.settingsTableView.reloadData()

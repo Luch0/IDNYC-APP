@@ -113,11 +113,11 @@
                   {
                         "type": "Eventos Deportivos",
                         "description": "Con su tarjeta IDNYC, puede obtener descuentos en los eventos deportivos más calientes con descuentos. Visita la página de eventos deportivos para aprender más acerca de los beneficios enumerados a continuación.",
-                        "place": [
-                        	"Brooklyn Sports and Entertainment",
+                        "places": [
+                        	"Brooklyn Sports y Entretenimiento",
 							"New York City Football Club",
-							"IDNYC Entertainment Deals",
-							"Modell's Sporting Goods",
+							"IDNYC Ofertas de Entretenimiento",
+							"Tienda Deportiva de Modell's",
 							"Estado Fisico"
 						]
                   },

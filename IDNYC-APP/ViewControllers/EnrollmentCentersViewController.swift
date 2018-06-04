@@ -72,6 +72,7 @@ class EnrollmentCentersViewController: UIViewController {
         //navigationItem.largeTitleDisplayMode = .automatic
         self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "Verdana-Bold", size: UIFont.systemFontSize)! ]
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "centersList"), style: .plain, target: self, action: #selector(showCentersList))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor(displayP3Red: 214/256, green: 71/256, blue: 41/256, alpha: 1.0)
     }
     
     @objc private func showCentersList() {
@@ -89,7 +90,7 @@ class EnrollmentCentersViewController: UIViewController {
             centerLocation.appearAnimation = .pop
             centerLocation.title = center.name
             centerLocation.snippet = "\(center.address1), \(center.city), \(center.zip)"
-            centerLocation.icon = #imageLiteral(resourceName: "IDNYCPin3")
+            centerLocation.icon = #imageLiteral(resourceName: "pinVerySmall")
             centerLocation.map = self.enrollmentCentersView.centersMapView
         }
     }

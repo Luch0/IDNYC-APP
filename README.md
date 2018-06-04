@@ -30,4 +30,3 @@ Find enrollment centers and more...
 ## Built with
 * [Google Maps SDK](https://cloud.google.com/maps-platform/)
 * [NYC OpenData](https://opendata.cityofnewyork.us)
-* [Firebase](https://firebase.google.com/)

@@ -67,7 +67,7 @@ class DocumentCheckerViewController: UIViewController {
         } else {
             navigationItem.title = "Document Checker"
             documentCheckerView.identityButton.setTitle("Identity 0/3", for: .normal)
-            documentCheckerView.residencyButton.setTitle("Residecia 0/1", for: .normal)
+            documentCheckerView.residencyButton.setTitle("Residecy 0/1", for: .normal)
         }
     }
     

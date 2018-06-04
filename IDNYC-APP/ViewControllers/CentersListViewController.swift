@@ -54,7 +54,7 @@ extension CentersListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let centerCell = tableView.dequeueReusableCell(withIdentifier: "center cell", for: indexPath) as! EnrollmentCenterTableViewCell
-        centerCell.configureCel(center: centers[indexPath.row])
+        centerCell.configureCell(center: centers[indexPath.row])
         return centerCell
     }
 }

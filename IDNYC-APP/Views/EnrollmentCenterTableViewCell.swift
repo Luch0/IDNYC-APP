@@ -108,17 +108,30 @@ class EnrollmentCenterTableViewCell: UITableViewCell {
             ])
     }
     
-    public func configureCel(center: IDNYCCenter) {
+    public func configureCell(center: IDNYCCenter) {
         nameLabel.text = center.name
         addressLabel.text = "\(center.address1), \(center.city), \(center.zip)"
         guard let hours = center.hours else {
-            hoursLabel.text = "Hours not available"
+            if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
+                hoursLabel.text = "Horas no Disponible"
+            } else {
+                hoursLabel.text = "Hours not available"
+            }
             return
         }
-        var formatedHours = hours.replacingOccurrences(of: "<br>", with: "\n").replacingOccurrences(of: "<b>", with: "\n").replacingOccurrences(of: "Mon, Tue, Wed, Thu, Fri", with: "Mon - Fri").replacingOccurrences(of: "Mon-Fri", with: "Mon - Fri").replacingOccurrences(of: "Monday - Friday", with: "Mon - Fri")
-        if formatedHours.hasSuffix("\n") {
-            formatedHours.removeLast()
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
+            var formatedHours = hours.replacingOccurrences(of: "<br>", with: "\n").replacingOccurrences(of: "<b>", with: "\n").replacingOccurrences(of: "Mon, Tue, Wed, Thu, Fri", with: "Lun - Vie").replacingOccurrences(of: "Mon-Fri", with: "Lun - Vie").replacingOccurrences(of: "Monday - Friday", with: "Lun - Vie").replacingOccurrences(of: "Sat", with: "Sab").replacingOccurrences(of: "Mon - Thu", with: "Lun - Jue").replacingOccurrences(of: "Mondays - Fridays", with: "Lun - Vie").replacingOccurrences(of: "Mon, Wed, Thu, Fri", with: "Lun, Mie, Jue, Vie").replacingOccurrences(of: "Tue", with: "Mar").replacingOccurrences(of: "Mon - Fri", with: "Lun - Vie").replacingOccurrences(of: "Mon-Thu", with: "Lun - Jue").replacingOccurrences(of: "Tue-Sat", with: "Mar - Sab").replacingOccurrences(of: "Mon", with: "Lun").replacingOccurrences(of: "Tue", with: "Tue").replacingOccurrences(of: "Wed", with: "Mie").replacingOccurrences(of: "Thu", with: "Jue").replacingOccurrences(of: "Fri", with: "Vie").replacingOccurrences(of: "Sat", with: "Sab").replacingOccurrences(of: "Sun", with: "Dom")
+            if formatedHours.hasSuffix("\n") {
+                formatedHours.removeLast()
+            }
+            hoursLabel.text = formatedHours
+        } else {
+            var formatedHours = hours.replacingOccurrences(of: "<br>", with: "\n").replacingOccurrences(of: "<b>", with: "\n").replacingOccurrences(of: "Mon, Tue, Wed, Thu, Fri", with: "Mon - Fri").replacingOccurrences(of: "Mon-Fri", with: "Mon - Fri").replacingOccurrences(of: "Monday - Friday", with: "Mon - Fri").replacingOccurrences(of: "Mondays - Fridays", with: "Mon - Fri")
+            if formatedHours.hasSuffix("\n") {
+                formatedHours.removeLast()
+            }
+            hoursLabel.text = formatedHours
         }
-        hoursLabel.text = formatedHours
+        return
     }
 }

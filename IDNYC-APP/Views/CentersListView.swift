@@ -14,6 +14,7 @@ class CentersListView: UIView {
         let tableView = UITableView()
         tableView.register(EnrollmentCenterTableViewCell.self, forCellReuseIdentifier: "center cell")
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         return tableView
     }()
     

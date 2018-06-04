@@ -13,15 +13,15 @@ class EnrollmentCentersViewController: UIViewController {
 
     let enrollmentCentersView = EnrollmentCentersView()
     
-    let boroughs: [String] = ["All Boroughs", "Queens", "Manhattan", "Brooklyn", "The Bronx", "Staten Island"]
+    let boroughs: [String] = ["NYC", "Queens", "Manhattan", "Brooklyn", "Bronx", "Staten Island"]
     
     var currentBorough: String = "None"
     
-    let boroughsLatAndLog:[String:(lat: Double,long: Double)] = ["All Boroughs":(40.7128, -74.0060),
+    let boroughsLatAndLog:[String:(lat: Double,long: Double)] = ["NYC":(40.7128, -74.0060),
                                                                  "Queens":(40.7282, -73.7949),
                                                                  "Manhattan":(40.7831, -73.9712),
                                                                  "Brooklyn":(40.6782, -73.9442),
-                                                                 "The Bronx":(40.8448, -73.8648),
+                                                                 "Bronx":(40.8448, -73.8648),
                                                                  "Staten Island":(40.5795, -74.1502)]
     
     var idnycCenters = [IDNYCCenter]() {
@@ -45,7 +45,12 @@ class EnrollmentCentersViewController: UIViewController {
         LocationService.manager.delegate = self
         fetchEnrollmentCenters()
         setupNavBar()
-        if let flowLayout = enrollmentCentersView.boroughsCollectionView.collectionViewLayout as? UICollectionViewFlowLayout { flowLayout.estimatedItemSize = CGSize(width: 1, height: 1) }
+        if let flowLayout = enrollmentCentersView.boroughsCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
+            flowLayout.sectionInset.left = 8
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(setToEnglish(notification:)), name: .english, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(setToSpanish(notfication:)), name: .spanish, object: nil)
     }
     
     private func fetchEnrollmentCenters() {
@@ -55,7 +60,11 @@ class EnrollmentCentersViewController: UIViewController {
     }
     
     private func setupNavBar() {
-        navigationItem.title = "Enrollment Centers"
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
+            navigationItem.title = "Centros de Inscripción"
+        } else {
+            navigationItem.title = "Enrollment Centers"
+        }
         // TODO: check if compass padding works well on all devices
         let mapInsets = UIEdgeInsets(top: 40.0, left: 0.0, bottom: 0.0, right: 0.0)
         enrollmentCentersView.centersMapView.padding = mapInsets
@@ -83,6 +92,14 @@ class EnrollmentCentersViewController: UIViewController {
             centerLocation.icon = #imageLiteral(resourceName: "IDNYCPin3")
             centerLocation.map = self.enrollmentCentersView.centersMapView
         }
+    }
+    
+    // MARK: NotificationCenter
+    @objc func setToEnglish(notification: NSNotification) {
+        navigationItem.title = "Enrollment Centers"
+    }
+    @objc func setToSpanish(notfication: NSNotification) {
+        navigationItem.title = "Centros de Inscripción"
     }
 
 }
@@ -158,8 +175,8 @@ extension EnrollmentCentersViewController: UICollectionViewDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: boroughsLatAndLog[tappedBorough]!.lat, longitude: boroughsLatAndLog[tappedBorough]!.long, zoom: 10)
         enrollmentCentersView.centersMapView.animate(to: camera)
         switch tappedBorough {
-        case "All Boroughs":
-            print("All Boroughs")
+        case "NYC":
+            print("NYC")
             filteredCenters = idnycCenters
             showCenters(centers: filteredCenters)
         case "Queens":
@@ -180,8 +197,8 @@ extension EnrollmentCentersViewController: UICollectionViewDelegate {
             print("Brooklyn")
             filteredCenters = idnycCenters.filter{ $0.city.lowercased() == "brooklyn" }
             showCenters(centers: filteredCenters)
-        case "The Bronx":
-            print("The Bronx")
+        case "Bronx":
+            print("Bronx")
             filteredCenters = idnycCenters.filter{ $0.city.lowercased() == "bronx" }
             showCenters(centers: filteredCenters)
         case "Staten Island":

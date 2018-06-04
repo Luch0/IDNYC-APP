@@ -112,6 +112,11 @@ extension SettingsViewController: UITableViewDelegate {
     
     func changeLanguagePressed() {
         print("change language pressed")
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
+            languagePickerView.selectRow(1, inComponent: 0, animated: true)
+        } else {
+            languagePickerView.selectRow(0, inComponent: 0, animated: true)
+        }
         print(currentLanguage)
         dummyTextField.becomeFirstResponder()
 //        UIView.animate(withDuration: 0.2) {

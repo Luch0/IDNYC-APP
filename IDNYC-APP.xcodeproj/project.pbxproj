@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		256B71CC8BAF5407083F9F9E /* Pods_IDNYC_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1862015AA3BA468E5B475A83 /* Pods_IDNYC_APP.framework */; };
-		363D590255DBECAA5B6A4814 /* Pods_IDNYC_APPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748B73890D46B80255467407 /* Pods_IDNYC_APPUITests.framework */; };
 		7B3A6FB376ED420BAE3BADA1 /* Pods_IDNYC_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA18B394C2F2992465BE3E4 /* Pods_IDNYC_APPTests.framework */; };
 		E20DACAB20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20DACAA20BFACED0068D7C0 /* LanguageUserDefaultsHelper.swift */; };
 		E214757620A54888001A5B2F /* DocumentCheckerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */; };
@@ -40,7 +39,6 @@
 		E2FB86AF208F872C008083F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FB86AE208F872C008083F6 /* Assets.xcassets */; };
 		E2FB86B2208F872C008083F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FB86B0208F872C008083F6 /* LaunchScreen.storyboard */; };
 		E2FB86BD208F872D008083F6 /* IDNYC_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86BC208F872D008083F6 /* IDNYC_APPTests.swift */; };
-		E2FB86C8208F872D008083F6 /* IDNYC_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86C7208F872D008083F6 /* IDNYC_APPUITests.swift */; };
 		E2FB86DB208F8C77008083F6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86DA208F8C77008083F6 /* HomeViewController.swift */; };
 		E2FB86DD208F8C8C008083F6 /* EnrollmentCentersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86DC208F8C8C008083F6 /* EnrollmentCentersViewController.swift */; };
 		E2FB86DF208F8C98008083F6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB86DE208F8C98008083F6 /* SettingsViewController.swift */; };
@@ -58,13 +56,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		E2FB86B9208F872D008083F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E2FB8699208F872B008083F6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E2FB86A0208F872B008083F6;
-			remoteInfo = "IDNYC-APP";
-		};
-		E2FB86C4208F872D008083F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E2FB8699208F872B008083F6 /* Project object */;
 			proxyType = 1;
@@ -115,9 +106,6 @@
 		E2FB86B8208F872D008083F6 /* IDNYC-APPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IDNYC-APPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FB86BC208F872D008083F6 /* IDNYC_APPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDNYC_APPTests.swift; sourceTree = "<group>"; };
 		E2FB86BE208F872D008083F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2FB86C3208F872D008083F6 /* IDNYC-APPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IDNYC-APPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2FB86C7208F872D008083F6 /* IDNYC_APPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDNYC_APPUITests.swift; sourceTree = "<group>"; };
-		E2FB86C9208F872D008083F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2FB86DA208F8C77008083F6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E2FB86DC208F8C8C008083F6 /* EnrollmentCentersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCentersViewController.swift; sourceTree = "<group>"; };
 		E2FB86DE208F8C98008083F6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -152,14 +140,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2FB86C0208F872D008083F6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				363D590255DBECAA5B6A4814 /* Pods_IDNYC_APPUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -191,7 +171,6 @@
 			children = (
 				E2FB86A3208F872B008083F6 /* IDNYC-APP */,
 				E2FB86BB208F872D008083F6 /* IDNYC-APPTests */,
-				E2FB86C6208F872D008083F6 /* IDNYC-APPUITests */,
 				E2FB86A2208F872B008083F6 /* Products */,
 				6FBA6813CCCA9A29187FCA8E /* Pods */,
 				CC85704D4941C359F509BB61 /* Frameworks */,
@@ -203,7 +182,6 @@
 			children = (
 				E2FB86A1208F872B008083F6 /* IDNYC-APP.app */,
 				E2FB86B8208F872D008083F6 /* IDNYC-APPTests.xctest */,
-				E2FB86C3208F872D008083F6 /* IDNYC-APPUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,23 +209,14 @@
 			path = "IDNYC-APPTests";
 			sourceTree = "<group>";
 		};
-		E2FB86C6208F872D008083F6 /* IDNYC-APPUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E2FB86C7208F872D008083F6 /* IDNYC_APPUITests.swift */,
-				E2FB86C9208F872D008083F6 /* Info.plist */,
-			);
-			path = "IDNYC-APPUITests";
-			sourceTree = "<group>";
-		};
 		E2FB86D5208F8B8E008083F6 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				E2FB86A4208F872B008083F6 /* AppDelegate.swift */,
 				E234D0BA20A14E7B00B1E4B4 /* DocumentChecker.json */,
-				E2B2504F20C1D27D0084FF0C /* Benefits_es.json */,
 				E2B2505020C1D27D0084FF0C /* DocumentChecker_es.json */,
 				E24AB48C20B4CFEE00023EB4 /* Benefits.json */,
+				E2B2504F20C1D27D0084FF0C /* Benefits_es.json */,
 				E2FB86AE208F872C008083F6 /* Assets.xcassets */,
 				E2FB86B0208F872C008083F6 /* LaunchScreen.storyboard */,
 			);
@@ -357,25 +326,6 @@
 			productReference = E2FB86B8208F872D008083F6 /* IDNYC-APPTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E2FB86C2208F872D008083F6 /* IDNYC-APPUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E2FB86D2208F872D008083F6 /* Build configuration list for PBXNativeTarget "IDNYC-APPUITests" */;
-			buildPhases = (
-				9183359DBF98730ED8222043 /* [CP] Check Pods Manifest.lock */,
-				E2FB86BF208F872D008083F6 /* Sources */,
-				E2FB86C0208F872D008083F6 /* Frameworks */,
-				E2FB86C1208F872D008083F6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E2FB86C5208F872D008083F6 /* PBXTargetDependency */,
-			);
-			name = "IDNYC-APPUITests";
-			productName = "IDNYC-APPUITests";
-			productReference = E2FB86C3208F872D008083F6 /* IDNYC-APPUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -390,10 +340,6 @@
 						CreatedOnToolsVersion = 9.3;
 					};
 					E2FB86B7208F872D008083F6 = {
-						CreatedOnToolsVersion = 9.3;
-						TestTargetID = E2FB86A0208F872B008083F6;
-					};
-					E2FB86C2208F872D008083F6 = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = E2FB86A0208F872B008083F6;
 					};
@@ -414,7 +360,6 @@
 			targets = (
 				E2FB86A0208F872B008083F6 /* IDNYC-APP */,
 				E2FB86B7208F872D008083F6 /* IDNYC-APPTests */,
-				E2FB86C2208F872D008083F6 /* IDNYC-APPUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -435,13 +380,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E2FB86B6208F872D008083F6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2FB86C1208F872D008083F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -487,24 +425,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IDNYC-APP/Pods-IDNYC-APP-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9183359DBF98730ED8222043 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-IDNYC-APPUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D4A2539818F5BAF72F4115C9 /* [CP] Check Pods Manifest.lock */ = {
@@ -578,14 +498,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2FB86BF208F872D008083F6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E2FB86C8208F872D008083F6 /* IDNYC_APPUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -593,11 +505,6 @@
 			isa = PBXTargetDependency;
 			target = E2FB86A0208F872B008083F6 /* IDNYC-APP */;
 			targetProxy = E2FB86B9208F872D008083F6 /* PBXContainerItemProxy */;
-		};
-		E2FB86C5208F872D008083F6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E2FB86A0208F872B008083F6 /* IDNYC-APP */;
-			targetProxy = E2FB86C4208F872D008083F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -807,46 +714,6 @@
 			};
 			name = Release;
 		};
-		E2FB86D3208F872D008083F6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79E127D3B43D46523FC0ADE9 /* Pods-IDNYC-APPUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "IDNYC-APPUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Lucho.IDNYC-APPUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "IDNYC-APP";
-			};
-			name = Debug;
-		};
-		E2FB86D4208F872D008083F6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AF056D20E42FD7655C370C0 /* Pods-IDNYC-APPUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "IDNYC-APPUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Lucho.IDNYC-APPUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "IDNYC-APP";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -873,15 +740,6 @@
 			buildConfigurations = (
 				E2FB86D0208F872D008083F6 /* Debug */,
 				E2FB86D1208F872D008083F6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E2FB86D2208F872D008083F6 /* Build configuration list for PBXNativeTarget "IDNYC-APPUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E2FB86D3208F872D008083F6 /* Debug */,
-				E2FB86D4208F872D008083F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

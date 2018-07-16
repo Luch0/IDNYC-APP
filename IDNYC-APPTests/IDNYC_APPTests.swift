@@ -21,15 +21,61 @@ class IDNYC_APPTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetEnrollmentCenters() {
+        let exp = expectation(description: "enrollment centers received")
+        let fullUrl = "https://data.cityofnewyork.us/resource/umtz-d4sd.json"
+        guard let url = URL(string: fullUrl) else {
+            XCTFail("bad URL")
+            return
+        }
+        let urlRequest = URLRequest(url: url)
+        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                XCTFail(error.localizedDescription)
+            } else if let data = data {
+                do {
+                    let _ = try JSONDecoder().decode([IDNYCCenter].self, from: data)
+                    exp.fulfill()
+                }
+                catch let error {
+                    XCTFail(error.localizedDescription)
+                }
+            }
+        }.resume()
+        wait(for: [exp], timeout: 10.0)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetDocumentCheckerFromJsonFile() {
+        if let pathname = Bundle.main.path(forResource: "DocumentChecker", ofType: "json") {
+            guard let data = FileManager.default.contents(atPath: pathname) else {
+                XCTFail("Could not load from json file")
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let _ = try decoder.decode(DocumentCheckerResponse.self, from: data)
+            } catch let error {
+                XCTFail(error.localizedDescription)
+            }
+        } else {
+            XCTFail("could not get pathname for DocumentChecker.json")
+        }
+    }
+    
+    func testGetBenefitsFromJsonFile() {
+        if let pathname = Bundle.main.path(forResource: "Benefits", ofType: "json") {
+            guard let data = FileManager.default.contents(atPath: pathname) else {
+                XCTFail("Could not load from json file")
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let _ = try decoder.decode(BenefitsResponse.self, from: data)
+            } catch let error {
+                XCTFail(error.localizedDescription)
+            }
+        } else {
+            XCTFail("could not get pathname for Benefits.json")
         }
     }
     

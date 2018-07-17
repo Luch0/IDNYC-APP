@@ -36,7 +36,6 @@ class NetworkService {
                     errorHandler(error)
                 }
                 completionHandler(data)
-                
             }
             }.resume()
     }

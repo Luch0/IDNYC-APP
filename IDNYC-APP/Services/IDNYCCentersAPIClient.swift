@@ -13,7 +13,7 @@ struct IDNYCCentersAPIClient {
     private init() {}
     static let manager = IDNYCCentersAPIClient()
     
-    func getEnrollmetCenters(with zipCode: String, completionHandler: @escaping ([IDNYCCenter]) -> Void, errorHandler: @escaping (Error) -> Void) {
+    func getEnrollmetCenters(completionHandler: @escaping ([IDNYCCenter]) -> Void, errorHandler: @escaping (Error) -> Void) {
         let fullUrl = "https://data.cityofnewyork.us/resource/umtz-d4sd.json"
         guard let url = URL(string: fullUrl) else {
             errorHandler(AppError.badURL(str: fullUrl))

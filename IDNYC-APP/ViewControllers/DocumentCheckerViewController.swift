@@ -29,6 +29,7 @@ class DocumentCheckerViewController: UIViewController {
             dump(checkedIdentityIndexPaths)
         }
     }
+    
     var checkedResidencyIndexPaths = [IndexPath]() {
         didSet {
             dump(checkedResidencyIndexPaths)

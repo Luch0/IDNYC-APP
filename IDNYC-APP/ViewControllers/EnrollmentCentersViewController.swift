@@ -54,7 +54,7 @@ class EnrollmentCentersViewController: UIViewController {
     }
     
     private func fetchEnrollmentCenters() {
-        IDNYCCentersAPIClient.manager.getEnrollmetCenters(with: "11385", completionHandler: {
+        IDNYCCentersAPIClient.manager.getEnrollmetCenters(completionHandler: {
             self.idnycCenters = $0
         }, errorHandler: { print($0) })
     }

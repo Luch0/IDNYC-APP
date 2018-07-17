@@ -22,11 +22,11 @@ class SettingsView: UIView {
         return tableView
     }()
     
-    lazy var languagePickerView: UIPickerView = {
-        let pickerView = UIPickerView()
-        pickerView.backgroundColor = .yellow
-        return pickerView
-    }()
+//    lazy var languagePickerView: UIPickerView = {
+//        let pickerView = UIPickerView()
+//        pickerView.backgroundColor = .yellow
+//        return pickerView
+//    }()
 
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
@@ -60,15 +60,15 @@ class SettingsView: UIView {
             ])
     }
     
-    private func setupLanguagePickerView() {
-        addSubview(languagePickerView)
-        languagePickerView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            languagePickerView.topAnchor.constraint(equalTo: self.bottomAnchor),
-            languagePickerView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
-            languagePickerView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.4),
-            languagePickerView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor)
-            ])
-    }
+//    private func setupLanguagePickerView() {
+//        addSubview(languagePickerView)
+//        languagePickerView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            languagePickerView.topAnchor.constraint(equalTo: self.bottomAnchor),
+//            languagePickerView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
+//            languagePickerView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.4),
+//            languagePickerView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor)
+//            ])
+//    }
 
 }

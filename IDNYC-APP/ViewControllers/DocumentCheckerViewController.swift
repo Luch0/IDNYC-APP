@@ -24,17 +24,8 @@ class DocumentCheckerViewController: UIViewController {
         }
     }
     
-    var checkedIdentityIndexPaths = [IndexPath]() {
-        didSet {
-            dump(checkedIdentityIndexPaths)
-        }
-    }
-    
-    var checkedResidencyIndexPaths = [IndexPath]() {
-        didSet {
-            dump(checkedResidencyIndexPaths)
-        }
-    }
+    var checkedIdentityIndexPaths = [IndexPath]()
+    var checkedResidencyIndexPaths = [IndexPath]()
     
     var documentChecker: DocumentChecker?
     var onlineDocumentChecker: DocumentChecker?

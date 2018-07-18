@@ -30,6 +30,8 @@
 		E2B54268209229F500EF2C2C /* CentersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B54267209229F500EF2C2C /* CentersListViewController.swift */; };
 		E2B5426A20922A1A00EF2C2C /* CentersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426920922A1A00EF2C2C /* CentersListView.swift */; };
 		E2B5426C20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */; };
+		E2D0260720FFE50C0088CDE7 /* DocumentCheckerAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D0260620FFE50C0088CDE7 /* DocumentCheckerAlertView.xib */; };
+		E2D0260920FFE5320088CDE7 /* DocumentCheckerAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D0260820FFE5320088CDE7 /* DocumentCheckerAlertView.swift */; };
 		E2DCAEE320AE7DF5003089DF /* AboutIDNYCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCAEE220AE7DF5003089DF /* AboutIDNYCViewController.swift */; };
 		E2DCAEE520AE7E0E003089DF /* AboutIDNYCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCAEE420AE7E0E003089DF /* AboutIDNYCView.swift */; };
 		E2DCAEE720AE8186003089DF /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCAEE620AE8186003089DF /* BenefitsViewController.swift */; };
@@ -93,6 +95,8 @@
 		E2B54267209229F500EF2C2C /* CentersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListViewController.swift; sourceTree = "<group>"; };
 		E2B5426920922A1A00EF2C2C /* CentersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentersListView.swift; sourceTree = "<group>"; };
 		E2B5426B20922A9A00EF2C2C /* EnrollmentCenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCenterTableViewCell.swift; sourceTree = "<group>"; };
+		E2D0260620FFE50C0088CDE7 /* DocumentCheckerAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentCheckerAlertView.xib; sourceTree = "<group>"; };
+		E2D0260820FFE5320088CDE7 /* DocumentCheckerAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCheckerAlertView.swift; sourceTree = "<group>"; };
 		E2DCAEE220AE7DF5003089DF /* AboutIDNYCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutIDNYCViewController.swift; sourceTree = "<group>"; };
 		E2DCAEE420AE7E0E003089DF /* AboutIDNYCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutIDNYCView.swift; sourceTree = "<group>"; };
 		E2DCAEE620AE8186003089DF /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +247,8 @@
 			children = (
 				E2FB86EC208F941C008083F6 /* CustomInfoView.xib */,
 				E2FB86EE208F944B008083F6 /* CustomInfoView.swift */,
+				E2D0260620FFE50C0088CDE7 /* DocumentCheckerAlertView.xib */,
+				E2D0260820FFE5320088CDE7 /* DocumentCheckerAlertView.swift */,
 				E214757520A54888001A5B2F /* DocumentCheckerTableViewCell.swift */,
 				E2A7B66A20A9EC4700FAB784 /* IdentityDocCheckTableViewCell.swift */,
 				E2A7B66C20A9EC6100FAB784 /* ResidencyDocCheckTableViewCell.swift */,
@@ -373,6 +379,7 @@
 				E234D0BB20A14E7B00B1E4B4 /* DocumentChecker.json in Resources */,
 				E2FB86B2208F872C008083F6 /* LaunchScreen.storyboard in Resources */,
 				E2B2505220C1D27D0084FF0C /* DocumentChecker_es.json in Resources */,
+				E2D0260720FFE50C0088CDE7 /* DocumentCheckerAlertView.xib in Resources */,
 				E2B2505120C1D27D0084FF0C /* Benefits_es.json in Resources */,
 				E2FB86AF208F872C008083F6 /* Assets.xcassets in Resources */,
 				E2FB86ED208F941C008083F6 /* CustomInfoView.xib in Resources */,
@@ -484,6 +491,7 @@
 				E243D2A120BFB22200627A3F /* APIKeys.swift in Sources */,
 				E2FB86F1208FB90F008083F6 /* LocationService.swift in Sources */,
 				E2FB86EF208F944B008083F6 /* CustomInfoView.swift in Sources */,
+				E2D0260920FFE5320088CDE7 /* DocumentCheckerAlertView.swift in Sources */,
 				E2FB86EB208F8DB1008083F6 /* IDNYCCenter.swift in Sources */,
 				E2FB86DD208F8C8C008083F6 /* EnrollmentCentersViewController.swift in Sources */,
 				E234D0C120A1536D00B1E4B4 /* DocumentCheckerView.swift in Sources */,

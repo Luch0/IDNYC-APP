@@ -35,6 +35,8 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
         view.addSubview(settingsView)
         settingsView.settingsTableView.delegate = self
         settingsView.settingsTableView.dataSource = self
+        languagePickerView.delegate = self
+        languagePickerView.dataSource = self
         setupLanguagePickerViewToolbar()
         setupNavBar()
     }
@@ -56,10 +58,17 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
         toolBar.barStyle = UIBarStyle.default
         toolBar.sizeToFit()
         
-        let selectButton = UIBarButtonItem(title: "Select", style: .done, target: self, action: #selector(pickerDonePressed))
+        let selectButton: UIBarButtonItem
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPickerPressed))
+        let cancelButton: UIBarButtonItem
         
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage()! == "English" {
+            selectButton = UIBarButtonItem(title: "Select", style: .done, target: self, action: #selector(pickerDonePressed))
+            cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPickerPressed))
+        } else {
+            selectButton = UIBarButtonItem(title: "Elegir", style: .done, target: self, action: #selector(pickerDonePressed))
+            cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(cancelPickerPressed))
+        }
         toolBar.setItems([cancelButton, spaceButton, selectButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         
@@ -208,4 +217,8 @@ extension SettingsViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return languages[row]
     }
+}
+
+extension SettingsViewController: UIPickerViewDelegate {
+
 }

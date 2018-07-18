@@ -107,4 +107,12 @@ class WhatIsIDNYCView: UIView {
         """
     }
     
+    func setEnglish() {
+        descriptionText.text = """
+        IDNYC is the new, free identification card for all New York City residents, which gives all of us the opportunity to show who we are—New Yorkers. As a government-issued photo identification card, IDNYC secures the peace of mind and access to City services that come from having recognized identification. IDNYC benefits every city resident, including the most vulnerable communities—the homeless, youth, the elderly, undocumented immigrants, the formerly incarcerated and others who may have difficulty obtaining other government-issued ID.
+        
+        IDNYC cardholders can access services and programs offered by the City as well as by businesses. IDNYC helps enhance public safety, by serving as a recognized ID for interacting with NYPD. It also helps New Yorkers gain access to all City buildings that provide services to the public and is accepted as a form of identification for accessing numerous City programs and services. IDNYC also provides a dynamic series of benefits to cardholders, including a free one-year membership at many of the City's leading museums, zoos, concert halls, and botanical gardens.
+        """
+    }
+    
 }

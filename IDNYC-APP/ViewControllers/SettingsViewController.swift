@@ -35,8 +35,6 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
         view.addSubview(settingsView)
         settingsView.settingsTableView.delegate = self
         settingsView.settingsTableView.dataSource = self
-        languagePickerView.delegate = self
-        languagePickerView.delegate = self
         setupLanguagePickerViewToolbar()
         setupNavBar()
     }
@@ -58,11 +56,11 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
         toolBar.barStyle = UIBarStyle.default
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(pickerDonePressed))
+        let selectButton = UIBarButtonItem(title: "Select", style: .done, target: self, action: #selector(pickerDonePressed))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPickerPressed))
         
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.setItems([cancelButton, spaceButton, selectButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         
         dummyTextField.inputView = languagePickerView
@@ -75,17 +73,22 @@ class SettingsViewController: UIViewController, SFSafariViewControllerDelegate {
         currentLanguage = languages[indexPicked]
         LanguageUserDefaultsHelper.manager.saveSelectedLanguage(language: currentLanguage)
         dummyTextField.resignFirstResponder()
+        let accessoryView = dummyTextField.inputAccessoryView as! UIToolbar
         if LanguageUserDefaultsHelper.manager.getSelectedLanguage()! == "English" {
             navigationItem.title = "Settings"
             tabBarController?.tabBar.items?[0].title = "Home"
             tabBarController?.tabBar.items?[1].title = "Centers"
             tabBarController?.tabBar.items?[2].title = "Options"
+            accessoryView.items![0].title = "Cancel"
+            accessoryView.items![2].title = "Select"
             NotificationCenter.default.post(name: .english, object: nil)
         } else {
             navigationItem.title = "Opciones"
             tabBarController?.tabBar.items?[0].title = "Inicio"
             tabBarController?.tabBar.items?[1].title = "Centros"
             tabBarController?.tabBar.items?[2].title = "Opciones"
+            accessoryView.items![0].title = "Cancelar"
+            accessoryView.items![2].title = "Elegir"
             NotificationCenter.default.post(name: .spanish, object: nil)
         }
         settingsView.settingsTableView.reloadData()
@@ -204,11 +207,5 @@ extension SettingsViewController: UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return languages[row]
-    }
-}
-
-extension SettingsViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //print("selected: \(languages[row])")
     }
 }

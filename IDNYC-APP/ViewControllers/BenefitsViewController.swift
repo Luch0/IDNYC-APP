@@ -21,6 +21,8 @@ class BenefitsViewController: UIViewController {
         benefitsView.benefitsTableView.dataSource = self
         benefitsView.benefitsTableView.estimatedRowHeight = 50
         benefitsView.benefitsTableView.rowHeight = UITableViewAutomaticDimension
+        NotificationCenter.default.addObserver(self, selector: #selector(setToEnglish(notification:)), name: .english, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(setToSpanish(notfication:)), name: .spanish, object: nil)
         setupNavBar()
         loadBenefits()
     }
@@ -44,6 +46,20 @@ class BenefitsViewController: UIViewController {
             print("Error retrieving data")
             return
         }
+    }
+    
+    // MARK: NotificationCenter
+    @objc func setToEnglish(notification: NSNotification) {
+        loadBenefits()
+        benefitsView.benefitsTableView.reloadData()
+        navigationItem.title = "Benefits"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
+    }
+    @objc func setToSpanish(notfication: NSNotification) {
+        loadBenefits()
+        benefitsView.benefitsTableView.reloadData()
+        navigationItem.title = "Beneficios"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Inicio", style: .plain, target: nil, action: nil)
     }
 
 }

@@ -212,4 +212,3 @@ extension EnrollmentCentersViewController: UICollectionViewDelegate {
         enrollmentCentersView.centersMapView.animate(to: camera)
     }
 }
-

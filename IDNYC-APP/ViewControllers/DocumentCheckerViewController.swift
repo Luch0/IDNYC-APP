@@ -39,6 +39,9 @@ class DocumentCheckerViewController: UIViewController {
     var documentChecker: DocumentChecker?
     var onlineDocumentChecker: DocumentChecker?
     
+    var identityPointsStr: String = "0/3"
+    var residencyPointsStr: String = "0/1"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(documentCheckerView)
@@ -47,6 +50,8 @@ class DocumentCheckerViewController: UIViewController {
         documentCheckerView.identityTableView.dataSource = self
         documentCheckerView.residencyTableView.dataSource = self
         documentCheckerView.tableViewsScrollView.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(setToEnglish(notification:)), name: .english, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(setToSpanish(notfication:)), name: .spanish, object: nil)
 //        documentCheckerView.residencyTableView.sectionHeaderHeight = UITableViewAutomaticDimension
 //        documentCheckerView.residencyTableView.estimatedSectionHeaderHeight = 40
 //        documentCheckerView.identityTableView.rowHeight = UITableViewAutomaticDimension
@@ -63,13 +68,30 @@ class DocumentCheckerViewController: UIViewController {
     private func setupNavBar() {
         if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
             navigationItem.title = "Documentos"
-            documentCheckerView.identityButton.setTitle("Identidad 0/3", for: .normal)
-            documentCheckerView.residencyButton.setTitle("Residecia 0/1", for: .normal)
+            documentCheckerView.identityButton.setTitle("Identidad \(identityPointsStr)", for: .normal)
+            documentCheckerView.residencyButton.setTitle("Residencia \(residencyPointsStr)", for: .normal)
         } else {
             navigationItem.title = "Document Checker"
-            documentCheckerView.identityButton.setTitle("Identity 0/3", for: .normal)
-            documentCheckerView.residencyButton.setTitle("Residecy 0/1", for: .normal)
+            documentCheckerView.identityButton.setTitle("Identity \(identityPointsStr)", for: .normal)
+            documentCheckerView.residencyButton.setTitle("Residency \(residencyPointsStr)", for: .normal)
         }
+    }
+    
+    // MARK: NotificationCenter
+    @objc func setToEnglish(notification: NSNotification) {
+        loadDocumentChecker()
+        navigationItem.title = "Document Checker"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
+        documentCheckerView.identityButton.setTitle("Identity \(identityPointsStr)", for: .normal)
+        documentCheckerView.residencyButton.setTitle("Residency \(residencyPointsStr)", for: .normal)
+    }
+    
+    @objc func setToSpanish(notfication: NSNotification) {
+        loadDocumentChecker()
+        navigationItem.title = "Documentos"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Inicio", style: .plain, target: nil, action: nil)
+        documentCheckerView.identityButton.setTitle("Identidad \(identityPointsStr)", for: .normal)
+        documentCheckerView.residencyButton.setTitle("Residencia \(residencyPointsStr)", for: .normal)
     }
     
     private func setButtonsTargets() {
@@ -214,17 +236,19 @@ extension DocumentCheckerViewController: IdentityDocCheckTableViewCellDelegate {
         checkedIdentityIndexPaths.append(indexPath)
         let pointsTotal: Int = checkedIdentityIndexPaths.reduce(0){ $0 + identityChecker[$1.section].documents[$1.row].points }
         if pointsTotal >= 3 {
+            identityPointsStr = "3/3"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
-                documentCheckerView.identityButton.setTitle("Identidad 3/3", for: .normal)
+                documentCheckerView.identityButton.setTitle("Identidad \(identityPointsStr)", for: .normal)
             } else {
-                documentCheckerView.identityButton.setTitle("Identity 3/3", for: .normal)
+                documentCheckerView.identityButton.setTitle("Identity \(identityPointsStr)", for: .normal)
             }
             documentCheckerView.identityButton.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
         } else {
+            identityPointsStr = "\(pointsTotal)/3"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
-                documentCheckerView.identityButton.setTitle("Identidad \(pointsTotal)/3", for: .normal)
+                documentCheckerView.identityButton.setTitle("Identidad \(identityPointsStr)", for: .normal)
             } else {
-                documentCheckerView.identityButton.setTitle("Identity \(pointsTotal)/3", for: .normal)
+                documentCheckerView.identityButton.setTitle("Identity \(identityPointsStr)", for: .normal)
             }
             documentCheckerView.identityButton.backgroundColor = .red
         }
@@ -234,17 +258,19 @@ extension DocumentCheckerViewController: IdentityDocCheckTableViewCellDelegate {
         checkedIdentityIndexPaths = checkedIdentityIndexPaths.filter{ $0 != indexPath }
         let pointsTotal: Int = checkedIdentityIndexPaths.reduce(0){ $0 + identityChecker[$1.section].documents[$1.row].points }
         if pointsTotal >= 3 {
+            identityPointsStr = "3/3"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
-                documentCheckerView.identityButton.setTitle("Identidad 3/3", for: .normal)
+                documentCheckerView.identityButton.setTitle("Identidad \(identityPointsStr)", for: .normal)
             } else {
-                documentCheckerView.identityButton.setTitle("Identity 3/3", for: .normal)
+                documentCheckerView.identityButton.setTitle("Identity \(identityPointsStr)", for: .normal)
             }
             documentCheckerView.identityButton.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
         } else {
+            identityPointsStr = "\(pointsTotal)/3"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
-                documentCheckerView.identityButton.setTitle("Identidad \(pointsTotal)/3", for: .normal)
+                documentCheckerView.identityButton.setTitle("Identidad \(identityPointsStr)", for: .normal)
             } else {
-                documentCheckerView.identityButton.setTitle("Identity \(pointsTotal)/3", for: .normal)
+                documentCheckerView.identityButton.setTitle("Identity \(identityPointsStr)", for: .normal)
             }
             documentCheckerView.identityButton.backgroundColor = .red
         }
@@ -256,17 +282,19 @@ extension DocumentCheckerViewController: ResidencyDocCheckTableViewCellDelegate 
         checkedResidencyIndexPaths.append(indexPath)
         let pointsTotal: Int = checkedResidencyIndexPaths.reduce(0){ $0 + residencyChecker[$1.section].documents[$1.row].points }
         if pointsTotal >= 1 {
+            residencyPointsStr = "1/1"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
-                documentCheckerView.residencyButton.setTitle("Residencia 1/1", for: .normal)
+                documentCheckerView.residencyButton.setTitle("Residencia \(residencyPointsStr)", for: .normal)
             } else {
-                documentCheckerView.residencyButton.setTitle("Residency 1/1", for: .normal)
+                documentCheckerView.residencyButton.setTitle("Residency \(residencyPointsStr)", for: .normal)
             }
             documentCheckerView.residencyButton.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
         } else {
+            residencyPointsStr = "\(pointsTotal)/1"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
-                documentCheckerView.residencyButton.setTitle("Residencia \(pointsTotal)/1", for: .normal)
+                documentCheckerView.residencyButton.setTitle("Residencia \(residencyPointsStr)", for: .normal)
             } else {
-                documentCheckerView.residencyButton.setTitle("Residency \(pointsTotal)/1", for: .normal)
+                documentCheckerView.residencyButton.setTitle("Residency \(residencyPointsStr)", for: .normal)
             }
             documentCheckerView.residencyButton.backgroundColor = .red
         }
@@ -276,17 +304,19 @@ extension DocumentCheckerViewController: ResidencyDocCheckTableViewCellDelegate 
         checkedResidencyIndexPaths = checkedResidencyIndexPaths.filter{ $0 != indexPath }
         let pointsTotal: Int = checkedResidencyIndexPaths.reduce(0){ $0 + residencyChecker[$1.section].documents[$1.row].points }
         if pointsTotal >= 1 {
+            residencyPointsStr = "1/1"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
-                documentCheckerView.residencyButton.setTitle("Residencia 1/1", for: .normal)
+                documentCheckerView.residencyButton.setTitle("Residencia \(residencyPointsStr)", for: .normal)
             } else {
-                documentCheckerView.residencyButton.setTitle("Residency 1/1", for: .normal)
+                documentCheckerView.residencyButton.setTitle("Residency \(residencyPointsStr)", for: .normal)
             }
             documentCheckerView.residencyButton.backgroundColor = UIColor(displayP3Red: 32/255, green: 168/255, blue: 18/255, alpha: 1.0)
         } else {
+            residencyPointsStr = "\(pointsTotal)/1"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
-                documentCheckerView.residencyButton.setTitle("Residencia \(pointsTotal)/1", for: .normal)
+                documentCheckerView.residencyButton.setTitle("Residencia \(residencyPointsStr)", for: .normal)
             } else {
-                documentCheckerView.residencyButton.setTitle("Residency \(pointsTotal)/1", for: .normal)
+                documentCheckerView.residencyButton.setTitle("Residency \(residencyPointsStr)", for: .normal)
             }
             documentCheckerView.residencyButton.backgroundColor = .red
         }

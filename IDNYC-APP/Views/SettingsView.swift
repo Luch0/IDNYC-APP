@@ -19,6 +19,7 @@ class SettingsView: UIView {
         let tableView = UITableView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "settings cell")
         tableView.separatorStyle = .none
+        tableView.bounces = false
         return tableView
     }()
     

@@ -13,11 +13,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocumentCheckerAlertView" customModule="IDNYC_APP" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DocumentCheckerAlertView" customModule="IDNYC_APP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9W-nB-LVw" userLabel="ViewInside">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9W-nB-LVw">
                     <rect key="frame" x="4" y="4" width="292" height="92"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successCheck" translatesAutoresizingMaskIntoConstraints="NO" id="336-gQ-j65">
@@ -26,35 +26,40 @@
                                 <constraint firstAttribute="width" secondItem="336-gQ-j65" secondAttribute="height" multiplier="1:1" id="fvH-XS-hRg"/>
                             </constraints>
                         </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have the documents needed. Check for an enrollment center in the Centers tab" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-5U-2bZ">
+                            <rect key="frame" x="92" y="4" width="192" height="84"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="4dh-5U-2bZ" firstAttribute="top" secondItem="s9W-nB-LVw" secondAttribute="top" constant="4" id="5eX-1y-xlh"/>
+                        <constraint firstItem="4dh-5U-2bZ" firstAttribute="leading" secondItem="336-gQ-j65" secondAttribute="trailing" constant="8" id="6FH-WW-9hK"/>
                         <constraint firstAttribute="bottom" secondItem="336-gQ-j65" secondAttribute="bottom" constant="8" id="9mY-ws-Jpp"/>
+                        <constraint firstAttribute="trailing" secondItem="4dh-5U-2bZ" secondAttribute="trailing" constant="8" id="HL0-fo-HX6"/>
                         <constraint firstItem="336-gQ-j65" firstAttribute="leading" secondItem="s9W-nB-LVw" secondAttribute="leading" constant="8" id="Imu-gl-EtI"/>
+                        <constraint firstAttribute="bottom" secondItem="4dh-5U-2bZ" secondAttribute="bottom" constant="4" id="PLQ-I3-Qpl"/>
                         <constraint firstItem="336-gQ-j65" firstAttribute="top" secondItem="s9W-nB-LVw" secondAttribute="top" constant="8" id="YrN-6p-DEX"/>
                         <constraint firstItem="336-gQ-j65" firstAttribute="centerY" secondItem="s9W-nB-LVw" secondAttribute="centerY" id="gOa-4c-fKi"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have the documents needed. Check for an enrollment center in the Centers tab" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-5U-2bZ">
-                    <rect key="frame" x="96" y="8" width="192" height="84"/>
-                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="4dh-5U-2bZ" firstAttribute="top" secondItem="s9W-nB-LVw" secondAttribute="top" constant="4" id="4Eu-Pb-B9w"/>
-                <constraint firstItem="s9W-nB-LVw" firstAttribute="trailing" secondItem="4dh-5U-2bZ" secondAttribute="trailing" constant="8" id="KoB-Ya-ZIM"/>
                 <constraint firstItem="s9W-nB-LVw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="MmC-h3-90v"/>
                 <constraint firstItem="s9W-nB-LVw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="Nn4-Gz-cX0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="s9W-nB-LVw" secondAttribute="bottom" constant="4" id="PA4-Zh-Mcx"/>
                 <constraint firstItem="s9W-nB-LVw" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="PG9-aM-h8H"/>
-                <constraint firstItem="4dh-5U-2bZ" firstAttribute="leading" secondItem="336-gQ-j65" secondAttribute="trailing" constant="8" id="SUU-VT-2G2"/>
-                <constraint firstItem="s9W-nB-LVw" firstAttribute="bottom" secondItem="4dh-5U-2bZ" secondAttribute="bottom" constant="4" id="XYF-tM-M5z"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s9W-nB-LVw" secondAttribute="trailing" constant="4" id="Xw6-VO-2gG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="insideView" destination="s9W-nB-LVw" id="ANf-zf-tis"/>
+                <outlet property="successImageView" destination="336-gQ-j65" id="2nL-qT-HVV"/>
+                <outlet property="successMessageLabel" destination="4dh-5U-2bZ" id="opv-fZ-Gm4"/>
+            </connections>
             <point key="canvasLocation" x="66" y="337"/>
         </view>
     </objects>

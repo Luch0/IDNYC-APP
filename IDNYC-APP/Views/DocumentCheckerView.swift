@@ -10,6 +10,13 @@ import UIKit
 
 class DocumentCheckerView: UIView {
     
+    lazy var documentPopUp: UIView = {
+        let view = UINib(nibName: "DocumentCheckerAlertView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+        //view.isHidden = true
+        view.layer.opacity = 0.0
+        return view
+    }()
+    
     lazy var tableViewsScrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.isPagingEnabled = true
@@ -106,6 +113,7 @@ class DocumentCheckerView: UIView {
         setupTableViewsContainer()
         setupIdentityTableView()
         setupResidencyTableView()
+        setupDocumentPopUp()
     }
     
     private func setupIdentityButton() {
@@ -173,6 +181,17 @@ class DocumentCheckerView: UIView {
             residencyTableView.leadingAnchor.constraint(equalTo: identityTableView.trailingAnchor),
             residencyTableView.centerYAnchor.constraint(equalTo: identityTableView.centerYAnchor),
             residencyTableView.trailingAnchor.constraint(equalTo: tableViewsContainer.trailingAnchor)
+            ])
+    }
+    
+    private func setupDocumentPopUp() {
+        addSubview(documentPopUp)
+        documentPopUp.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            documentPopUp.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            documentPopUp.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
+            documentPopUp.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.95),
+            documentPopUp.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.25)
             ])
     }
     

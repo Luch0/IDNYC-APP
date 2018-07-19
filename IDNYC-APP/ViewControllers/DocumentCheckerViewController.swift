@@ -33,6 +33,9 @@ class DocumentCheckerViewController: UIViewController {
     var identityPointsStr: String = "0/3"
     var residencyPointsStr: String = "0/1"
     
+    var identityPoints: Int = 0
+    var residencyPoints: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(documentCheckerView)
@@ -127,6 +130,36 @@ class DocumentCheckerViewController: UIViewController {
         identityChecker = documentChecker.identity
         residencyChecker = documentChecker.residency
     }
+    
+    private func hasAllDocuments() -> Bool {
+        return identityPoints >= 3 && residencyPoints >= 1
+    }
+    
+    private func showAllDocumentsPopUp() {
+        //documentCheckerView.documentPopUp.isHidden = false
+//        UIView.animate(withDuration: 5.0, animations: {
+//            self.documentCheckerView.documentPopUp.layer.opacity = 1.0
+//        }) { (finished) in
+//            // fade out
+//            UIView.animate(withDuration: 2.0, animations: {
+//                self.documentCheckerView.documentPopUp.layer.opacity = 0.0
+//            })
+//        }
+//        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(hideDocumentsPopUp), userInfo: nil, repeats: false)
+        
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
+            self.documentCheckerView.documentPopUp.layer.opacity = 1.0
+        }) { (finished) in
+            UIView.animate(withDuration: 0.5, delay: 4.0, options: .curveEaseOut, animations: {
+                self.documentCheckerView.documentPopUp.layer.opacity = 0.0
+            }, completion: nil)
+        }
+    }
+    
+//    @objc private func hideDocumentsPopUp() {
+//        documentCheckerView.documentPopUp.isHidden = true
+//    }
     
 //    private func loadDocumentCheckerFromOnline() {
 //        DocumentCheckerService.manager.loadDocumentCheckerFromOnline(completionHandler: {
@@ -226,6 +259,12 @@ extension DocumentCheckerViewController: IdentityDocCheckTableViewCellDelegate {
     func didCheckIdentityDocument(_ indexPath: IndexPath) {
         checkedIdentityIndexPaths.append(indexPath)
         let pointsTotal: Int = checkedIdentityIndexPaths.reduce(0){ $0 + identityChecker[$1.section].documents[$1.row].points }
+        identityPoints = pointsTotal
+        
+        if hasAllDocuments() {
+            showAllDocumentsPopUp()
+        }
+        
         if pointsTotal >= 3 {
             identityPointsStr = "3/3"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
@@ -248,6 +287,7 @@ extension DocumentCheckerViewController: IdentityDocCheckTableViewCellDelegate {
     func didUncheckIdentityDocument(_ indexPath: IndexPath) {
         checkedIdentityIndexPaths = checkedIdentityIndexPaths.filter{ $0 != indexPath }
         let pointsTotal: Int = checkedIdentityIndexPaths.reduce(0){ $0 + identityChecker[$1.section].documents[$1.row].points }
+        identityPoints = pointsTotal
         if pointsTotal >= 3 {
             identityPointsStr = "3/3"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
@@ -272,6 +312,12 @@ extension DocumentCheckerViewController: ResidencyDocCheckTableViewCellDelegate 
     func didCheckResidencyDocument(_ indexPath: IndexPath) {
         checkedResidencyIndexPaths.append(indexPath)
         let pointsTotal: Int = checkedResidencyIndexPaths.reduce(0){ $0 + residencyChecker[$1.section].documents[$1.row].points }
+        residencyPoints = pointsTotal
+        
+        if hasAllDocuments() {
+            showAllDocumentsPopUp()
+        }
+        
         if pointsTotal >= 1 {
             residencyPointsStr = "1/1"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {
@@ -294,6 +340,7 @@ extension DocumentCheckerViewController: ResidencyDocCheckTableViewCellDelegate 
     func didUncheckResidencyDocument(_ indexPath: IndexPath) {
         checkedResidencyIndexPaths = checkedResidencyIndexPaths.filter{ $0 != indexPath }
         let pointsTotal: Int = checkedResidencyIndexPaths.reduce(0){ $0 + residencyChecker[$1.section].documents[$1.row].points }
+        residencyPoints = pointsTotal
         if pointsTotal >= 1 {
             residencyPointsStr = "1/1"
             if LanguageUserDefaultsHelper.manager.getSelectedLanguage() == "Español" {

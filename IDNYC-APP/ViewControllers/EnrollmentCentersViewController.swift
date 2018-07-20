@@ -51,6 +51,18 @@ class EnrollmentCentersViewController: UIViewController {
         }
         NotificationCenter.default.addObserver(self, selector: #selector(setToEnglish(notification:)), name: .english, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(setToSpanish(notfication:)), name: .spanish, object: nil)
+        
+        // animation to shake and then dissapear
+        self.enrollmentCentersView.swipeForMoreBoroughsLabel.transform = CGAffineTransform(translationX: 40, y: 0)
+        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 3.0, options: .curveEaseInOut, animations: {
+            self.enrollmentCentersView.swipeForMoreBoroughsLabel.transform = CGAffineTransform.identity
+        }, completion: { (finished) in
+            UIView.animate(withDuration: 0.5, delay: 1.5, options: .curveEaseOut, animations: {
+                self.enrollmentCentersView.swipeForMoreBoroughsLabel.layer.opacity = 0.0
+            }, completion: nil)
+        })
+        
+
     }
     
     private func fetchEnrollmentCenters() {

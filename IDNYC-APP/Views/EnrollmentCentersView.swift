@@ -23,6 +23,16 @@ class EnrollmentCentersView: UIView {
         return collectionView
     }()
     
+    lazy var swipeForMoreBoroughsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "  ←   Scroll   →  \u{200c}"
+        label.backgroundColor = UIColor(displayP3Red: 214/256, green: 71/256, blue: 41/256, alpha: 1.0)
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = UIFont(name: "Verdana-Bold", size: 16)
+        return label
+    }()
+    
     lazy var centersMapView: GMSMapView = {
         let camera = GMSCameraPosition.camera(withLatitude: 40.6971494, longitude: -74.2598719, zoom: 5)
         var mapView = GMSMapView.map(withFrame: frame, camera: camera)
@@ -47,9 +57,15 @@ class EnrollmentCentersView: UIView {
         setupViews()
     }
     
+    override func layoutSubviews() {
+        swipeForMoreBoroughsLabel.layer.cornerRadius = 8
+        swipeForMoreBoroughsLabel.layer.masksToBounds = true
+    }
+    
     private func setupViews() {
         setupCentersMapView()
         setupBoroughCollectionView()
+        setupSwipeForMoreBoroughsLabel()
     }
     
     private func setupCentersMapView() {
@@ -74,6 +90,15 @@ class EnrollmentCentersView: UIView {
             boroughsCollectionView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             boroughsCollectionView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.1)
         ])
+    }
+    
+    private func setupSwipeForMoreBoroughsLabel() {
+        addSubview(swipeForMoreBoroughsLabel)
+        swipeForMoreBoroughsLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            swipeForMoreBoroughsLabel.topAnchor.constraint(equalTo: boroughsCollectionView.bottomAnchor),
+            swipeForMoreBoroughsLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor)
+            ])
     }
 
 }

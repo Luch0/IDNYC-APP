@@ -60,6 +60,11 @@ class EnrollmentCentersView: UIView {
     override func layoutSubviews() {
         swipeForMoreBoroughsLabel.layer.cornerRadius = 8
         swipeForMoreBoroughsLabel.layer.masksToBounds = true
+        if LanguageUserDefaultsHelper.manager.getSelectedLanguage()! == "English" {
+            swipeForMoreBoroughsLabel.text = "  ←   Scroll   →  \u{200c}"
+        } else {
+            swipeForMoreBoroughsLabel.text = "  ←   Deslizar   →  \u{200c}"
+        }
     }
     
     private func setupViews() {

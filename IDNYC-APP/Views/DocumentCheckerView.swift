@@ -190,8 +190,8 @@ class DocumentCheckerView: UIView {
         NSLayoutConstraint.activate([
             documentPopUp.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             documentPopUp.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-            documentPopUp.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.95),
-            documentPopUp.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.25)
+            documentPopUp.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
+            documentPopUp.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.18)
             ])
     }
     

@@ -34,11 +34,23 @@ class CentersListViewController: UIViewController {
         view.addSubview(centersListView)
         centersListView.centersTableView.delegate = self
         centersListView.centersTableView.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(setToEnglish(notification:)), name: .english, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(setToSpanish(notfication:)), name: .spanish, object: nil)
         setupNavBar()
     }
     
     private func setupNavBar() {
         //navigationItem.largeTitleDisplayMode = .never
+    }
+    
+    // MARK: NotificationCenter
+    @objc func setToEnglish(notification: NSNotification) {
+        centersListView.centersTableView.reloadData()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Enrollment Centers", style: .plain, target: nil, action: nil)
+    }
+    @objc func setToSpanish(notfication: NSNotification) {
+        centersListView.centersTableView.reloadData()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Centros de Inscripción", style: .plain, target: nil, action: nil)
     }
     
 }

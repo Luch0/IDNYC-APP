@@ -68,5 +68,4 @@ class HomeViewController: UIViewController {
         navigationItem.title = "Inicio"
     }
 
-
 }
